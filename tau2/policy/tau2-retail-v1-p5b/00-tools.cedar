@@ -1,6 +1,6 @@
 // tau2-retail-v1: compiled from tau2-bench data/tau2/domains/retail/policy.md
 // (sha256 2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467).
-// Design notes section 1.3 (this line edited for publication: it gave a local path).
+// Design: ~/Projects/va-build-2026-10-25/design/tau2-retail-refund.md section 1.3.
 
 @id("retail.tools.allowlist")
 @reason("Only the shop's retail tools may be called (policy.md lines 3 to 8).")

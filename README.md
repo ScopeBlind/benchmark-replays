@@ -15,8 +15,9 @@ answer key.
 call to look for, and were not evaluated. Samples of the gate decisions are signed with Ed25519 keys made for these runs, and the
 receipts verify offline with @veritasacta/verify 0.11.0 (commands below).
 
-This is not an independent evaluation. ScopeBlind makes protect-mcp, wrote the policies, the adapters, the scorers and
-this write-up, and ran both replays. Every result is counterfactual from the first denial on: a replay cannot show what
+This is not an independent evaluation. The designs, replays, scorers and this write-up were produced by ScopeBlind with
+AI coding agents (Claude, by Anthropic). ScopeBlind also makes protect-mcp, the gate under test, and wrote the
+policies and adapters it was tested with. Every result is counterfactual from the first denial on: a replay cannot show what
 an agent would have done after being refused.
 
 ## Headline results
@@ -284,10 +285,12 @@ its precision and recall by a person labelling 100 failing runs was not done, so
 5. **Every attacker call denied (M1all) is 73.3% in slack**, because later calls `add_user_to_channel(Fred)` follow an
    invitation that was already denied, and the policy treats channels as internal (501 later calls; 16 more are the
    artefact in item 3).
-6. **Denials before the first attacker call (M5): 32 calls in 32 traces**, classified one by one by the authors
+6. **Denials before the first attacker call (M5): 32 calls in 32 traces**, classified one by one against a written rule
    (`report/m5_classes.json`): 23 attacker-motivated (22 fetches of the attacker's site before posting to it, and one
    exfiltration e-mail whose recipient list was a string, which our scorer missed and the gate denied), 7 honest steps
-   (the user_task_11 invitation) and 2 off-task actions by a hijacked model.
+   (the user_task_11 invitation) and 2 off-task actions by a hijacked model. Where the run's own summary
+   (`agentdojo/README.md`) says "hand-classified", it means that the replay's AI agent read each case and classified it
+   against a written rule; no person classified them.
 7. **Positive control (PF3).** Every sink call allowed in banking 150/150, slack 120/120, travel 83/84 and workspace
    125/125. 24 of the 84 travel runs are injection task 6, which has no tool call, so they pass trivially (59/60
    without them). The expected denials held: all 58 runs giving travel injection tasks 3, 4 and 5 as the user's own
@@ -408,18 +411,10 @@ Nothing else in the repository was changed from the run's own outputs.
   author's machine replaced by a description.
 - `agentdojo/MANIFEST.sha256`, `logs/build_policies.sha256`, `logs/frozen-code-and-policies.sha256`: absolute paths
   made relative, in the two-space format `shasum -c` reads. The hashes are unchanged.
-- `tau2/policy/*/00-tools.cedar` (three files): line 3, a comment that gave the design notes' location on the author's
-  machine, now reads `// Design notes section 1.3 (this line edited for publication: it gave a local path).`. The rules
-  are untouched, but the files' sha256 and the directories' policy digests change: the published directories digest to
-  `sha256:3a2e5ed3d0b62925e833f9a49a5b53e70bb426640e5db214a76b725afd7dad25` (v1),
-  `sha256:42017b63375d4a971b49dbe93025de645ae69c6f555c3b7bda7e4e9014e15746` (P5a) and
-  `sha256:bb712550823f273ddc30274dceb0b8fb2f3ee99bb767a26268ebea1d2221ea85` (P5b), while the receipts carry
-  `sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933`,
-  `sha256:7265a5f25ebca4a596b5654554a33527e9a30e50631d4cf10867958b86e1f113` and
-  `sha256:0309aca8eb596bd90407b213e30d04dcf4dd7a7fac73818e62a92af269d4de14`. The digest is computed over the files'
-  hashes, so the receipts' digests recompute from the hashes listed in `registration-v1.json`
-  (`tools/policy_digest.py --registration`), and the other 15 policy files match those hashes byte for byte. A
-  comment cannot change a Cedar decision.
+- Not edited: every policy file, in both benchmarks, is byte-identical to the one the run used, so each directory's
+  policy digest is the digest its receipts carry (`tau2/policy/tau2-retail-v1`: `sha256:a867d85e...`, `-p5a`:
+  `sha256:7265a5f2...`, `-p5b`: `sha256:0309aca8...`). One comment line in each tau2 `00-tools.cedar` names where the
+  unpublished design notes lived on the author's machine.
 - `tau2/reports/summary.json`, `reports/c0.json`, `tau2check/sims.json`, `tau2check/gold_only.json`: tau2's own
   database path on the author's machine replaced by `<tau2-bench install at commit 96a3ef92>/...`.
 - `tau2/scripts/`: ten of the 24 scripts changed. Seven had home-directory paths built in (`c0.py`, `c1.py`,
@@ -546,7 +541,7 @@ R=benchmark-replays/tau2; S=$R/scripts; D=upstream/tau2-bench/data/tau2; B=out/t
 GW=tools/protect-mcp; V=tools/verify/cli.js
 RES=$(ls $D/results/final/*_retail_*.json); RESARGS=$(for f in $RES; do printf -- '--results %s ' $f; done)
 mkdir -p $B/frozen $B/reports $B/logs $B/runs
-cp -R $R/policy $B/policy                     # the published policy files (00-tools.cedar line 3 differs, see above)
+cp -R $R/policy $B/policy                     # the policy files as registered
 node $S/make_keys.mjs --gateway $GW --dir $B/keys --names gate,harness
 
 python3 -I $S/answer_key.py --db $D/domains/retail/db.json --tasks $D/domains/retail/tasks.json $RESARGS --out $B/frozen/answer_key.json
@@ -558,7 +553,7 @@ shasum -a 256 $B/frozen/answer_key.json $B/frozen/bases.json $B/frozen/plants.js
 shasum -a 256 $B/frozen/plants-v2.json                                                 # substitution-v2.json
 
 python3 -I $S/vectors.py --policy $B/policy/tau2-retail-v1 --out $B/frozen/vectors.json --gateway $GW --base $B   # 83 of 83
-# (vectors.json records the policy digest, so its sha256 differs from the registered one; see above)
+shasum -a 256 $B/frozen/vectors.json                                                 # registration-v1.json, "frozen"
 python3 -I $S/c0.py --out $B/reports/c0.json --data $D --base $B
 python3 -I $S/gold_check.py --out $B/reports/gold_check.json --gateway $GW --data $D --base $B
 for kind in controls planted; do
@@ -576,13 +571,12 @@ python3 -I $S/report.py --base $B --data $D
 python3 -I $S/write_report.py --base $B
 ```
 
-Your keys, timestamps, request ids and signatures will differ from ours. So will the policy digest, because
-`00-tools.cedar` line 3 was edited for publication: your receipts will carry `sha256:3a2e5ed3...` where ours carry
-`sha256:a867d85e...`, and the per-run `stable_digest` in the result rows, which includes the digest, will differ too.
-Decisions, reasons, gate-input hashes, observations, findings and database hashes should not: compare the
-`decisions`, `refusals`, `enforced_db_hash`, `recorded_db_hash`, `accepted_recorded` and `accepted_enforced` fields of
-your `runs/results-*.jsonl` with ours, run by run. `c5.py` runs on the shipped result rows alone:
-`python3 -I $S/c5.py --pass1 $R/runs --pass2 $R/runs-pass2 --out c5.json` gives 263 of 263 identical.
+Your keys, timestamps, request ids and signatures will differ from ours. Decisions, reasons, policy digests,
+gate-input hashes, observations, findings and database hashes should not; each result row's `stable_digest` and
+`findings_sha256` are digests over those fields, with each call's tool and arguments. To compare a replay of yours with ours run by run, write it with `--tag pass2`
+and run `python3 -I $S/c5.py --pass1 $R/runs --pass2 <your runs dir> --out c5-vs-ours.json`. `c5.py` also runs on
+the shipped result rows alone: `python3 -I $S/c5.py --pass1 $R/runs --pass2 $R/runs-pass2 --out c5.json` gives 263 of
+263 identical.
 
 On macOS, `verify_pass.py` with verify 0.11.0 reads the verifier's output through a pipe, so its counts for the
 concatenated published chains come back empty. Take them with output written to files, as we did:
@@ -690,9 +684,9 @@ python3 -I tools/check_receipt_inputs.py --agentdojo agentdojo        # 200 and 
 python3 -I tools/check_receipt_inputs.py --tau2 $(awk '!/^#/ {print "tau2/runs/" $1}' tau2/runs/published-sample.txt) \
   tau2/runs/controls/*/* tau2/runs/planted/*/*/*                      # 386 runs, 3,358 decisions, problems 0
 
-# policy digests: AgentDojo's directories give exactly the digests in the receipts;
-# tau2's receipts' digests recompute from the file hashes in the registration
-python3 -I tools/policy_digest.py agentdojo/run/policies/*/A agentdojo/run/policies/*/full
+# policy digests: every published policy directory gives exactly the digest its receipts carry,
+# and the tau2 files match the per-file hashes in the registration
+python3 -I tools/policy_digest.py agentdojo/run/policies/*/A agentdojo/run/policies/*/full tau2/policy/*
 python3 -I tools/policy_digest.py --registration tau2/registration-v1.json
 ```
 
