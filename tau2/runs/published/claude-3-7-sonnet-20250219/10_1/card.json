@@ -1,0 +1,200 @@
+{
+ "answer_key": {
+  "gold_db_hash": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 5,
+    "entity": "orders/#W5490111",
+    "status": "complete",
+    "tool": "return_delivered_order_items"
+   },
+   {
+    "call": 6,
+    "entity": "orders/#W7387996",
+    "status": "complete",
+    "tool": "return_delivered_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": false,
+   "recorded": false
+  },
+  "e3": {
+   "enforced": {
+    "orders/#W5490111": [
+     "return_items",
+     "return_payment_method_id",
+     "status"
+    ],
+    "orders/#W7387996": [
+     "return_items",
+     "return_payment_method_id",
+     "status"
+    ]
+   },
+   "recorded": {
+    "orders/#W5490111": [
+     "return_items",
+     "return_payment_method_id",
+     "status"
+    ],
+    "orders/#W7387996": [
+     "return_items",
+     "return_payment_method_id",
+     "status"
+    ]
+   }
+  },
+  "e4": [
+   {
+    "call": 4,
+    "customer_turn": 13,
+    "missing": "no affirmative customer turn after the last proposal",
+    "proposal_turn": 12,
+    "result": "not established"
+   },
+   {
+    "call": 5,
+    "customer_turn": 13,
+    "missing": "no affirmative customer turn after the last proposal",
+    "proposal_turn": 12,
+    "result": "not established"
+   },
+   {
+    "call": 6,
+    "customer_turn": 13,
+    "missing": "no affirmative customer turn after the last proposal",
+    "proposal_turn": 12,
+    "result": "not established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 4,
+    "executed": 1023.16,
+    "result": "mismatch",
+    "stated": [
+     54.85,
+     158.89,
+     218.04,
+     268.77,
+     481.5
+    ]
+   },
+   {
+    "call": 5,
+    "executed": 1023.16,
+    "result": "mismatch",
+    "stated": [
+     54.85,
+     158.89,
+     218.04,
+     268.77,
+     481.5
+    ]
+   },
+   {
+    "call": 6,
+    "executed": 158.89,
+    "result": "match"
+   }
+  ],
+  "e6": [
+   {
+    "call": 4,
+    "result": "match"
+   },
+   {
+    "call": 5,
+    "result": "match"
+   },
+   {
+    "call": 6,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [],
+   "recorded": []
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 5
+  },
+  "e9": [
+   {
+    "call": 7,
+    "exact_sentence": true
+   }
+  ],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 4,
+    "call_id": "toolu_01QBp6ooSgsJ1qEPnzng6GvH",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "call refunds to paypal_9497703; recorded original method credit_card_3124723; customer gift card: False",
+      "grounded": true,
+      "policy_line": "124",
+      "quote": "must either go to the original payment method, or an existing gift card",
+      "rule": "retail.return.refund-destination",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.return.refund-destination"
+    ],
+    "tool": "return_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.return.refund-destination"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "claude-3-7-sonnet-20250219",
+  "plant": null,
+  "published": {
+   "db_match": false,
+   "reward": 0.0
+  },
+  "run_id": "published/claude-3-7-sonnet-20250219/10_1",
+  "set": "published",
+  "sim_id": "e66d3d42-b29d-49c1-b915-181404716396",
+  "task_id": "10",
+  "trial": 1
+ },
+ "summary": {
+  "accepted_enforced": false,
+  "accepted_recorded": false,
+  "enforced_db_hash": "05695f333e6ae8961f827b95bd6aeec5b1d417c315d83c627799632dff79792b",
+  "findings_sha256": "7e738c0ba1c0e6e8384cf2910002538e92700c01f01737214c1c40155e6525fa",
+  "gate_head": "sha256:494459e2fce645e51488cf8a86f5cf44e808550a3ebc9b0758c06b67083217f8",
+  "gate_receipts": 15,
+  "gold_db_hash": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+  "harness_readbacks": 2,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "05695f333e6ae8961f827b95bd6aeec5b1d417c315d83c627799632dff79792b",
+  "run_id": "published/claude-3-7-sonnet-20250219/10_1"
+ }
+}

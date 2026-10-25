@@ -1,0 +1,7 @@
+Run        controls/o4-mini-2025-04-16/47_0_approval (task 47 trial 0, o4-mini-2025-04-16, sim 7c841bf2)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      7 attempted, 7 authorized, 0 refused
+Write      call 5 return_delivered_order_items orders/#W9502127: observed complete: complete
+Accepted   yes under enforcement (final database equals the answer key)
+Not established  confirmation before call 5: the proposal does not name the call's order or user
+Evidence   14 gate receipts, 2 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

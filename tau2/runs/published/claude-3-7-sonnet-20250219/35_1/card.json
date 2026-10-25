@@ -1,0 +1,158 @@
+{
+ "answer_key": {
+  "gold_db_hash": "4f518424174e5718c1a44cc20b1015bde5ed9da4f0fc58eb2eb6bdbbe7713c78",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 8,
+    "entity": "orders/#W9672333",
+    "status": "complete",
+    "tool": "modify_pending_order_items"
+   },
+   {
+    "call": 9,
+    "entity": "orders/#W8528674",
+    "status": "complete",
+    "tool": "return_delivered_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 8,
+    "customer_turn": 27,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 26,
+    "result": "not established"
+   },
+   {
+    "call": 9,
+    "customer_turn": 27,
+    "proposal_turn": 26,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 8,
+    "executed": 113.71,
+    "result": "mismatch",
+    "stated": [
+     305.45,
+     2621.77
+    ]
+   },
+   {
+    "call": 9,
+    "executed": 305.45,
+    "result": "match"
+   }
+  ],
+  "e6": [
+   {
+    "call": 8,
+    "result": "match"
+   },
+   {
+    "call": 9,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "return requested",
+     "status": "observed",
+     "turn": 32,
+     "type": "return"
+    },
+    {
+     "match": "refund of $305.45 will be processed",
+     "status": "observed",
+     "turn": 32,
+     "type": "refund"
+    },
+    {
+     "match": "refund of $305.45 will be processed",
+     "status": "observed",
+     "turn": 34,
+     "type": "refund"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "return requested",
+     "status": "observed",
+     "turn": 32,
+     "type": "return"
+    },
+    {
+     "match": "refund of $305.45 will be processed",
+     "status": "observed",
+     "turn": 32,
+     "type": "refund"
+    },
+    {
+     "match": "refund of $305.45 will be processed",
+     "status": "observed",
+     "turn": 34,
+     "type": "refund"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 6
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": []
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "claude-3-7-sonnet-20250219",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/claude-3-7-sonnet-20250219/35_1",
+  "set": "published",
+  "sim_id": "0a9adf90-af66-4db0-b0a9-985a39c5ace6",
+  "task_id": "35",
+  "trial": 1
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "4f518424174e5718c1a44cc20b1015bde5ed9da4f0fc58eb2eb6bdbbe7713c78",
+  "findings_sha256": "2692bef70016e6b2af3f7ddcf83fdfa9d0243b8573b3c48f66ea67453f62d319",
+  "gate_head": "sha256:e8ab1ae3cd49ea3f37c9182a940e1bd3c4c4527d96abaaa5ab3199dcf908b537",
+  "gate_receipts": 20,
+  "gold_db_hash": "4f518424174e5718c1a44cc20b1015bde5ed9da4f0fc58eb2eb6bdbbe7713c78",
+  "harness_readbacks": 2,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "4f518424174e5718c1a44cc20b1015bde5ed9da4f0fc58eb2eb6bdbbe7713c78",
+  "run_id": "published/claude-3-7-sonnet-20250219/35_1"
+ }
+}

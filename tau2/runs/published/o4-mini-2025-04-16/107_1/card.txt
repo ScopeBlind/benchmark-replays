@@ -1,0 +1,9 @@
+Run        published/o4-mini-2025-04-16/107_1 (task 107 trial 1, o4-mini-2025-04-16, sim 56902bf6)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      10 attempted, 9 authorized, 1 refused
+Refused    call 9 exchange_delivered_order_items: retail.items.different-option
+Write      call 8 exchange_delivered_order_items orders/#W8353027: observed complete: complete
+Accepted   NO under enforcement (final database differs from the answer key)
+           differs at orders/#W1304208 ['exchange_items', 'exchange_new_items', 'exchange_payment_method_id', 'exchange_price_difference', 'status']; orders/#W8353027 ['exchange_new_items', 'exchange_price_difference']
+Claim      "exchange requested": executed, not the expected state
+Evidence   19 gate receipts, 2 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

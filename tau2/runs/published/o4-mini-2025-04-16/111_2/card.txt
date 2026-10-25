@@ -1,0 +1,8 @@
+Run        published/o4-mini-2025-04-16/111_2 (task 111 trial 2, o4-mini-2025-04-16, sim 9282504e)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      11 attempted, 11 authorized, 0 refused
+Write      call 8 modify_pending_order_address orders/#W3730488: observed complete: complete
+Write      call 9 modify_pending_order_items orders/#W3730488: observed complete: complete
+Write      call 10 modify_pending_order_items orders/#W9810810: observed complete: complete
+Accepted   yes under enforcement (final database equals the answer key)
+Evidence   22 gate receipts, 4 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

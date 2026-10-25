@@ -1,0 +1,11 @@
+Run        published/gpt-4.1-mini-2025-04-14/78_2 (task 78 trial 2, gpt-4.1-mini-2025-04-14, sim b1137cf4)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      9 attempted, 8 authorized, 1 refused
+Refused    call 6 exchange_delivered_order_items: retail.return-exchange.delivered-only
+Write      call 3 modify_pending_order_address orders/#W5056519: observed complete: complete
+Write      call 8 cancel_pending_order orders/#W5995614: observed complete: complete
+Accepted   NO under enforcement (final database differs from the answer key)
+           differs at orders/#W5056519 ['items', 'payment_history', 'status']
+Claim      "has been successfully cancelled": observed
+Claim      "refund of $1074.31 will be processed": observed
+Evidence   17 gate receipts, 3 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

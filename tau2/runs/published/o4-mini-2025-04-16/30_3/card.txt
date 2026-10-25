@@ -1,0 +1,10 @@
+Run        published/o4-mini-2025-04-16/30_3 (task 30 trial 3, o4-mini-2025-04-16, sim 5e84e6c7)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      12 attempted, 11 authorized, 1 refused
+Refused    call 7 exchange_delivered_order_items: retail.items.different-option
+Write      call 9 return_delivered_order_items orders/#W2692684: observed complete: complete
+Write      call 10 cancel_pending_order orders/#W9373487: observed complete: complete
+Write      call 11 return_delivered_order_items orders/#W7449508: observed complete: complete
+Accepted   yes under enforcement (final database equals the answer key)
+Claim      "return requested": observed
+Evidence   23 gate receipts, 5 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

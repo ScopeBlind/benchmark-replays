@@ -1,0 +1,8 @@
+Run        published/gpt-4.1-2025-04-14/18_2 (task 18 trial 2, gpt-4.1-2025-04-14, sim 2fa214b6)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      5 attempted, 4 authorized, 1 refused
+Refused    call 4 exchange_delivered_order_items: retail.items.different-option
+Accepted   NO under enforcement (final database differs from the answer key)
+           differs at orders/#W2890441 ['exchange_items', 'exchange_new_items', 'exchange_payment_method_id', 'exchange_price_difference', 'status']
+Not established  confirmation before call 4: the proposal does not name the call's order or user
+Evidence   9 gate receipts, 1 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

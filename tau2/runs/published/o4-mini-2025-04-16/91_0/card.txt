@@ -1,0 +1,12 @@
+Run        published/o4-mini-2025-04-16/91_0 (task 91 trial 0, o4-mini-2025-04-16, sim 6a0296fa)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      9 attempted, 8 authorized, 1 refused
+Refused    call 8 exchange_delivered_order_items: retail.items.different-option
+Write      call 7 return_delivered_order_items orders/#W7553978: observed complete: complete
+Accepted   NO under enforcement (final database differs from the answer key)
+           differs at orders/#W3239882 ['exchange_items', 'exchange_new_items', 'exchange_payment_method_id', 'exchange_price_difference', 'status']
+Mismatch   amount at call 7: stated [186.06, 202.13, 315.61, 323.19, 339.85], executed 728.04
+Mismatch   amount at call 8: stated [186.06, 202.13, 315.61, 323.19, 339.85], executed 0.0
+Claim      "Return requested": observed
+Claim      "Exchange requested": refused
+Evidence   17 gate receipts, 2 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

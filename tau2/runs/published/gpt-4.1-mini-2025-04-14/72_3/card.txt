@@ -1,0 +1,11 @@
+Run        published/gpt-4.1-mini-2025-04-14/72_3 (task 72 trial 3, gpt-4.1-mini-2025-04-14, sim 464d45d6)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      10 attempted, 9 authorized, 1 refused
+Refused    call 9 modify_pending_order_address: retail.modify.pending-only
+Write      call 8 modify_pending_order_items orders/#W5270061: observed complete: complete
+Accepted   NO under enforcement (final database differs from the answer key)
+           differs at orders/#W5270061 ['address']
+           as recorded: yes (the refused calls ran in the recording)
+Not established  confirmation before call 8: the proposal does not name the call's order or user
+Not established  confirmation before call 9: the proposal does not name the call's order or user
+Evidence   19 gate receipts, 2 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

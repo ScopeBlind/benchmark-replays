@@ -1,0 +1,190 @@
+{
+ "answer_key": {
+  "gold_db_hash": "f45606e4dad4fb4eaf74fd1b1538c3f350781d0e2ca3bc956ade0c3fa359912f",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 4,
+    "entity": "users/sophia_martin_8570",
+    "status": "complete",
+    "tool": "modify_user_address"
+   },
+   {
+    "call": 5,
+    "entity": "orders/#W1092119",
+    "status": "complete",
+    "tool": "modify_pending_order_address"
+   },
+   {
+    "call": 8,
+    "entity": "orders/#W1603792",
+    "status": "complete",
+    "tool": "modify_pending_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 4,
+    "customer_turn": 14,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 13,
+    "result": "not established"
+   },
+   {
+    "call": 5,
+    "customer_turn": 14,
+    "proposal_turn": 13,
+    "result": "established"
+   },
+   {
+    "call": 7,
+    "customer_turn": 21,
+    "proposal_turn": 20,
+    "result": "established"
+   },
+   {
+    "call": 8,
+    "customer_turn": 27,
+    "proposal_turn": 26,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 4,
+    "result": "not computable"
+   },
+   {
+    "call": 5,
+    "result": "not computable"
+   },
+   {
+    "call": 7,
+    "executed": 114.73,
+    "result": "match"
+   },
+   {
+    "call": 8,
+    "executed": 114.73,
+    "result": "match"
+   }
+  ],
+  "e6": [
+   {
+    "call": 4,
+    "result": "n/a"
+   },
+   {
+    "call": 5,
+    "result": "n/a"
+   },
+   {
+    "call": 7,
+    "result": "match"
+   },
+   {
+    "call": 8,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "refund of $114.73 will be issued",
+     "status": "observed",
+     "turn": 30,
+     "type": "refund"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "refund of $114.73 will be issued",
+     "status": "observed",
+     "turn": 30,
+     "type": "refund"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 2,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 7,
+    "call_id": "call_DPzmkfm0NZqPYJq0VHJ9RUJX",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "latest recorded observation of #W1603792 shows status 'pending', the call needs 'delivered'",
+      "grounded": true,
+      "policy_line": "118, 130",
+      "quote": "An order can only be returned if its status is 'delivered'",
+      "rule": "retail.return-exchange.delivered-only",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.return-exchange.delivered-only"
+    ],
+    "tool": "exchange_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.return-exchange.delivered-only"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/gpt-4.1-2025-04-14/110_2",
+  "set": "published",
+  "sim_id": "f5885092-55de-4b23-8caa-7bb69944d8d0",
+  "task_id": "110",
+  "trial": 2
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "f45606e4dad4fb4eaf74fd1b1538c3f350781d0e2ca3bc956ade0c3fa359912f",
+  "findings_sha256": "5bc2193121f61c1b06238f64736555f24b5ee67baea9c43252f67260b472b6f3",
+  "gate_head": "sha256:b860f8645afc4a5bd29213260d3126a6a48cafe3f787bc84a1f4163b729d05f6",
+  "gate_receipts": 17,
+  "gold_db_hash": "f45606e4dad4fb4eaf74fd1b1538c3f350781d0e2ca3bc956ade0c3fa359912f",
+  "harness_readbacks": 3,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "f45606e4dad4fb4eaf74fd1b1538c3f350781d0e2ca3bc956ade0c3fa359912f",
+  "run_id": "published/gpt-4.1-2025-04-14/110_2"
+ }
+}

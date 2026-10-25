@@ -1,0 +1,5 @@
+Run        published/gpt-4.1-2025-04-14/50_2 (task 50 trial 2, gpt-4.1-2025-04-14, sim 71665eec)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      1 attempted, 1 authorized, 0 refused
+Accepted   yes under enforcement (final database equals the answer key)
+Evidence   2 gate receipts, 1 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

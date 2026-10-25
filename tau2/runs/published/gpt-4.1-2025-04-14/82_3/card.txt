@@ -1,0 +1,9 @@
+Run        published/gpt-4.1-2025-04-14/82_3 (task 82 trial 3, gpt-4.1-2025-04-14, sim b1686bf5)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      10 attempted, 9 authorized, 1 refused
+Refused    call 7 return_delivered_order_items: retail.return.refund-destination
+Write      call 8 return_delivered_order_items orders/#W3069600: observed complete: complete
+Write      call 9 return_delivered_order_items orders/#W9571698: observed complete: complete
+Accepted   NO under enforcement (final database differs from the answer key)
+           differs at orders/#W3069600 ['return_items', 'return_payment_method_id', 'status']; orders/#W9571698 ['return_items']
+Evidence   19 gate receipts, 3 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

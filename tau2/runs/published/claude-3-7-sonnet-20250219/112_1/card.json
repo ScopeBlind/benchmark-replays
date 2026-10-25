@@ -1,0 +1,173 @@
+{
+ "answer_key": {
+  "gold_db_hash": "6eb2be1662a3ddae310baf9b4a6ce65a3ef63b6f6885285463c7bcaed978dfdc",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 8,
+    "entity": "orders/#W3730488",
+    "status": "complete",
+    "tool": "modify_pending_order_items"
+   },
+   {
+    "call": 11,
+    "entity": "orders/#W9810810",
+    "status": "complete",
+    "tool": "modify_pending_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": false,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {
+    "orders/#W3730488": [
+     "address"
+    ]
+   },
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 8,
+    "customer_turn": 29,
+    "proposal_turn": 28,
+    "result": "established"
+   },
+   {
+    "call": 9,
+    "customer_turn": 29,
+    "proposal_turn": 28,
+    "result": "established"
+   },
+   {
+    "call": 11,
+    "customer_turn": 39,
+    "proposal_turn": 38,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 8,
+    "executed": 242.15,
+    "result": "match"
+   },
+   {
+    "call": 9,
+    "result": "not computable"
+   },
+   {
+    "call": 11,
+    "executed": 77.15,
+    "result": "match"
+   }
+  ],
+  "e6": [
+   {
+    "call": 8,
+    "result": "match"
+   },
+   {
+    "call": 9,
+    "result": "n/a"
+   },
+   {
+    "call": 11,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "refund of $77.15 has been processed",
+     "status": "observed",
+     "turn": 42,
+     "type": "refund"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "refund of $77.15 has been processed",
+     "status": "observed",
+     "turn": 42,
+     "type": "refund"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 9
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 9,
+    "call_id": "toolu_01J1XT4p1ud6xAYvjLdCGMt4",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "latest recorded observation of #W3730488 shows status 'pending (item modified)', the call needs 'pending'",
+      "grounded": true,
+      "policy_line": "96, 110",
+      "quote": "The agent will not be able to modify or cancel the order anymore",
+      "rule": "retail.modify.pending-only",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.modify.pending-only"
+    ],
+    "tool": "modify_pending_order_address",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.modify.pending-only"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "claude-3-7-sonnet-20250219",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/claude-3-7-sonnet-20250219/112_1",
+  "set": "published",
+  "sim_id": "9991156b-aea1-491c-b677-aa67e832d0d6",
+  "task_id": "112",
+  "trial": 1
+ },
+ "summary": {
+  "accepted_enforced": false,
+  "accepted_recorded": true,
+  "enforced_db_hash": "7d6789ce578ddd77ba09aaad7fb574e4d36e7f423285d7af53d142cda7d7e7c4",
+  "findings_sha256": "9fbb2020a769827d8704171d9a7921fba43740477dd021135e26b2a475a7daa9",
+  "gate_head": "sha256:6b316fa26529b63b222bc7d101034e791af1003edc16bcc5639e791377f43559",
+  "gate_receipts": 23,
+  "gold_db_hash": "6eb2be1662a3ddae310baf9b4a6ce65a3ef63b6f6885285463c7bcaed978dfdc",
+  "harness_readbacks": 3,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "6eb2be1662a3ddae310baf9b4a6ce65a3ef63b6f6885285463c7bcaed978dfdc",
+  "run_id": "published/claude-3-7-sonnet-20250219/112_1"
+ }
+}

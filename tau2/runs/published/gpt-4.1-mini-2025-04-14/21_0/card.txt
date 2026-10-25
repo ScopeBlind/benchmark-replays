@@ -1,0 +1,8 @@
+Run        published/gpt-4.1-mini-2025-04-14/21_0 (task 21 trial 0, gpt-4.1-mini-2025-04-14, sim 2a70a937)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      12 attempted, 10 authorized, 2 refused
+Refused    call 9 exchange_delivered_order_items: retail.return-exchange.delivered-only, retail.items.in-order
+Refused    call 10 modify_pending_order_items: retail.items.in-order
+Write      call 11 modify_pending_order_items orders/#W9911714: observed complete: complete
+Accepted   yes under enforcement (final database equals the answer key)
+Evidence   22 gate receipts, 3 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

@@ -1,0 +1,4 @@
+{"set": "controls", "tag": "pass2", "worker": 0, "runs": 35, "seconds": 6.8}
+{"set": "planted", "tag": "pass2", "worker": 0, "runs": 44, "seconds": 8.7}
+{"set": "published", "tag": "pass2", "worker": 0, "runs": 184, "seconds": 39.1}
+exit=0

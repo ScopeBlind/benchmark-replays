@@ -1,0 +1,8 @@
+Run        published/gpt-4.1-mini-2025-04-14/66_1 (task 66 trial 1, gpt-4.1-mini-2025-04-14, sim df831418)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      11 attempted, 9 authorized, 2 refused
+Refused    call 7 modify_pending_order_items: retail.items.available-same-product
+Refused    call 9 modify_pending_order_items: retail.items.available-same-product
+Accepted   NO under enforcement (final database differs from the answer key)
+           differs at orders/#W3361211 ['cancel_reason', 'payment_history', 'status']
+Evidence   20 gate receipts, 1 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

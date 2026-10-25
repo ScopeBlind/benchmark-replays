@@ -1,0 +1,176 @@
+{
+ "answer_key": {
+  "gold_db_hash": "8111ebca39106dc47090d13df4491130add9e194d7d71697cf909a9a0be50040",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 7,
+    "entity": "orders/#W8353027",
+    "status": "complete",
+    "tool": "exchange_delivered_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": false,
+   "recorded": false
+  },
+  "e3": {
+   "enforced": {
+    "orders/#W1304208": [
+     "exchange_items",
+     "exchange_new_items",
+     "exchange_payment_method_id",
+     "exchange_price_difference",
+     "status"
+    ],
+    "orders/#W8353027": [
+     "exchange_new_items",
+     "exchange_price_difference"
+    ]
+   },
+   "recorded": {
+    "orders/#W1304208": [
+     "exchange_new_items",
+     "exchange_price_difference"
+    ],
+    "orders/#W8353027": [
+     "exchange_new_items",
+     "exchange_price_difference"
+    ]
+   }
+  },
+  "e4": [
+   {
+    "call": 6,
+    "customer_turn": 19,
+    "proposal_turn": 18,
+    "result": "established"
+   },
+   {
+    "call": 7,
+    "customer_turn": 19,
+    "proposal_turn": 18,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 6,
+    "executed": 0.0,
+    "result": "mismatch",
+    "stated": [
+     6.01,
+     46.0,
+     52.01,
+     253.89
+    ]
+   },
+   {
+    "call": 7,
+    "executed": 6.01,
+    "result": "match"
+   }
+  ],
+  "e6": [
+   {
+    "call": 6,
+    "result": "match"
+   },
+   {
+    "call": 7,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "exchange requested",
+     "status": "executed, not the expected state",
+     "turn": 24,
+     "type": "exchange"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "exchange requested",
+     "status": "executed, not the expected state",
+     "turn": 24,
+     "type": "exchange"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 6
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 6,
+    "call_id": "toolu_01Vkw9jA16oB6eSRycnTMGC7",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "new item ids equal to the replaced ones: ['1615379700']; present in the recorded order: True",
+      "grounded": true,
+      "policy_line": "112, 132",
+      "quote": "available new item of the same product but of different product option",
+      "rule": "retail.items.different-option",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.items.different-option"
+    ],
+    "tool": "exchange_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.items.different-option"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "claude-3-7-sonnet-20250219",
+  "plant": null,
+  "published": {
+   "db_match": false,
+   "reward": 0.0
+  },
+  "run_id": "published/claude-3-7-sonnet-20250219/107_3",
+  "set": "published",
+  "sim_id": "976dd1f9-51bb-46c2-ad79-2835a2bdbcf9",
+  "task_id": "107",
+  "trial": 3
+ },
+ "summary": {
+  "accepted_enforced": false,
+  "accepted_recorded": false,
+  "enforced_db_hash": "9a53c31ada8f4e8b5855b39a7eb6967b5d7c169560dadb5fef0dac7687a6a027",
+  "findings_sha256": "c11ec9b02086fcf660526a9e2890f4cd8bcb81145209c529b10284655c71dcab",
+  "gate_head": "sha256:1d8049951c06dc1b73c85cfedbc4356c5bfc981a3a6dbedea0fd30f9573aa08d",
+  "gate_receipts": 15,
+  "gold_db_hash": "8111ebca39106dc47090d13df4491130add9e194d7d71697cf909a9a0be50040",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "95bb8b33deb70815b55084dbb7868d49aba84d2294ebb46265eb335824f34115",
+  "run_id": "published/claude-3-7-sonnet-20250219/107_3"
+ }
+}

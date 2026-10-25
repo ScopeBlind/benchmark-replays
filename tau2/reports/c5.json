@@ -1,0 +1,21 @@
+{
+ "compared": 263,
+ "identical": 263,
+ "different": [],
+ "by_set": {
+  "control": {
+   "compared": 35,
+   "identical": 35
+  },
+  "planted": {
+   "compared": 44,
+   "identical": 44
+  },
+  "published": {
+   "compared": 184,
+   "identical": 184
+  }
+ },
+ "missing_in_pass2": 0,
+ "pass": true
+}

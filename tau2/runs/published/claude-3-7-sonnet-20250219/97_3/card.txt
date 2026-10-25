@@ -1,0 +1,11 @@
+Run        published/claude-3-7-sonnet-20250219/97_3 (task 97 trial 3, claude-3-7-sonnet-20250219, sim 82623e08)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      7 attempted, 6 authorized, 1 refused
+Refused    call 6 modify_pending_order_address: retail.modify.pending-only
+Write      call 5 modify_pending_order_items orders/#W6750959: observed complete: complete
+Accepted   NO under enforcement (final database differs from the answer key)
+           differs at orders/#W6750959 ['address']
+           as recorded: yes (the refused calls ran in the recording)
+Mismatch   amount at call 5: stated [298.91, 302.67], executed 3.76
+Claim      "refund of $3.76 has been processed": executed, not the expected state
+Evidence   13 gate receipts, 2 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

@@ -1,0 +1,231 @@
+{
+ "runs": {
+  "controls": {
+   "runs": 35,
+   "problem_runs": 0,
+   "calls": 233,
+   "reexec_own_ok": 233,
+   "reexec_pinned_flips": 0,
+   "examples": []
+  },
+  "planted": {
+   "runs": 44,
+   "problem_runs": 0,
+   "calls": 286,
+   "reexec_own_ok": 286,
+   "reexec_pinned_flips": 4,
+   "examples": []
+  },
+  "published": {
+   "runs": 1824,
+   "problem_runs": 0,
+   "calls": 13870,
+   "reexec_own_ok": 13870,
+   "reexec_pinned_flips": 0,
+   "examples": []
+  }
+ },
+ "verify": {
+  "controls": {
+   "gate_exit0": 35,
+   "harness_exit0": 35,
+   "runs": 35,
+   "other": []
+  },
+  "planted": {
+   "gate_exit0": 44,
+   "harness_exit0": 44,
+   "runs": 44,
+   "other": []
+  },
+  "published": {
+   "claude-3-7-sonnet-20250219/gate": {
+    "model": "claude-3-7-sonnet-20250219",
+    "chain": "gate",
+    "exit": 0,
+    "runs": 456,
+    "total": 7125,
+    "verified": 7125,
+    "failed": 0,
+    "undecidable": 0,
+    "chainBreaks": 0,
+    "chains": 456,
+    "invalid_lines": 0
+   },
+   "claude-3-7-sonnet-20250219/harness": {
+    "model": "claude-3-7-sonnet-20250219",
+    "chain": "harness",
+    "exit": 0,
+    "runs": 456,
+    "total": 1151,
+    "verified": 1151,
+    "failed": 0,
+    "undecidable": 0,
+    "chainBreaks": 0,
+    "chains": 456,
+    "invalid_lines": 0
+   },
+   "gpt-4.1-2025-04-14/gate": {
+    "model": "gpt-4.1-2025-04-14",
+    "chain": "gate",
+    "exit": 0,
+    "runs": 456,
+    "total": 6937,
+    "verified": 6937,
+    "failed": 0,
+    "undecidable": 0,
+    "chainBreaks": 0,
+    "chains": 454,
+    "invalid_lines": 0
+   },
+   "gpt-4.1-2025-04-14/harness": {
+    "model": "gpt-4.1-2025-04-14",
+    "chain": "harness",
+    "exit": 0,
+    "runs": 456,
+    "total": 1118,
+    "verified": 1118,
+    "failed": 0,
+    "undecidable": 0,
+    "chainBreaks": 0,
+    "chains": 456,
+    "invalid_lines": 0
+   },
+   "gpt-4.1-mini-2025-04-14/gate": {
+    "model": "gpt-4.1-mini-2025-04-14",
+    "chain": "gate",
+    "exit": 0,
+    "runs": 456,
+    "total": 7149,
+    "verified": 7149,
+    "failed": 0,
+    "undecidable": 0,
+    "chainBreaks": 0,
+    "chains": 456,
+    "invalid_lines": 0
+   },
+   "gpt-4.1-mini-2025-04-14/harness": {
+    "model": "gpt-4.1-mini-2025-04-14",
+    "chain": "harness",
+    "exit": 0,
+    "runs": 456,
+    "total": 1085,
+    "verified": 1085,
+    "failed": 0,
+    "undecidable": 0,
+    "chainBreaks": 0,
+    "chains": 456,
+    "invalid_lines": 0
+   },
+   "o4-mini-2025-04-16/gate": {
+    "model": "o4-mini-2025-04-16",
+    "chain": "gate",
+    "exit": 0,
+    "runs": 456,
+    "total": 6215,
+    "verified": 6215,
+    "failed": 0,
+    "undecidable": 0,
+    "chainBreaks": 0,
+    "chains": 456,
+    "invalid_lines": 0
+   },
+   "o4-mini-2025-04-16/harness": {
+    "model": "o4-mini-2025-04-16",
+    "chain": "harness",
+    "exit": 0,
+    "runs": 456,
+    "total": 1083,
+    "verified": 1083,
+    "failed": 0,
+    "undecidable": 0,
+    "chainBreaks": 0,
+    "chains": 456,
+    "invalid_lines": 0
+   }
+  },
+  "published_note": "first pass read the verifier output through a pipe, which Node truncates at exit for large outputs; exit codes were 0; counts re-taken with file output"
+ },
+ "cli": {
+  "runs": 36,
+  "decisions": 284,
+  "sign_match": 284,
+  "evaluate_match": 284,
+  "mismatches": []
+ },
+ "tamper": [
+  {
+   "run": "controls/claude-3-7-sonnet-20250219/14_0",
+   "flipped": {
+    "exit": 1,
+    "outcome": "invalid",
+    "invalid_signature": true
+   },
+   "deleted": {
+    "exit": 1,
+    "outcome": "invalid",
+    "chain_break": true
+   },
+   "wrong_key": {
+    "exit": 1,
+    "outcome": "invalid",
+    "key_mismatch": true
+   }
+  },
+  {
+   "run": "controls/gpt-4.1-2025-04-14/14_0",
+   "flipped": {
+    "exit": 1,
+    "outcome": "invalid",
+    "invalid_signature": true
+   },
+   "deleted": {
+    "exit": 1,
+    "outcome": "invalid",
+    "chain_break": true
+   },
+   "wrong_key": {
+    "exit": 1,
+    "outcome": "invalid",
+    "key_mismatch": true
+   }
+  },
+  {
+   "run": "controls/gpt-4.1-mini-2025-04-14/44_0",
+   "flipped": {
+    "exit": 1,
+    "outcome": "invalid",
+    "invalid_signature": true
+   },
+   "deleted": {
+    "exit": 1,
+    "outcome": "invalid",
+    "chain_break": true
+   },
+   "wrong_key": {
+    "exit": 1,
+    "outcome": "invalid",
+    "key_mismatch": true
+   }
+  },
+  {
+   "run": "controls/o4-mini-2025-04-16/14_0",
+   "flipped": {
+    "exit": 1,
+    "outcome": "invalid",
+    "invalid_signature": true
+   },
+   "deleted": {
+    "exit": 1,
+    "outcome": "invalid",
+    "chain_break": true
+   },
+   "wrong_key": {
+    "exit": 1,
+    "outcome": "invalid",
+    "key_mismatch": true
+   }
+  }
+ ],
+ "pass": true
+}

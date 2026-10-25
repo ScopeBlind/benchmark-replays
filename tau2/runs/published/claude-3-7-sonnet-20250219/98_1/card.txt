@@ -1,0 +1,13 @@
+Run        published/claude-3-7-sonnet-20250219/98_1 (task 98 trial 1, claude-3-7-sonnet-20250219, sim e67c6595)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      21 attempted, 20 authorized, 1 refused
+Refused    call 14 exchange_delivered_order_items: retail.return-exchange.delivered-only, retail.items.once-per-order
+Write      call 12 exchange_delivered_order_items orders/#W3916020: observed complete: complete
+Write      call 16 exchange_delivered_order_items orders/#W5416052: observed complete: complete
+Write      call 18 exchange_delivered_order_items orders/#W4689314: observed complete: complete
+Write      call 20 cancel_pending_order orders/#W8855135: observed complete: complete
+Accepted   NO under enforcement (final database differs from the answer key)
+           differs at orders/#W3916020 ['exchange_items', 'exchange_new_items', 'exchange_payment_method_id', 'exchange_price_difference']; orders/#W4689314 ['exchange_payment_method_id']; orders/#W5416052 ['exchange_items', 'exchange_new_items', 'exchange_payment_method_id', 'exchange_price_difference', 'status']
+Claim      "has been successfully canceled": observed
+Claim      "refund of $1,058.79 will be issued": observed
+Evidence   41 gate receipts, 5 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

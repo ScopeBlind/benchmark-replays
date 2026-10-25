@@ -1,0 +1,275 @@
+{
+ "answer_key": {
+  "gold_db_hash": "a38fddcc78ebe2ba2a41b1cffaff27fd678aa60e52c505a0cd0a43e3963ea641",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 12,
+    "entity": "orders/#W3916020",
+    "status": "complete",
+    "tool": "exchange_delivered_order_items"
+   },
+   {
+    "call": 16,
+    "entity": "orders/#W5416052",
+    "status": "complete",
+    "tool": "exchange_delivered_order_items"
+   },
+   {
+    "call": 18,
+    "entity": "orders/#W4689314",
+    "status": "complete",
+    "tool": "exchange_delivered_order_items"
+   },
+   {
+    "call": 20,
+    "entity": "orders/#W8855135",
+    "status": "complete",
+    "tool": "cancel_pending_order"
+   }
+  ],
+  "e10": [
+   {
+    "call": 20,
+    "declared": "no longer needed",
+    "phrase": "no longer needed",
+    "result": "established"
+   }
+  ],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": false,
+   "recorded": false
+  },
+  "e3": {
+   "enforced": {
+    "orders/#W3916020": [
+     "exchange_items",
+     "exchange_new_items",
+     "exchange_payment_method_id",
+     "exchange_price_difference"
+    ],
+    "orders/#W4689314": [
+     "exchange_payment_method_id"
+    ],
+    "orders/#W5416052": [
+     "exchange_items",
+     "exchange_new_items",
+     "exchange_payment_method_id",
+     "exchange_price_difference",
+     "status"
+    ]
+   },
+   "recorded": {
+    "orders/#W3916020": [
+     "exchange_items",
+     "exchange_new_items",
+     "exchange_payment_method_id",
+     "exchange_price_difference"
+    ],
+    "orders/#W4689314": [
+     "exchange_payment_method_id"
+    ],
+    "orders/#W5416052": [
+     "exchange_items",
+     "exchange_new_items",
+     "exchange_payment_method_id",
+     "exchange_price_difference",
+     "status"
+    ]
+   }
+  },
+  "e4": [
+   {
+    "call": 12,
+    "customer_turn": 35,
+    "proposal_turn": 34,
+    "result": "established"
+   },
+   {
+    "call": 14,
+    "customer_turn": 43,
+    "proposal_turn": 42,
+    "result": "established"
+   },
+   {
+    "call": 16,
+    "customer_turn": 49,
+    "proposal_turn": 48,
+    "result": "established"
+   },
+   {
+    "call": 18,
+    "customer_turn": 57,
+    "proposal_turn": 56,
+    "result": "established"
+   },
+   {
+    "call": 20,
+    "customer_turn": 65,
+    "proposal_turn": 64,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 12,
+    "executed": 14.54,
+    "result": "match"
+   },
+   {
+    "call": 14,
+    "executed": 6.01,
+    "result": "match"
+   },
+   {
+    "call": 16,
+    "executed": 6.01,
+    "result": "match"
+   },
+   {
+    "call": 18,
+    "executed": 71.59,
+    "result": "match"
+   },
+   {
+    "call": 20,
+    "executed": 1058.79,
+    "result": "match"
+   }
+  ],
+  "e6": [
+   {
+    "call": 12,
+    "result": "match"
+   },
+   {
+    "call": 14,
+    "result": "match"
+   },
+   {
+    "call": 16,
+    "result": "match"
+   },
+   {
+    "call": 18,
+    "result": "match"
+   },
+   {
+    "call": 20,
+    "result": "n/a"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "has been successfully canceled",
+     "status": "observed",
+     "turn": 68,
+     "type": "cancel"
+    },
+    {
+     "match": "refund of $1,058.79 will be issued",
+     "status": "observed",
+     "turn": 68,
+     "type": "refund"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "has been successfully canceled",
+     "status": "observed",
+     "turn": 68,
+     "type": "cancel"
+    },
+    {
+     "match": "refund of $1,058.79 will be issued",
+     "status": "observed",
+     "turn": 68,
+     "type": "refund"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 10
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 14,
+    "call_id": "toolu_018DMQj1C9h2CYag2MNo8pPj",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "latest recorded observation of #W3916020 shows status 'exchange requested', the call needs 'delivered'",
+      "grounded": true,
+      "policy_line": "118, 130",
+      "quote": "An order can only be returned if its status is 'delivered'",
+      "rule": "retail.return-exchange.delivered-only",
+      "test": "G2"
+     },
+     {
+      "evidence": "1 recorded successful item change(s) on #W3916020 before this call",
+      "grounded": true,
+      "policy_line": "84",
+      "quote": "Exchange or modify order tools can only be called once per order",
+      "rule": "retail.items.once-per-order",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.return-exchange.delivered-only",
+     "retail.items.once-per-order"
+    ],
+    "tool": "exchange_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.return-exchange.delivered-only",
+      "retail.items.once-per-order"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "claude-3-7-sonnet-20250219",
+  "plant": null,
+  "published": {
+   "db_match": false,
+   "reward": 0.0
+  },
+  "run_id": "published/claude-3-7-sonnet-20250219/98_1",
+  "set": "published",
+  "sim_id": "e67c6595-67b5-498d-9c93-f0438e6a8463",
+  "task_id": "98",
+  "trial": 1
+ },
+ "summary": {
+  "accepted_enforced": false,
+  "accepted_recorded": false,
+  "enforced_db_hash": "d7355f8262db225283091b94f3c23f6618756161e1c7ed3217cb4003aadd56b8",
+  "findings_sha256": "3efc94526851a004d42e0203919ee61daa64f4d20a43e44f45131f48e73c40dc",
+  "gate_head": "sha256:8f6b87045bfe2268597d4b6de656d0b265b1cc2760de39973a6d917031278e50",
+  "gate_receipts": 41,
+  "gold_db_hash": "a38fddcc78ebe2ba2a41b1cffaff27fd678aa60e52c505a0cd0a43e3963ea641",
+  "harness_readbacks": 4,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "d7355f8262db225283091b94f3c23f6618756161e1c7ed3217cb4003aadd56b8",
+  "run_id": "published/claude-3-7-sonnet-20250219/98_1"
+ }
+}

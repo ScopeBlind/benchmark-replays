@@ -1,0 +1,14 @@
+Run        published/gpt-4.1-mini-2025-04-14/36_1 (task 36 trial 1, gpt-4.1-mini-2025-04-14, sim 0f6c37b3)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      10 attempted, 8 authorized, 2 refused
+Refused    call 5 modify_pending_order_items: retail.items.different-option
+Refused    call 8 modify_pending_order_items: retail.items.different-option
+Write      call 9 cancel_pending_order orders/#W9348897: observed complete: complete
+Accepted   NO under enforcement (final database differs from the answer key)
+           differs at orders/#W9348897 ['cancel_reason', 'items', 'payment_history', 'status']
+Not established  confirmation before call 6: the proposal does not name the call's order or user
+Not established  confirmation before call 7: the proposal does not name the call's order or user
+Not established  confirmation before call 8: the proposal does not name the call's order or user
+Claim      "has been cancelled": executed, not the expected state
+Claim      "refund of $1166.98 will be processed": executed, not the expected state
+Evidence   18 gate receipts, 2 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

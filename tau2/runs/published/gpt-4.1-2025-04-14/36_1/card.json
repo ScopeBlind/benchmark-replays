@@ -1,0 +1,254 @@
+{
+ "answer_key": {
+  "gold_db_hash": "c263b7ca5913ee44ccb614b4b5fd2b672049d710741063b90239ef46a3112c3c",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 13,
+    "entity": "orders/#W9348897",
+    "status": "complete",
+    "tool": "modify_pending_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [
+   {
+    "said": true,
+    "string": "camera"
+   },
+   {
+    "said": true,
+    "string": "481.5"
+   }
+  ],
+  "e13": [],
+  "e2": {
+   "enforced": false,
+   "recorded": false
+  },
+  "e3": {
+   "enforced": {
+    "orders/#W9348897": [
+     "items",
+     "payment_history"
+    ]
+   },
+   "recorded": {
+    "orders/#W9348897": [
+     "items",
+     "payment_history"
+    ]
+   }
+  },
+  "e4": [
+   {
+    "call": 4,
+    "customer_turn": 19,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 18,
+    "result": "not established"
+   },
+   {
+    "call": 11,
+    "customer_turn": 36,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 35,
+    "result": "not established"
+   },
+   {
+    "call": 12,
+    "customer_turn": 40,
+    "missing": "no affirmative customer turn after the last proposal; the proposal does not name the call's order or user",
+    "proposal_turn": 39,
+    "result": "not established"
+   },
+   {
+    "call": 13,
+    "customer_turn": 46,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 45,
+    "result": "not established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 4,
+    "result": "not computable"
+   },
+   {
+    "call": 11,
+    "result": "not computable"
+   },
+   {
+    "call": 12,
+    "executed": 36.13,
+    "result": "mismatch",
+    "stated": [
+     288.82
+    ]
+   },
+   {
+    "call": 13,
+    "executed": 20.09,
+    "result": "mismatch",
+    "stated": [
+     198.0,
+     300.24
+    ]
+   }
+  ],
+  "e6": [
+   {
+    "call": 4,
+    "result": "match"
+   },
+   {
+    "call": 11,
+    "result": "not stated"
+   },
+   {
+    "call": 12,
+    "result": "not stated"
+   },
+   {
+    "call": 13,
+    "result": "not stated"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "order has been updated",
+     "status": "executed, not the expected state",
+     "turn": 49,
+     "type": "item_change"
+    },
+    {
+     "match": "you will receive a refund",
+     "status": "executed, not the expected state",
+     "turn": 49,
+     "type": "refund"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "order has been updated",
+     "status": "executed, not the expected state",
+     "turn": 49,
+     "type": "item_change"
+    },
+    {
+     "match": "you will receive a refund",
+     "status": "executed, not the expected state",
+     "turn": 49,
+     "type": "refund"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 1,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 11,
+    "call_id": "call_HKqN7uLnXizQ7moNIAHi7WpM",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "new item ids equal to the replaced ones: ['9851293632']; present in the recorded order: True",
+      "grounded": true,
+      "policy_line": "112, 132",
+      "quote": "available new item of the same product but of different product option",
+      "rule": "retail.items.different-option",
+      "test": "G2"
+     },
+     {
+      "evidence": "recorded product observations show these new items missing or unavailable: ['3111466194']",
+      "grounded": true,
+      "policy_line": "112, 132",
+      "quote": "available new item of the same product but of different product option",
+      "rule": "retail.items.available-same-product",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.items.different-option",
+     "retail.items.available-same-product"
+    ],
+    "tool": "modify_pending_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.items.different-option",
+      "retail.items.available-same-product"
+     ]
+    }
+   },
+   {
+    "call": 12,
+    "call_id": "call_K16IsGjtnvFY396NZ6P0618R",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "new item ids equal to the replaced ones: ['9879255677', '9851293632']; present in the recorded order: True",
+      "grounded": true,
+      "policy_line": "112, 132",
+      "quote": "available new item of the same product but of different product option",
+      "rule": "retail.items.different-option",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.items.different-option"
+    ],
+    "tool": "modify_pending_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.items.different-option"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": false,
+   "reward": 0.0
+  },
+  "run_id": "published/gpt-4.1-2025-04-14/36_1",
+  "set": "published",
+  "sim_id": "07c349b6-6975-498c-9036-dd98cffb6204",
+  "task_id": "36",
+  "trial": 1
+ },
+ "summary": {
+  "accepted_enforced": false,
+  "accepted_recorded": false,
+  "enforced_db_hash": "fe0297390cba3622360441b8e1d878b120eb3bcfa3892c5a2a6b8c0bcd9c9248",
+  "findings_sha256": "6a7dbea4de6b0093069dbb867cf928d22734a1d4ccc9fae73d9bdc96dd428b13",
+  "gate_head": "sha256:361f23b93d557bc8c07331b7ab2a85bdd334156b6ee4d3a81329201569b4c435",
+  "gate_receipts": 26,
+  "gold_db_hash": "c263b7ca5913ee44ccb614b4b5fd2b672049d710741063b90239ef46a3112c3c",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "fe0297390cba3622360441b8e1d878b120eb3bcfa3892c5a2a6b8c0bcd9c9248",
+  "run_id": "published/gpt-4.1-2025-04-14/36_1"
+ }
+}

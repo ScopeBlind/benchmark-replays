@@ -1,0 +1,63 @@
+{
+  "valid": true,
+  "outcome": "valid",
+  "checks": {
+    "signing_input": {
+      "result": "pass"
+    },
+    "signature": {
+      "result": "pass"
+    },
+    "carried_key": {
+      "result": "pass"
+    },
+    "issuer_kid": {
+      "result": "pass"
+    },
+    "chain_link": {
+      "result": "absent"
+    },
+    "key_window": {
+      "result": "not_established"
+    }
+  },
+  "connectorAction": null,
+  "format": "passport",
+  "type": "protectmcp:decision",
+  "kid": "generated",
+  "issuer": null,
+  "keySource": "provided",
+  "publicKey": "ca3f64a477db88d97fc5945ea010adc76a4947e87aafde6627a188a6caeeebb6",
+  "algorithm": "EdDSA",
+  "payloadFields": {
+    "decision": "deny",
+    "scope": "tu-1792899490097-vo2e",
+    "tool_name": "send_money",
+    "spec": "draft-farley-acta-signed-receipts-03"
+  },
+  "entitlementAttested": false,
+  "entitlementVerifiedByRuntime": false,
+  "hash": "62b42cb230d347ebd760ee0d303bc909b62e2987e701cd418845683737b56160",
+  "canonicalization": "jcs",
+  "keyStatus": {
+    "source": "provided",
+    "window": null,
+    "issued_at": "2026-10-25T03:38:10.097Z",
+    "applied": false,
+    "result": "not_established",
+    "detail": "The key was given directly, so no key source gives it a validity window: its validity at issuance is not established."
+  },
+  "scope": "tu-1792899490097-vo2e",
+  "tier": {
+    "tier": 1,
+    "label": "T1 basic",
+    "features": [
+      "ed25519-signature",
+      "jcs-canonicalization"
+    ],
+    "declaredFeatures": []
+  },
+  "modeLabel": "Ed25519 Passport envelope (RFC 8032)",
+  "specVersion": "draft-farley-acta-signed-receipts-03",
+  "sigil_fingerprint": "dd196969"
+}

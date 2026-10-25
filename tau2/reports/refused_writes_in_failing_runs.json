@@ -1,0 +1,1947 @@
+[
+ {
+  "sim_id": "2358c560-f419-4177-852d-6f2bef8d5dd5",
+  "call": 4,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "12",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "tool": "return_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/12_0",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "sim_id": "68587863-f2b4-4bf2-8dc6-10bec9ec7ace",
+  "call": 8,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "91",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/91_0",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "9bd3c22d-2b8a-4600-a06e-dac5e968bf95",
+  "call": 12,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "98",
+  "rules": [
+   "retail.return-exchange.delivered-only",
+   "retail.items.once-per-order"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/98_0",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "1178539e-7543-44d6-bb41-e5f8fdd1758c",
+  "call": 6,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "107",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/107_0",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "e66d3d42-b29d-49c1-b915-181404716396",
+  "call": 4,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "10",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "tool": "return_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/10_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "sim_id": "2bdd8b6b-9928-4d05-b2a8-5ea5b9c6eb01",
+  "call": 6,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "27",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/27_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "fc900d8c-38cb-49ac-8d13-6a22c3fddc32",
+  "call": 7,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "41",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "tool": "modify_pending_order_address",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/41_1",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "e67c6595-67b5-498d-9c93-f0438e6a8463",
+  "call": 14,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "98",
+  "rules": [
+   "retail.return-exchange.delivered-only",
+   "retail.items.once-per-order"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/98_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "6e43c0a2-e290-4764-ad34-768b3097267a",
+  "call": 4,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "10",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "tool": "return_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/10_2",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "sim_id": "65b223ab-0370-4856-8e2a-99db5a928949",
+  "call": 11,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "98",
+  "rules": [
+   "retail.return-exchange.delivered-only",
+   "retail.items.once-per-order"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/98_2",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "889fb509-e143-4e2b-bd89-a87da0ba9c06",
+  "call": 9,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "36",
+  "rules": [
+   "retail.items.available-same-product"
+  ],
+  "tool": "modify_pending_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/36_3",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: New item 3111466194 not found or available"
+ },
+ {
+  "sim_id": "889fb509-e143-4e2b-bd89-a87da0ba9c06",
+  "call": 14,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "36",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "modify_pending_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/36_3",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: The new item id should be different from the old item id"
+ },
+ {
+  "sim_id": "889fb509-e143-4e2b-bd89-a87da0ba9c06",
+  "call": 17,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "36",
+  "rules": [
+   "retail.cancel.pending-only"
+  ],
+  "tool": "cancel_pending_order",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/36_3",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-pending order cannot be cancelled"
+ },
+ {
+  "sim_id": "294fb324-2fc5-4997-a1aa-0d0bd6329763",
+  "call": 6,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "41",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "tool": "modify_pending_order_address",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/41_0",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "f0970bf2-5ea6-431c-bf76-e7fff99d38e4",
+  "call": 8,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "91",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/91_0",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "6877dd1b-f832-44d9-a17f-eb63369e9a0a",
+  "call": 6,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "82",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "tool": "return_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/82_0",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "sim_id": "0f295ff1-63f4-4759-aa06-62e22b71912d",
+  "call": 6,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "41",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "tool": "modify_pending_order_address",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/41_1",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "7839778a-d7a0-400f-962d-369d183e852f",
+  "call": 6,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "27",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/27_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "94a9d1df-13cc-4d96-83e9-baa7f3671eda",
+  "call": 7,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "91",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/91_1",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "490eebb9-49cf-454d-b550-3abc1f728261",
+  "call": 10,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "37",
+  "rules": [
+   "retail.items.different-option",
+   "retail.items.available-same-product"
+  ],
+  "tool": "modify_pending_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/37_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: New item 3111466194 not found or available"
+ },
+ {
+  "sim_id": "490eebb9-49cf-454d-b550-3abc1f728261",
+  "call": 11,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "37",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "modify_pending_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/37_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: The new item id should be different from the old item id"
+ },
+ {
+  "sim_id": "490eebb9-49cf-454d-b550-3abc1f728261",
+  "call": 12,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "37",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "modify_pending_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/37_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: The new item id should be different from the old item id"
+ },
+ {
+  "sim_id": "542dc98c-e5c5-45c7-ba1e-01374f69bd99",
+  "call": 4,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "45",
+  "rules": [
+   "retail.payment.customer-method"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/45_2",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method not found"
+ },
+ {
+  "sim_id": "d66cb88f-57b9-4c3c-9be7-6fe2b9552926",
+  "call": 6,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "41",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "tool": "modify_pending_order_address",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/41_2",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "19456edd-ba3f-4044-a556-429fda864cbd",
+  "call": 7,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "72",
+  "rules": [
+   "retail.modify.pending-only",
+   "retail.items.once-per-order",
+   "retail.items.in-order"
+  ],
+  "tool": "modify_pending_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/72_2",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-pending order cannot be modified"
+ },
+ {
+  "sim_id": "1d959334-d883-4e46-8ef7-5df539e1b734",
+  "call": 4,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "105",
+  "rules": [
+   "retail.payment.gift-card-balance"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/105_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Insufficient gift card balance to pay for the price difference"
+ },
+ {
+  "sim_id": "abdc6dae-08a6-49b0-8402-433076e3d804",
+  "call": 7,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "109",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/109_2",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "891d3308-7f64-4d9b-af5d-d3acbf03c599",
+  "call": 8,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "27",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/27_3",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "62973f89-40f4-4f5e-9f93-7deba34d83c5",
+  "call": 8,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "107",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/107_3",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "af10ab2e-8cba-403b-8021-2fe41bb15439",
+  "call": 4,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "18",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/18_0",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "c8a62d19-40af-40c6-9b5c-9b46d06d00c7",
+  "call": 6,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "15",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "tool": "modify_pending_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/15_0",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-pending order cannot be modified"
+ },
+ {
+  "sim_id": "bb332ccf-352f-4432-82a2-f43e1527c246",
+  "call": 7,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "74",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/74_0",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "10679446-e02e-4a1c-a7e1-2de6b68105fe",
+  "call": 7,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "91",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/91_0",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "cdb5caeb-570c-4ec6-bf53-16260c4a0cd4",
+  "call": 8,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "27",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/27_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "536ce4a9-dd34-4ef1-ab4d-b687cbc6ef4a",
+  "call": 11,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "23",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "modify_pending_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/23_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: The new item id should be different from the old item id"
+ },
+ {
+  "sim_id": "61ca41e6-3cce-4895-8385-088cadd61fe6",
+  "call": 8,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "109",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/109_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "b164b5ee-96b6-4e98-b631-ea9792c78fc8",
+  "call": 10,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "111",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/111_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "9bbb30c3-0b90-4978-ada7-23a38d0e4e11",
+  "call": 7,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "20",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/20_2",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "e1bd945d-1959-410c-a53f-626e606fb5f0",
+  "call": 8,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "107",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/107_1",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "545e5c87-ab0e-4188-a7e3-5e92ce7c30c5",
+  "call": 7,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "71",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "tool": "modify_pending_order_address",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/71_2",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "87a25445-b333-43e7-b803-13a74487e278",
+  "call": 10,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "29",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "modify_pending_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/29_2",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: The new item id should be different from the old item id"
+ },
+ {
+  "sim_id": "e0a9f6d4-bf05-4071-85c0-91b863a00f1c",
+  "call": 10,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "98",
+  "rules": [
+   "retail.items.in-order"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/98_2",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Number of 5996159312 not found."
+ },
+ {
+  "sim_id": "25babc82-8fe9-44e2-9ce3-dd65e40403ce",
+  "call": 8,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "27",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/27_3",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "ab5f9f11-f220-4b1a-a4bf-ffbc81df1e92",
+  "call": 4,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "85",
+  "rules": [
+   "retail.return-exchange.delivered-only",
+   "retail.payment.customer-method"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/85_3",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "14386f2a-a6d5-4a2d-9e8e-0f8c550e4f5a",
+  "call": 7,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "91",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/91_3",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "2b40eabf-1f99-401a-95de-6f55642b7bf9",
+  "call": 8,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "107",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/107_3",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "2c6b2e8c-8337-4829-af29-54fbdb97984d",
+  "call": 9,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "98",
+  "rules": [
+   "retail.items.in-order"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/98_3",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Number of 5996159312 not found."
+ },
+ {
+  "sim_id": "4e7533b5-5497-45b6-8538-fe9689ad524a",
+  "call": 10,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "111",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/111_3",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "dc6b9d36-731e-4a3c-b1de-e30fa5bbb2ea",
+  "call": 12,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "104",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "tool": "modify_pending_order_address",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/104_3",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "1ff22d1d-bb88-4afd-8754-cd55c3f344d3",
+  "call": 4,
+  "model": "o4-mini-2025-04-16",
+  "task": "18",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/o4-mini-2025-04-16/18_0",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "6a0296fa-8559-413e-a5ae-3a12d7ae1438",
+  "call": 8,
+  "model": "o4-mini-2025-04-16",
+  "task": "91",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/o4-mini-2025-04-16/91_0",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "b12a32ef-9e02-4aea-a815-b96db70dd550",
+  "call": 3,
+  "model": "o4-mini-2025-04-16",
+  "task": "18",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/o4-mini-2025-04-16/18_1",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "1f52a0f9-a41b-46f5-b694-d77cd3c514c2",
+  "call": 11,
+  "model": "o4-mini-2025-04-16",
+  "task": "104",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "tool": "modify_pending_order_address",
+  "first_order": true,
+  "run_id": "published/o4-mini-2025-04-16/104_0",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "d2508f54-834a-4f96-8c18-aa6047e98461",
+  "call": 8,
+  "model": "o4-mini-2025-04-16",
+  "task": "107",
+  "rules": [
+   "retail.payment.customer-method"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/o4-mini-2025-04-16/107_0",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method not found"
+ },
+ {
+  "sim_id": "6ccacf81-56d0-43f8-979a-5d83b7088f1b",
+  "call": 3,
+  "model": "o4-mini-2025-04-16",
+  "task": "18",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/o4-mini-2025-04-16/18_2",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "ddccdf37-9d31-42f3-825b-fd1f29690412",
+  "call": 8,
+  "model": "o4-mini-2025-04-16",
+  "task": "104",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "return_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/o4-mini-2025-04-16/104_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be returned"
+ },
+ {
+  "sim_id": "f3bc3dd9-86b4-4a8c-bcc0-b11ed3b54c34",
+  "call": 8,
+  "model": "o4-mini-2025-04-16",
+  "task": "27",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/o4-mini-2025-04-16/27_2",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "7d7071c9-962e-4342-b52f-5db3b635397a",
+  "call": 4,
+  "model": "o4-mini-2025-04-16",
+  "task": "18",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/o4-mini-2025-04-16/18_3",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "56aec921-ac71-4d84-8c43-5b59faacb39a",
+  "call": 6,
+  "model": "o4-mini-2025-04-16",
+  "task": "91",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/o4-mini-2025-04-16/91_3",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "c31d7bfa-a7a4-42c3-a1e2-c67b9e4468de",
+  "call": 5,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "18",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/18_0",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "f678bb2c-b2e0-4e65-ad2d-6eaddae9322b",
+  "call": 5,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "18",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/18_1",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "91bf8967-9cf4-46e5-b591-4c9f31e945d3",
+  "call": 8,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "19",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "return_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/19_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be returned"
+ },
+ {
+  "sim_id": "b12c882f-4d4e-4c27-a6e3-4c951e91081f",
+  "call": 6,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "82",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "tool": "return_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/82_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "sim_id": "b12c882f-4d4e-4c27-a6e3-4c951e91081f",
+  "call": 8,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "82",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "return_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/82_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be returned"
+ },
+ {
+  "sim_id": "705fc9aa-c894-4910-b5bc-625dd9d356af",
+  "call": 6,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "107",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/107_1",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "00530ca6-9ef9-4e4b-b0e4-4354663ae0ef",
+  "call": 4,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "12",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "tool": "return_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/12_2",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "sim_id": "672164af-4728-469a-963a-1bc969ac83bb",
+  "call": 5,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "18",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/18_2",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "dafe2f09-bca7-46b5-8a8b-ee9cc6ec94cd",
+  "call": 6,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "82",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "tool": "return_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/82_2",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "sim_id": "56b4d461-60d3-4df0-8eed-34d6b3b8cf40",
+  "call": 8,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "107",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/107_2",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "17b65dcc-dec1-427a-81f4-10a883854b28",
+  "call": 5,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "18",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/18_3",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "1f844862-6930-47c0-af53-a62e549fe139",
+  "call": 7,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "41",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "tool": "modify_pending_order_address",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/41_3",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "1a942008-0ffe-4f7b-adfb-b94cfc5134dc",
+  "call": 4,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "56",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "modify_pending_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/56_3",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: The number of items to be exchanged should match"
+ },
+ {
+  "sim_id": "17688157-5f4b-45c4-9ead-a93ea1a7a037",
+  "call": 12,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "98",
+  "rules": [
+   "retail.return-exchange.delivered-only",
+   "retail.items.once-per-order"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/98_3",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "5062587a-e512-41d3-a3fd-505cabdda9ad",
+  "call": 11,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "104",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "tool": "modify_pending_order_address",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/104_3",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "976dd1f9-51bb-46c2-ad79-2835a2bdbcf9",
+  "call": 6,
+  "model": "claude-3-7-sonnet-20250219",
+  "task": "107",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/claude-3-7-sonnet-20250219/107_3",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "d52b24d0-1c51-45b7-9669-b0b785b22bb0",
+  "call": 6,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "27",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/27_0",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "e5481f62-b77b-4035-a577-870bb22db2aa",
+  "call": 8,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "109",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/109_0",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "19a2e216-5898-437b-a55d-599ec551bf65",
+  "call": 7,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "107",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/107_0",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "fbdae47d-2aec-4544-8e63-154b21c42a2f",
+  "call": 7,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "110",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/110_0",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "f02df3e7-3841-4f20-a2bb-30a4848cd15d",
+  "call": 7,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "82",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "tool": "return_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/82_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "sim_id": "2fa214b6-9eac-455c-ac8b-2f55cddf0153",
+  "call": 4,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "18",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/18_2",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "69279305-faf2-411f-b102-31ddaa763bb2",
+  "call": 7,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "107",
+  "rules": [
+   "retail.return.refund-destination",
+   "retail.payment.customer-method"
+  ],
+  "tool": "return_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/107_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method not found"
+ },
+ {
+  "sim_id": "69279305-faf2-411f-b102-31ddaa763bb2",
+  "call": 8,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "107",
+  "rules": [
+   "retail.payment.customer-method"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/107_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method not found"
+ },
+ {
+  "sim_id": "07c349b6-6975-498c-9036-dd98cffb6204",
+  "call": 11,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "36",
+  "rules": [
+   "retail.items.different-option",
+   "retail.items.available-same-product"
+  ],
+  "tool": "modify_pending_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/36_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: New item 3111466194 not found or available"
+ },
+ {
+  "sim_id": "07c349b6-6975-498c-9036-dd98cffb6204",
+  "call": 12,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "36",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "modify_pending_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/36_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: The new item id should be different from the old item id"
+ },
+ {
+  "sim_id": "d341e810-2049-4758-a47d-7473417ba696",
+  "call": 6,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "27",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/27_2",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "d341e810-2049-4758-a47d-7473417ba696",
+  "call": 7,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "27",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/27_2",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "cb75be22-9cb4-4c65-8671-4bccf57caa25",
+  "call": 7,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "91",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/91_2",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "bf4d13ae-2eb3-4826-a894-23a9e6dd5cd2",
+  "call": 8,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "107",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/107_2",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "b1686bf5-5950-4f57-973d-0e64ac4572aa",
+  "call": 7,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "82",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "tool": "return_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/82_3",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "sim_id": "6dcfafe0-4085-4d7b-80cd-4cd22ff17ba8",
+  "call": 11,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "36",
+  "rules": [
+   "retail.items.different-option",
+   "retail.items.available-same-product"
+  ],
+  "tool": "modify_pending_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/36_3",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: New item 3111466194 not found or available"
+ },
+ {
+  "sim_id": "6dcfafe0-4085-4d7b-80cd-4cd22ff17ba8",
+  "call": 12,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "36",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "modify_pending_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/36_3",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: The new item id should be different from the old item id"
+ },
+ {
+  "sim_id": "6dcfafe0-4085-4d7b-80cd-4cd22ff17ba8",
+  "call": 13,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "36",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "modify_pending_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/36_3",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: The new item id should be different from the old item id"
+ },
+ {
+  "sim_id": "6dcfafe0-4085-4d7b-80cd-4cd22ff17ba8",
+  "call": 14,
+  "model": "gpt-4.1-2025-04-14",
+  "task": "36",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "modify_pending_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-2025-04-14/36_3",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: The new item id should be different from the old item id"
+ },
+ {
+  "sim_id": "113a635f-9635-4f9d-ba79-dc73228c1354",
+  "call": 9,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "27",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/27_0",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "d0278c91-07a3-406c-ac41-6f3c7fe6d978",
+  "call": 5,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "71",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "tool": "modify_pending_order_payment",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/71_0",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: There should be exactly one payment for a pending order"
+ },
+ {
+  "sim_id": "de4087c4-c071-4be1-9c7b-bf1c36e5f3a2",
+  "call": 7,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "63",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/63_0",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "4349fbab-da43-4d28-9413-3c51d56a745f",
+  "call": 8,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "109",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/109_0",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "3c9e41f6-6792-49e9-88de-7dc10bf015d1",
+  "call": 4,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "18",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/18_1",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "d4ddcbc9-3e08-4b29-a64a-cf6744c05a90",
+  "call": 9,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "107",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/107_0",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "a41e12a2-e562-4182-8f55-8aa4553a15a6",
+  "call": 9,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "111",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/111_0",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "a41e12a2-e562-4182-8f55-8aa4553a15a6",
+  "call": 10,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "111",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "tool": "modify_pending_order_address",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/111_0",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "e4c08c13-c515-416a-ac0f-2f8048959b8d",
+  "call": 5,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "71",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "tool": "modify_pending_order_payment",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/71_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: There should be exactly one payment for a pending order"
+ },
+ {
+  "sim_id": "df831418-797d-4c7d-9d74-91a4926dc1c4",
+  "call": 7,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "66",
+  "rules": [
+   "retail.items.available-same-product"
+  ],
+  "tool": "modify_pending_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/66_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Variant not found"
+ },
+ {
+  "sim_id": "df831418-797d-4c7d-9d74-91a4926dc1c4",
+  "call": 9,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "66",
+  "rules": [
+   "retail.items.available-same-product"
+  ],
+  "tool": "modify_pending_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/66_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Variant not found"
+ },
+ {
+  "sim_id": "0f6c37b3-a3dd-4943-81d5-ba9e32887fb0",
+  "call": 5,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "36",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "modify_pending_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/36_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Variant not found"
+ },
+ {
+  "sim_id": "0f6c37b3-a3dd-4943-81d5-ba9e32887fb0",
+  "call": 8,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "36",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "modify_pending_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/36_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: The new item id should be different from the old item id"
+ },
+ {
+  "sim_id": "a16bac90-7996-4fb6-b438-d80ec8736a10",
+  "call": 9,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "42",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/42_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "6f9097b5-aea9-4331-ba55-e3dcebfb7e7f",
+  "call": 5,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "18",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/18_2",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "375cf318-6410-40ec-b75a-c90eed39c486",
+  "call": 8,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "110",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/110_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "670d5ed0-daf7-456e-97fe-c9abc99df906",
+  "call": 6,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "82",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "tool": "return_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/82_2",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "sim_id": "b1137cf4-7193-4ccd-a8dc-b80baea29134",
+  "call": 6,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "78",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/78_2",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "cf2d7190-ad69-4a37-a8f4-5cbd501557be",
+  "call": 4,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "12",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "tool": "return_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/12_3",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "sim_id": "cb624adc-e916-4968-a902-e2b0e4df1d79",
+  "call": 7,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "112",
+  "rules": [
+   "retail.items.in-order",
+   "retail.payment.customer-method"
+  ],
+  "tool": "modify_pending_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/112_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: 1355937109 not found"
+ },
+ {
+  "sim_id": "cb624adc-e916-4968-a902-e2b0e4df1d79",
+  "call": 9,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "112",
+  "rules": [
+   "retail.payment.customer-method"
+  ],
+  "tool": "modify_pending_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/112_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method not found"
+ },
+ {
+  "sim_id": "b678047c-c26c-4b50-9dd4-50e403911be1",
+  "call": 3,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "18",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/18_3",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "d3517c20-0b81-48fb-a9fd-a6d37f5115bb",
+  "call": 7,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "109",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/109_2",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "aed49318-2041-4b52-bac7-3414e0660a27",
+  "call": 11,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "111",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/111_2",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "bcdb9cd9-2dcf-4d02-8247-b9446f9774ed",
+  "call": 6,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "107",
+  "rules": [
+   "retail.items.different-option",
+   "retail.payment.customer-method"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/107_2",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method not found"
+ },
+ {
+  "sim_id": "bcdb9cd9-2dcf-4d02-8247-b9446f9774ed",
+  "call": 7,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "107",
+  "rules": [
+   "retail.payment.customer-method"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/107_2",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method not found"
+ },
+ {
+  "sim_id": "bcdb9cd9-2dcf-4d02-8247-b9446f9774ed",
+  "call": 8,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "107",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/107_2",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "28d15800-0759-499a-af1a-68851d70ee64",
+  "call": 8,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "110",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/110_2",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "3f326682-6228-4bef-a147-650bfa2d266f",
+  "call": 7,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "91",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/91_2",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "fd462858-7eed-4549-80ce-24a33a5aa0c9",
+  "call": 7,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "21",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/21_3",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "996c023e-9eca-4aae-b6a2-867dd5aa2c74",
+  "call": 8,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "78",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/78_3",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "a3df0c94-3fed-4c8d-a339-071441836e8d",
+  "call": 7,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "110",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/110_3",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "64b3534e-16c1-45bd-8afa-f5b8fad7cdeb",
+  "call": 9,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "task": "109",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/gpt-4.1-mini-2025-04-14/109_3",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "e12d0dfb-b4a8-4314-9e39-1195c6a45be9",
+  "call": 6,
+  "model": "o4-mini-2025-04-16",
+  "task": "41",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "tool": "modify_pending_order_address",
+  "first_order": true,
+  "run_id": "published/o4-mini-2025-04-16/41_0",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "cf10ca2f-beea-4f5c-adb9-6f087fb301c1",
+  "call": 2,
+  "model": "o4-mini-2025-04-16",
+  "task": "22",
+  "rules": [
+   "retail.order.status-checked-first"
+  ],
+  "tool": "modify_pending_order_address",
+  "first_order": true,
+  "run_id": "published/o4-mini-2025-04-16/22_0",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-pending order cannot be modified"
+ },
+ {
+  "sim_id": "6d2070bf-4a94-41ac-8170-b22e7b897398",
+  "call": 8,
+  "model": "o4-mini-2025-04-16",
+  "task": "27",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/o4-mini-2025-04-16/27_1",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "sim_id": "5a17bc76-e1be-40c2-90f9-5bb7d109fc42",
+  "call": 9,
+  "model": "o4-mini-2025-04-16",
+  "task": "111",
+  "rules": [
+   "retail.items.in-order"
+  ],
+  "tool": "modify_pending_order_items",
+  "first_order": true,
+  "run_id": "published/o4-mini-2025-04-16/111_0",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: 1355937109 not found"
+ },
+ {
+  "sim_id": "a70c8def-6016-414d-8c28-a956116357ba",
+  "call": 6,
+  "model": "o4-mini-2025-04-16",
+  "task": "91",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/o4-mini-2025-04-16/91_1",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "56902bf6-5e68-4f3e-a4c1-b14b061f7ab7",
+  "call": 9,
+  "model": "o4-mini-2025-04-16",
+  "task": "107",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/o4-mini-2025-04-16/107_1",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "d1fbc021-e17a-451a-aa11-73789d8d89d0",
+  "call": 6,
+  "model": "o4-mini-2025-04-16",
+  "task": "41",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "tool": "modify_pending_order_address",
+  "first_order": true,
+  "run_id": "published/o4-mini-2025-04-16/41_2",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "e83d3814-70a7-4267-92de-538318006fb4",
+  "call": 6,
+  "model": "o4-mini-2025-04-16",
+  "task": "91",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/o4-mini-2025-04-16/91_2",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "0a462e21-2588-4aa6-8cbe-2f625a438f75",
+  "call": 5,
+  "model": "o4-mini-2025-04-16",
+  "task": "69",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "tool": "return_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/o4-mini-2025-04-16/69_3",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be returned"
+ },
+ {
+  "sim_id": "8f104fe6-3471-4048-83fc-c87bfdc8dbe6",
+  "call": 6,
+  "model": "o4-mini-2025-04-16",
+  "task": "107",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/o4-mini-2025-04-16/107_3",
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "sim_id": "489c241d-ca6a-4d47-a04e-2446027f62b9",
+  "call": 10,
+  "model": "o4-mini-2025-04-16",
+  "task": "98",
+  "rules": [
+   "retail.items.in-order"
+  ],
+  "tool": "exchange_delivered_order_items",
+  "first_order": true,
+  "run_id": "published/o4-mini-2025-04-16/98_3",
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Number of 5996159312 not found."
+ }
+]

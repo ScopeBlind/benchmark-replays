@@ -1,0 +1,116 @@
+{
+ "answer_key": {
+  "gold_db_hash": "26acf77e3aebedee6b3e2e4de11af0db441173a1901ed5449f7415bdab6a596f",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 6,
+    "entity": "orders/#W5061109",
+    "status": "complete",
+    "tool": "modify_pending_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [
+   {
+    "said": true,
+    "string": "302.67"
+   },
+   {
+    "said": true,
+    "string": "20 hours"
+   },
+   {
+    "said": true,
+    "string": "1288.65"
+   }
+  ],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 6,
+    "customer_turn": 19,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 18,
+    "result": "not established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 6,
+    "executed": 30.78,
+    "result": "mismatch",
+    "stated": [
+     271.89,
+     285.81,
+     285.94,
+     289.69,
+     300.0,
+     302.67
+    ]
+   }
+  ],
+  "e6": [
+   {
+    "call": 6,
+    "result": "not stated"
+   }
+  ],
+  "e7": {
+   "enforced": [],
+   "recorded": []
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 7
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": []
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "claude-3-7-sonnet-20250219",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/claude-3-7-sonnet-20250219/63_3",
+  "set": "published",
+  "sim_id": "3c62c281-9541-4f3d-a7cb-ce69997f1817",
+  "task_id": "63",
+  "trial": 3
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "26acf77e3aebedee6b3e2e4de11af0db441173a1901ed5449f7415bdab6a596f",
+  "findings_sha256": "d6d879749a4a77f401fbce249490ddadbe1de1dee04221cf1c2aab82855d563f",
+  "gate_head": "sha256:e19bdf2ec27cdf13dd250eafca4d22602a2a64e5b4d8dc42d9bdbfc65363110e",
+  "gate_receipts": 14,
+  "gold_db_hash": "26acf77e3aebedee6b3e2e4de11af0db441173a1901ed5449f7415bdab6a596f",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "26acf77e3aebedee6b3e2e4de11af0db441173a1901ed5449f7415bdab6a596f",
+  "run_id": "published/claude-3-7-sonnet-20250219/63_3"
+ }
+}

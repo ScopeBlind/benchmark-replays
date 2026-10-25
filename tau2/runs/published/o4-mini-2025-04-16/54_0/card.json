@@ -1,0 +1,215 @@
+{
+ "answer_key": {
+  "gold_db_hash": "ce62537763499f1686e791ff0dc4d5a74af8df3ae4d33a76d9942f703bb440ef",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 12,
+    "entity": "orders/#W4836353",
+    "status": "complete",
+    "tool": "cancel_pending_order"
+   },
+   {
+    "call": 13,
+    "entity": "orders/#W7342738",
+    "status": "complete",
+    "tool": "cancel_pending_order"
+   },
+   {
+    "call": 14,
+    "entity": "orders/#W4597054",
+    "status": "complete",
+    "tool": "return_delivered_order_items"
+   }
+  ],
+  "e10": [
+   {
+    "call": 12,
+    "declared": "no longer needed",
+    "phrase": null,
+    "result": "not established"
+   },
+   {
+    "call": 13,
+    "declared": "no longer needed",
+    "phrase": null,
+    "result": "not established"
+   }
+  ],
+  "e11": [
+   {
+    "said": true,
+    "string": "3646.68"
+   }
+  ],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 12,
+    "customer_turn": 37,
+    "proposal_turn": 36,
+    "result": "established"
+   },
+   {
+    "call": 13,
+    "customer_turn": 37,
+    "proposal_turn": 36,
+    "result": "established"
+   },
+   {
+    "call": 14,
+    "customer_turn": 37,
+    "proposal_turn": 36,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 12,
+    "executed": 1429.81,
+    "result": "mismatch",
+    "stated": [
+     3646.68
+    ]
+   },
+   {
+    "call": 13,
+    "executed": 1030.4,
+    "result": "mismatch",
+    "stated": [
+     3646.68
+    ]
+   },
+   {
+    "call": 14,
+    "executed": 1186.47,
+    "result": "mismatch",
+    "stated": [
+     3646.68
+    ]
+   }
+  ],
+  "e6": [
+   {
+    "call": 12,
+    "result": "n/a"
+   },
+   {
+    "call": 13,
+    "result": "n/a"
+   },
+   {
+    "call": 14,
+    "result": "not stated"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "have been canceled",
+     "status": "observed",
+     "turn": 44,
+     "type": "cancel"
+    },
+    {
+     "match": "Return requested",
+     "status": "observed",
+     "turn": 44,
+     "type": "return"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "have been canceled",
+     "status": "observed",
+     "turn": 44,
+     "type": "cancel"
+    },
+    {
+     "match": "Return requested",
+     "status": "observed",
+     "turn": 44,
+     "type": "return"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 2,
+    "call_id": "call_z7UviH8Ks8aV3BvndPXaOEns",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "no recorded successful customer lookup before this call",
+      "grounded": true,
+      "policy_line": "10",
+      "quote": "you have to authenticate the user identity",
+      "rule": "retail.identity.authenticate-first",
+      "test": "G1"
+     }
+    ],
+    "rules": [
+     "retail.identity.authenticate-first"
+    ],
+    "tool": "get_order_details",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.identity.authenticate-first"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "o4-mini-2025-04-16",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/o4-mini-2025-04-16/54_0",
+  "set": "published",
+  "sim_id": "566817fb-455f-4f1f-8fb0-c1daae57a1e4",
+  "task_id": "54",
+  "trial": 0
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "ce62537763499f1686e791ff0dc4d5a74af8df3ae4d33a76d9942f703bb440ef",
+  "findings_sha256": "2001d7a6bf6732fde93021f45ed9ee3bfc59713dcf243046fab7a632981826c7",
+  "gate_head": "sha256:0ec99a7b7c8763c1fcc08049c73f3dd485842d7443da7582d566426f067038af",
+  "gate_receipts": 29,
+  "gold_db_hash": "ce62537763499f1686e791ff0dc4d5a74af8df3ae4d33a76d9942f703bb440ef",
+  "harness_readbacks": 4,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "ce62537763499f1686e791ff0dc4d5a74af8df3ae4d33a76d9942f703bb440ef",
+  "run_id": "published/o4-mini-2025-04-16/54_0"
+ }
+}

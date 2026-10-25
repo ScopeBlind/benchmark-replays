@@ -1,0 +1,7 @@
+Run        published/o4-mini-2025-04-16/20_1 (task 20 trial 1, o4-mini-2025-04-16, sim 31302e16)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      9 attempted, 9 authorized, 0 refused
+Write      call 8 modify_pending_order_items orders/#W9911714: observed complete: complete
+Accepted   NO under enforcement (final database differs from the answer key)
+           differs at orders/#W9911714 ['items', 'payment_history']; users/ethan_garcia_1261 ['payment_methods']
+Evidence   18 gate receipts, 3 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

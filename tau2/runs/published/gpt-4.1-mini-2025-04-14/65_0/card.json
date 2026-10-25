@@ -1,0 +1,113 @@
+{
+ "answer_key": {
+  "gold_db_hash": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 6,
+    "customer_turn": 23,
+    "proposal_turn": 22,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 6,
+    "executed": 537.01,
+    "result": "not stated"
+   }
+  ],
+  "e6": [
+   {
+    "call": 6,
+    "result": "not stated"
+   }
+  ],
+  "e7": {
+   "enforced": [],
+   "recorded": []
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 2
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 6,
+    "call_id": "call_0UZDjLj78qQbbxJRkrIWwJ1l",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "latest recorded observation of #W5362037 shows status 'processed', the call needs 'delivered'",
+      "grounded": true,
+      "policy_line": "118, 130",
+      "quote": "An order can only be returned if its status is 'delivered'",
+      "rule": "retail.return-exchange.delivered-only",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.return-exchange.delivered-only"
+    ],
+    "tool": "return_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.return-exchange.delivered-only"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-mini-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/gpt-4.1-mini-2025-04-14/65_0",
+  "set": "published",
+  "sim_id": "9ff9e0bd-d2b1-4119-be8c-da99b5f03bfb",
+  "task_id": "65",
+  "trial": 0
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+  "findings_sha256": "9715d50f2360733eb86f7b36512b0b0b08987a6dd221a75a91320b74aac00eea",
+  "gate_head": "sha256:77452bf9cc74039b9d338e22ab761fc2008b9c485b00dbfd721be824037ff150",
+  "gate_receipts": 13,
+  "gold_db_hash": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+  "harness_readbacks": 0,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+  "run_id": "published/gpt-4.1-mini-2025-04-14/65_0"
+ }
+}

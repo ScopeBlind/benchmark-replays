@@ -1,0 +1,98 @@
+{
+ "answer_key": {
+  "gold_db_hash": "7261dbb2b5feffa798d080a3e2b2b4c3bf5c32c7a281bc94205bc1b3015a7e5f",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 3,
+    "entity": "orders/#W9300146",
+    "status": "complete",
+    "tool": "modify_pending_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [
+   {
+    "said": true,
+    "string": "17.99"
+   }
+  ],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 3,
+    "customer_turn": 11,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 10,
+    "result": "not established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 3,
+    "executed": 17.99,
+    "result": "match"
+   }
+  ],
+  "e6": [
+   {
+    "call": 3,
+    "missing": "the method is not in an observed profile",
+    "result": "not checkable"
+   }
+  ],
+  "e7": {
+   "enforced": [],
+   "recorded": []
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": []
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-mini-2025-04-14",
+  "plant": null,
+  "published": null,
+  "run_id": "controls/gpt-4.1-mini-2025-04-14/44_0",
+  "set": "control",
+  "sim_id": "1005448f-435c-4bdf-9717-910629df3560",
+  "task_id": "44",
+  "trial": 0
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "7261dbb2b5feffa798d080a3e2b2b4c3bf5c32c7a281bc94205bc1b3015a7e5f",
+  "findings_sha256": "c33cbf00278a696d36eeb11c1af15a722807032ccb99e419e0a8b318f1887912",
+  "gate_head": "sha256:39a26c3f18a73bb17190e29960f597cffe63cc7a531bcdcf460c961d8aa88023",
+  "gate_receipts": 8,
+  "gold_db_hash": "7261dbb2b5feffa798d080a3e2b2b4c3bf5c32c7a281bc94205bc1b3015a7e5f",
+  "harness_readbacks": 2,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "7261dbb2b5feffa798d080a3e2b2b4c3bf5c32c7a281bc94205bc1b3015a7e5f",
+  "run_id": "controls/gpt-4.1-mini-2025-04-14/44_0"
+ }
+}

@@ -1,0 +1,10 @@
+Run        published/claude-3-7-sonnet-20250219/82_1 (task 82 trial 1, claude-3-7-sonnet-20250219, sim b12c882f)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      11 attempted, 9 authorized, 2 refused
+Refused    call 6 return_delivered_order_items: retail.return.refund-destination
+Refused    call 8 return_delivered_order_items: retail.return-exchange.delivered-only
+Write      call 7 return_delivered_order_items orders/#W9571698: observed complete: complete
+Accepted   NO under enforcement (final database differs from the answer key)
+           differs at orders/#W9571698 ['return_items']
+Mismatch   destination at call 7: proposal named credit_card_1565124, executed gift_card_7250692
+Evidence   20 gate receipts, 2 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

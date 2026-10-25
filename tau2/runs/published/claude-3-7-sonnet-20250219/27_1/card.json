@@ -1,0 +1,162 @@
+{
+ "answer_key": {
+  "gold_db_hash": "08a9f35dd8ee39c46d1538800cc251a33131272e6a540842f110fcb5b23cd8a5",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 5,
+    "entity": "orders/#W7181492",
+    "status": "complete",
+    "tool": "return_delivered_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": false,
+   "recorded": false
+  },
+  "e3": {
+   "enforced": {
+    "orders/#W7181492": [
+     "exchange_items",
+     "exchange_new_items",
+     "exchange_payment_method_id",
+     "exchange_price_difference",
+     "return_items",
+     "return_payment_method_id",
+     "status"
+    ]
+   },
+   "recorded": {
+    "orders/#W7181492": [
+     "exchange_items",
+     "exchange_new_items",
+     "exchange_payment_method_id",
+     "exchange_price_difference",
+     "return_items",
+     "return_payment_method_id",
+     "status"
+    ]
+   }
+  },
+  "e4": [
+   {
+    "call": 5,
+    "customer_turn": 17,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 16,
+    "result": "not established"
+   },
+   {
+    "call": 6,
+    "customer_turn": 17,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 16,
+    "result": "not established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 5,
+    "executed": 289.73,
+    "result": "match"
+   },
+   {
+    "call": 6,
+    "executed": 23.99,
+    "result": "match"
+   }
+  ],
+  "e6": [
+   {
+    "call": 5,
+    "result": "match"
+   },
+   {
+    "call": 6,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [],
+   "recorded": []
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 9
+  },
+  "e9": [
+   {
+    "call": 8,
+    "exact_sentence": true
+   }
+  ],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 6,
+    "call_id": "toolu_01MGCFKmQUed1anbiUBM25Ye",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "latest recorded observation of #W7181492 shows status 'return requested', the call needs 'delivered'",
+      "grounded": true,
+      "policy_line": "118, 130",
+      "quote": "An order can only be returned if its status is 'delivered'",
+      "rule": "retail.return-exchange.delivered-only",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.return-exchange.delivered-only"
+    ],
+    "tool": "exchange_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.return-exchange.delivered-only"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "claude-3-7-sonnet-20250219",
+  "plant": null,
+  "published": {
+   "db_match": false,
+   "reward": 0.0
+  },
+  "run_id": "published/claude-3-7-sonnet-20250219/27_1",
+  "set": "published",
+  "sim_id": "2bdd8b6b-9928-4d05-b2a8-5ea5b9c6eb01",
+  "task_id": "27",
+  "trial": 1
+ },
+ "summary": {
+  "accepted_enforced": false,
+  "accepted_recorded": false,
+  "enforced_db_hash": "bdb79c5bc59481b656570010d5d536d525ae836e77642aa1b0d1a35f29873e90",
+  "findings_sha256": "cee0718e04fcb3dd5b6c7150886dec47f2210ebca5235969170e572285677c3c",
+  "gate_head": "sha256:cc02afadda243aedf9aca4f7d3c1f9b7727d41fb9761f37909d99664822d0aec",
+  "gate_receipts": 17,
+  "gold_db_hash": "08a9f35dd8ee39c46d1538800cc251a33131272e6a540842f110fcb5b23cd8a5",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "bdb79c5bc59481b656570010d5d536d525ae836e77642aa1b0d1a35f29873e90",
+  "run_id": "published/claude-3-7-sonnet-20250219/27_1"
+ }
+}

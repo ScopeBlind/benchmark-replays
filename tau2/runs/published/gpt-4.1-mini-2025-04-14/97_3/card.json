@@ -1,0 +1,211 @@
+{
+ "answer_key": {
+  "gold_db_hash": "a997556557672619d883773ad696e9a5faae2e452ef49fa38e02896362fc24d7",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 7,
+    "entity": "orders/#W6750959",
+    "status": "complete",
+    "tool": "modify_pending_order_address"
+   },
+   {
+    "call": 8,
+    "entity": "orders/#W6750959",
+    "status": "complete",
+    "tool": "modify_pending_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 6,
+    "customer_turn": 19,
+    "proposal_turn": 18,
+    "result": "established"
+   },
+   {
+    "call": 7,
+    "customer_turn": 19,
+    "proposal_turn": 18,
+    "result": "established"
+   },
+   {
+    "call": 8,
+    "customer_turn": 24,
+    "proposal_turn": 23,
+    "result": "established"
+   },
+   {
+    "call": 9,
+    "customer_turn": 24,
+    "proposal_turn": 23,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 6,
+    "executed": 3.76,
+    "result": "mismatch",
+    "stated": [
+     298.91
+    ]
+   },
+   {
+    "call": 7,
+    "result": "not computable"
+   },
+   {
+    "call": 8,
+    "executed": 3.76,
+    "result": "not stated"
+   },
+   {
+    "call": 9,
+    "result": "not computable"
+   }
+  ],
+  "e6": [
+   {
+    "call": 6,
+    "result": "match"
+   },
+   {
+    "call": 7,
+    "result": "n/a"
+   },
+   {
+    "call": 8,
+    "result": "match"
+   },
+   {
+    "call": 9,
+    "result": "n/a"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "order has been successfully modified",
+     "status": "observed",
+     "turn": 29,
+     "type": "item_change"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "order has been successfully modified",
+     "status": "observed",
+     "turn": 29,
+     "type": "item_change"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 1,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 6,
+    "call_id": "call_CY4HAqxiQqvPGpefuQxWG8ym",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "latest recorded observation of #W6750959 shows status 'pending', the call needs 'delivered'",
+      "grounded": true,
+      "policy_line": "118, 130",
+      "quote": "An order can only be returned if its status is 'delivered'",
+      "rule": "retail.return-exchange.delivered-only",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.return-exchange.delivered-only"
+    ],
+    "tool": "exchange_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.return-exchange.delivered-only"
+     ]
+    }
+   },
+   {
+    "call": 9,
+    "call_id": "call_m5Rd57GZuFE9dyzlEwNvd7iG",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "latest recorded observation of #W6750959 shows status 'pending (item modified)', the call needs 'pending'",
+      "grounded": true,
+      "policy_line": "96, 110",
+      "quote": "The agent will not be able to modify or cancel the order anymore",
+      "rule": "retail.modify.pending-only",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.modify.pending-only"
+    ],
+    "tool": "modify_pending_order_address",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.modify.pending-only"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-mini-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/gpt-4.1-mini-2025-04-14/97_3",
+  "set": "published",
+  "sim_id": "f354c950-abed-4791-a388-d2caded0a482",
+  "task_id": "97",
+  "trial": 3
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "a997556557672619d883773ad696e9a5faae2e452ef49fa38e02896362fc24d7",
+  "findings_sha256": "149f8611743ba269921e68cba91f7335b62e0c9396aeee8de9a7b55dea0e4bc2",
+  "gate_head": "sha256:9e491267bfcf7ddaffbbd3a6c9c09755ad825f5e5b39b8bf2dc8d47951efeff9",
+  "gate_receipts": 18,
+  "gold_db_hash": "a997556557672619d883773ad696e9a5faae2e452ef49fa38e02896362fc24d7",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "a997556557672619d883773ad696e9a5faae2e452ef49fa38e02896362fc24d7",
+  "run_id": "published/gpt-4.1-mini-2025-04-14/97_3"
+ }
+}

@@ -1,0 +1,144 @@
+{
+ "answer_key": {
+  "gold_db_hash": "ae5647e967420cfac562d751d0be73b9a2401247f5a44efb5818b59e77946ff9",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": false,
+   "recorded": false
+  },
+  "e3": {
+   "enforced": {
+    "orders/#W2890441": [
+     "exchange_items",
+     "exchange_new_items",
+     "exchange_payment_method_id",
+     "exchange_price_difference",
+     "status"
+    ]
+   },
+   "recorded": {
+    "orders/#W2890441": [
+     "exchange_new_items",
+     "exchange_price_difference"
+    ]
+   }
+  },
+  "e4": [
+   {
+    "call": 5,
+    "customer_turn": 23,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 22,
+    "result": "not established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 5,
+    "executed": 0.0,
+    "result": "mismatch",
+    "stated": [
+     499.28
+    ]
+   }
+  ],
+  "e6": [
+   {
+    "call": 5,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "exchange has been successfully processed",
+     "status": "refused",
+     "turn": 26,
+     "type": "exchange"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "exchange has been successfully processed",
+     "status": "executed, not the expected state",
+     "turn": 26,
+     "type": "exchange"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 4
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 5,
+    "call_id": "toolu_01KbccWAxbAWoyV8zdjVUu3K",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "new item ids equal to the replaced ones: ['8069050545']; present in the recorded order: True",
+      "grounded": true,
+      "policy_line": "112, 132",
+      "quote": "available new item of the same product but of different product option",
+      "rule": "retail.items.different-option",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.items.different-option"
+    ],
+    "tool": "exchange_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.items.different-option"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "claude-3-7-sonnet-20250219",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/claude-3-7-sonnet-20250219/18_0",
+  "set": "published",
+  "sim_id": "c31d7bfa-a7a4-42c3-a1e2-c67b9e4468de",
+  "task_id": "18",
+  "trial": 0
+ },
+ "summary": {
+  "accepted_enforced": false,
+  "accepted_recorded": false,
+  "enforced_db_hash": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+  "findings_sha256": "59ae87762c4dae91f08e53370776f3d70b4958a04a9d46553b2387a126be0795",
+  "gate_head": "sha256:d8c648404554b21debaeb4067f2d842c2ac097e7f578b32ea3707263eb395846",
+  "gate_receipts": 11,
+  "gold_db_hash": "ae5647e967420cfac562d751d0be73b9a2401247f5a44efb5818b59e77946ff9",
+  "harness_readbacks": 0,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "31df0f86dbf9f3093b4fd5b4544316bfd9de7059a0ab7df26b374265e70e7ba2",
+  "run_id": "published/claude-3-7-sonnet-20250219/18_0"
+ }
+}

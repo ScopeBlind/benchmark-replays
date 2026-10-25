@@ -1,0 +1,139 @@
+{
+ "answer_key": {
+  "gold_db_hash": "3ac42fbf475eee669df916f306a70ea83ea6c56203718218f9a9a4e6a3c44527",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 5,
+    "entity": "orders/#W8835847",
+    "status": "complete",
+    "tool": "cancel_pending_order"
+   }
+  ],
+  "e10": [
+   {
+    "call": 5,
+    "declared": "ordered by mistake",
+    "phrase": "ordered by mistake",
+    "result": "established"
+   }
+  ],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 5,
+    "customer_turn": 17,
+    "proposal_turn": 16,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 5,
+    "executed": 689.97,
+    "result": "match"
+   }
+  ],
+  "e6": [
+   {
+    "call": 5,
+    "result": "n/a"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "has been successfully cancelled",
+     "status": "observed",
+     "turn": 20,
+     "type": "cancel"
+    },
+    {
+     "match": "refund has been processed",
+     "status": "observed",
+     "turn": 20,
+     "type": "refund"
+    },
+    {
+     "match": "refund of $689.97 has been credited",
+     "status": "observed",
+     "turn": 22,
+     "type": "refund"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "has been successfully cancelled",
+     "status": "observed",
+     "turn": 20,
+     "type": "cancel"
+    },
+    {
+     "match": "refund has been processed",
+     "status": "observed",
+     "turn": 20,
+     "type": "refund"
+    },
+    {
+     "match": "refund of $689.97 has been credited",
+     "status": "observed",
+     "turn": 22,
+     "type": "refund"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 4
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": []
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "claude-3-7-sonnet-20250219",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/claude-3-7-sonnet-20250219/88_1",
+  "set": "published",
+  "sim_id": "54b7e704-0691-4879-9f5a-ae1eeb4f40d3",
+  "task_id": "88",
+  "trial": 1
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "3ac42fbf475eee669df916f306a70ea83ea6c56203718218f9a9a4e6a3c44527",
+  "findings_sha256": "ba8a3d85a27a895e82a5fbd0ad78c3cb9d3c6ae24f5a2aa9210a42e9030d02d2",
+  "gate_head": "sha256:751cf6e3fa080966eb5fbd3883ed0ccd4e1ade4c89f575fa06bc653a6972eb90",
+  "gate_receipts": 12,
+  "gold_db_hash": "3ac42fbf475eee669df916f306a70ea83ea6c56203718218f9a9a4e6a3c44527",
+  "harness_readbacks": 2,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "3ac42fbf475eee669df916f306a70ea83ea6c56203718218f9a9a4e6a3c44527",
+  "run_id": "published/claude-3-7-sonnet-20250219/88_1"
+ }
+}

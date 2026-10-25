@@ -1,0 +1,16 @@
+Run        published/claude-3-7-sonnet-20250219/36_3 (task 36 trial 3, claude-3-7-sonnet-20250219, sim 889fb509)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      19 attempted, 16 authorized, 3 refused
+Refused    call 9 modify_pending_order_items: retail.items.available-same-product
+Refused    call 14 modify_pending_order_items: retail.items.different-option
+Refused    call 17 cancel_pending_order: retail.cancel.pending-only
+Write      call 16 modify_pending_order_items orders/#W9348897: observed complete: complete
+Accepted   NO under enforcement (final database differs from the answer key)
+           differs at orders/#W9348897 ['items', 'payment_history']
+Not established  confirmation before call 9: the proposal does not name the call's order or user
+Not established  confirmation before call 14: the proposal does not name the call's order or user
+Not established  confirmation before call 16: the proposal does not name the call's order or user
+Mismatch   amount at call 14: stated [3.16, 6.6, 6.61, 14.75, 14.77, 45.89, 46.66, 135.24, 186.78, 285.66, 466.75, 1121.09, 1131.0], executed 31.32
+Mismatch   amount at call 16: stated [3.16, 6.6, 6.61, 14.75, 14.77, 45.89, 46.66, 135.24, 186.78, 285.66, 466.75, 1121.09, 1131.0], executed 19.9
+Mismatch   amount at call 17: stated [1131.0, 1147.08], executed 1186.88
+Evidence   35 gate receipts, 2 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

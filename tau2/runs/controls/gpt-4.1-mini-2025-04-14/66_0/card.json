@@ -1,0 +1,124 @@
+{
+ "answer_key": {
+  "gold_db_hash": "a60e11827d3f533573fdd0fe8ab3a1870834454995a58c2b8eba2faf2e6c1dfb",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 4,
+    "entity": "orders/#W3361211",
+    "status": "complete",
+    "tool": "cancel_pending_order"
+   }
+  ],
+  "e10": [
+   {
+    "call": 4,
+    "declared": "no longer needed",
+    "phrase": "no longer needed",
+    "result": "established"
+   }
+  ],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 4,
+    "customer_turn": 21,
+    "proposal_turn": 20,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 4,
+    "executed": 1464.0,
+    "result": "not stated"
+   }
+  ],
+  "e6": [
+   {
+    "call": 4,
+    "result": "n/a"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "has been successfully cancelled",
+     "status": "observed",
+     "turn": 24,
+     "type": "cancel"
+    },
+    {
+     "match": "refund of $1464.00 will be processed",
+     "status": "observed",
+     "turn": 24,
+     "type": "refund"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "has been successfully cancelled",
+     "status": "observed",
+     "turn": 24,
+     "type": "cancel"
+    },
+    {
+     "match": "refund of $1464.00 will be processed",
+     "status": "observed",
+     "turn": 24,
+     "type": "refund"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": []
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-mini-2025-04-14",
+  "plant": null,
+  "published": null,
+  "run_id": "controls/gpt-4.1-mini-2025-04-14/66_0",
+  "set": "control",
+  "sim_id": "fdd7cf6e-1cca-43f8-9051-4405d031d9df",
+  "task_id": "66",
+  "trial": 0
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "a60e11827d3f533573fdd0fe8ab3a1870834454995a58c2b8eba2faf2e6c1dfb",
+  "findings_sha256": "0d458204df9800421944c9d85fbb4c3c86cc1819cafee7c698cf50e0fabe9307",
+  "gate_head": "sha256:11bed8bf28da410984b393feb9968598e48cd04706b895e858791dd81eb12f8f",
+  "gate_receipts": 10,
+  "gold_db_hash": "a60e11827d3f533573fdd0fe8ab3a1870834454995a58c2b8eba2faf2e6c1dfb",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "a60e11827d3f533573fdd0fe8ab3a1870834454995a58c2b8eba2faf2e6c1dfb",
+  "run_id": "controls/gpt-4.1-mini-2025-04-14/66_0"
+ }
+}

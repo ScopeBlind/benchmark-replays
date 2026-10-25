@@ -1,0 +1,192 @@
+{
+ "answer_key": {
+  "gold_db_hash": "aa54036bba8dcaffc217e37461b7f0bde695b81db351900d6be7e9e16677fcf9",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 6,
+    "entity": "orders/#W4284542",
+    "status": "complete",
+    "tool": "cancel_pending_order"
+   }
+  ],
+  "e10": [
+   {
+    "call": 6,
+    "declared": "no longer needed",
+    "phrase": null,
+    "result": "not established"
+   }
+  ],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": false,
+   "recorded": false
+  },
+  "e3": {
+   "enforced": {
+    "orders/#W4284542": [
+     "cancel_reason",
+     "items",
+     "payment_history",
+     "status"
+    ],
+    "users/ivan_hernandez_6923": [
+     "payment_methods"
+    ]
+   },
+   "recorded": {
+    "orders/#W4284542": [
+     "cancel_reason",
+     "items",
+     "payment_history",
+     "status"
+    ],
+    "users/ivan_hernandez_6923": [
+     "payment_methods"
+    ]
+   }
+  },
+  "e4": [
+   {
+    "call": 4,
+    "customer_turn": 17,
+    "proposal_turn": 16,
+    "result": "established"
+   },
+   {
+    "call": 6,
+    "customer_turn": 17,
+    "proposal_turn": 16,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 4,
+    "result": "not computable"
+   },
+   {
+    "call": 6,
+    "executed": 2020.61,
+    "result": "mismatch",
+    "stated": [
+     85.0,
+     547.55,
+     632.55
+    ]
+   }
+  ],
+  "e6": [
+   {
+    "call": 4,
+    "result": "match"
+   },
+   {
+    "call": 6,
+    "result": "n/a"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "successfully cancelled",
+     "status": "executed, not the expected state",
+     "turn": 24,
+     "type": "cancel"
+    },
+    {
+     "match": "refund of $2,020.61 has been issued",
+     "status": "executed, not the expected state",
+     "turn": 24,
+     "type": "refund"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "successfully cancelled",
+     "status": "executed, not the expected state",
+     "turn": 24,
+     "type": "cancel"
+    },
+    {
+     "match": "refund of $2,020.61 has been issued",
+     "status": "executed, not the expected state",
+     "turn": 24,
+     "type": "refund"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 6
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 4,
+    "call_id": "toolu_01AzsfvjvyQttZKSSaxUeZgu",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "new item ids equal to the replaced ones: ['1689914594', '1507389580']; present in the recorded order: True",
+      "grounded": true,
+      "policy_line": "112, 132",
+      "quote": "available new item of the same product but of different product option",
+      "rule": "retail.items.different-option",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.items.different-option"
+    ],
+    "tool": "modify_pending_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.items.different-option"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "claude-3-7-sonnet-20250219",
+  "plant": null,
+  "published": {
+   "db_match": false,
+   "reward": 0.0
+  },
+  "run_id": "published/claude-3-7-sonnet-20250219/56_3",
+  "set": "published",
+  "sim_id": "1a942008-0ffe-4f7b-adfb-b94cfc5134dc",
+  "task_id": "56",
+  "trial": 3
+ },
+ "summary": {
+  "accepted_enforced": false,
+  "accepted_recorded": false,
+  "enforced_db_hash": "ae24398e11dc399d06382463c81870df447efebbd90ce024695c1da9ffc6dc56",
+  "findings_sha256": "84312f15fe406c8892a0aac2ab3d78d6cee56587de1249da624c2bdec475edcc",
+  "gate_head": "sha256:0fcfe01a7d96cb914653634048b49125c35777904cdf5b7503febad9e7f8cb45",
+  "gate_receipts": 13,
+  "gold_db_hash": "aa54036bba8dcaffc217e37461b7f0bde695b81db351900d6be7e9e16677fcf9",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "ae24398e11dc399d06382463c81870df447efebbd90ce024695c1da9ffc6dc56",
+  "run_id": "published/claude-3-7-sonnet-20250219/56_3"
+ }
+}

@@ -1,0 +1,418 @@
+{
+ "claude-3-7-sonnet-20250219": {
+  "pool": 339,
+  "P1": {
+   "target_call_index": 28,
+   "tool": "return_delivered_order_items",
+   "order_id": "#W2378156",
+   "edit": "delete this call and its tool result; keep every later message",
+   "sim_id": "ee6707bb-dbcb-4356-a43d-d91194bcf895",
+   "task_id": "2",
+   "trial": 0
+  },
+  "P1_qualifying": 65,
+  "P2a_non_gift": {
+   "target_call_index": 16,
+   "order_id": "#W4689314",
+   "original_method": "credit_card_8105988",
+   "replacement": "credit_card_3951670",
+   "sim_id": "88537d2d-1b86-4734-a415-7c3d3f2745e3",
+   "task_id": "51",
+   "trial": 0
+  },
+  "P2a_non_gift_qualifying": 18,
+  "P2b_gift_card": null,
+  "P2b_gift_card_qualifying": 0,
+  "P2c_price_difference": {
+   "target_call_index": 16,
+   "tool": "modify_pending_order_items",
+   "order_id": "#W4082615",
+   "method_used": "paypal_4768213",
+   "replacement": "credit_card_9503061",
+   "sim_id": "470bd37a-7c56-42ef-9ac3-9ec04495c39b",
+   "task_id": "41",
+   "trial": 0
+  },
+  "P2c_price_difference_qualifying": 17,
+  "P3a_cancel": {
+   "target_call_index": 34,
+   "tool": "cancel_pending_order",
+   "order_id": "#W9348897",
+   "edit": "insert an identical call (new id) right after this call's result; regenerate its result",
+   "sim_id": "dcec8d38-3a97-4011-b26c-a121efa3557b",
+   "task_id": "38",
+   "trial": 0
+  },
+  "P3a_cancel_qualifying": 14,
+  "P3b_return": {
+   "target_call_index": 28,
+   "tool": "return_delivered_order_items",
+   "order_id": "#W2378156",
+   "edit": "insert an identical call (new id) right after this call's result; regenerate its result",
+   "sim_id": "ee6707bb-dbcb-4356-a43d-d91194bcf895",
+   "task_id": "2",
+   "trial": 0
+  },
+  "P3b_return_qualifying": 51,
+  "P4": {
+   "target_call_index": 16,
+   "order_id": "#W9502127",
+   "confirmation_index": 14,
+   "approved_total": 1126.04,
+   "added_item": "2872451762",
+   "executed_total_after_edit": 1748.16,
+   "sim_id": "59ec2dc4-60ef-4ab4-8e8b-723652e1dae8",
+   "task_id": "46",
+   "trial": 0
+  },
+  "P4_qualifying": 21,
+  "P5": {
+   "swap_after_call_index": 14,
+   "writes": [
+    "return_delivered_order_items",
+    "return_delivered_order_items"
+   ],
+   "sim_id": "1466a180-230b-42d3-abf5-96fc76440b89",
+   "task_id": "14",
+   "trial": 0
+  },
+  "P5_qualifying": 106,
+  "P5b": {
+   "target_call_index": 16,
+   "tool": "return_delivered_order_items",
+   "order_id": "#W5490111",
+   "deleted_read_index": 8,
+   "payment_method_id": "credit_card_3124723",
+   "method_seen_elsewhere": true,
+   "swap_after_call_index": 14,
+   "sim_id": "1466a180-230b-42d3-abf5-96fc76440b89",
+   "task_id": "14",
+   "trial": 0
+  },
+  "P5b_qualifying": 79,
+  "P6": {
+   "target_call_index": 22,
+   "tool": "exchange_delivered_order_items",
+   "order_id": "#W6390527",
+   "deleted_read_index": 10,
+   "payment_method_id": "paypal_7644869",
+   "method_seen_elsewhere": true,
+   "sim_id": "4bec2b80-1781-4799-a103-037acd71715d",
+   "task_id": "6",
+   "trial": 0
+  },
+  "P6_qualifying": 257
+ },
+ "gpt-4.1-2025-04-14": {
+  "pool": 320,
+  "P1": {
+   "target_call_index": 12,
+   "tool": "return_delivered_order_items",
+   "order_id": "#W5272531",
+   "edit": "delete this call and its tool result; keep every later message",
+   "sim_id": "2c85c3f8-cdfb-4c08-ad8a-74be2700172a",
+   "task_id": "73",
+   "trial": 0
+  },
+  "P1_qualifying": 62,
+  "P2a_non_gift": {
+   "target_call_index": 17,
+   "order_id": "#W9571698",
+   "original_method": "gift_card_7250692",
+   "replacement": "credit_card_1565124",
+   "sim_id": "4778e07d-d08c-462e-9d30-b70f6ba2ad16",
+   "task_id": "83",
+   "trial": 0
+  },
+  "P2a_non_gift_qualifying": 16,
+  "P2b_gift_card": null,
+  "P2b_gift_card_qualifying": 0,
+  "P2c_price_difference": {
+   "target_call_index": 23,
+   "tool": "exchange_delivered_order_items",
+   "order_id": "#W4689314",
+   "method_used": "paypal_8194385",
+   "replacement": "credit_card_3951670",
+   "sim_id": "f041e4e7-c273-4c69-a76b-fa22492cc50c",
+   "task_id": "52",
+   "trial": 0
+  },
+  "P2c_price_difference_qualifying": 14,
+  "P3a_cancel": {
+   "target_call_index": 20,
+   "tool": "cancel_pending_order",
+   "order_id": "#W2417020",
+   "edit": "insert an identical call (new id) right after this call's result; regenerate its result",
+   "sim_id": "828a8018-2bcd-4e85-b598-befa63c4e988",
+   "task_id": "69",
+   "trial": 0
+  },
+  "P3a_cancel_qualifying": 18,
+  "P3b_return": {
+   "target_call_index": 12,
+   "tool": "return_delivered_order_items",
+   "order_id": "#W5272531",
+   "edit": "insert an identical call (new id) right after this call's result; regenerate its result",
+   "sim_id": "2c85c3f8-cdfb-4c08-ad8a-74be2700172a",
+   "task_id": "73",
+   "trial": 0
+  },
+  "P3b_return_qualifying": 44,
+  "P4": {
+   "target_call_index": 20,
+   "order_id": "#W9502127",
+   "confirmation_index": 18,
+   "approved_total": 1126.04,
+   "added_item": "2872451762",
+   "executed_total_after_edit": 1748.16,
+   "sim_id": "23ae0321-a3ae-426b-b569-4720c8b5a6f6",
+   "task_id": "46",
+   "trial": 0
+  },
+  "P4_qualifying": 10,
+  "P5": {
+   "swap_after_call_index": 13,
+   "writes": [
+    "return_delivered_order_items",
+    "return_delivered_order_items"
+   ],
+   "sim_id": "387ad524-36b4-4564-baf7-ee2dcc499b09",
+   "task_id": "14",
+   "trial": 0
+  },
+  "P5_qualifying": 91,
+  "P5b": {
+   "target_call_index": 13,
+   "tool": "return_delivered_order_items",
+   "order_id": "#W7387996",
+   "deleted_read_index": 8,
+   "payment_method_id": "paypal_9497703",
+   "method_seen_elsewhere": true,
+   "swap_after_call_index": 13,
+   "sim_id": "387ad524-36b4-4564-baf7-ee2dcc499b09",
+   "task_id": "14",
+   "trial": 0
+  },
+  "P5b_qualifying": 70,
+  "P6": {
+   "target_call_index": 13,
+   "tool": "return_delivered_order_items",
+   "order_id": "#W5490111",
+   "deleted_read_index": 8,
+   "payment_method_id": "credit_card_3124723",
+   "method_seen_elsewhere": true,
+   "sim_id": "387ad524-36b4-4564-baf7-ee2dcc499b09",
+   "task_id": "14",
+   "trial": 0
+  },
+  "P6_qualifying": 241
+ },
+ "gpt-4.1-mini-2025-04-14": {
+  "pool": 279,
+  "P1": {
+   "target_call_index": 15,
+   "tool": "return_delivered_order_items",
+   "order_id": "#W5272531",
+   "edit": "delete this call and its tool result; keep every later message",
+   "sim_id": "e9a19c5e-e33a-4735-9690-952861d6296a",
+   "task_id": "73",
+   "trial": 0
+  },
+  "P1_qualifying": 54,
+  "P2a_non_gift": {
+   "target_call_index": 20,
+   "order_id": "#W4689314",
+   "original_method": "credit_card_8105988",
+   "replacement": "credit_card_3951670",
+   "sim_id": "3543b212-22eb-475f-a934-30d9c881c0a4",
+   "task_id": "51",
+   "trial": 0
+  },
+  "P2a_non_gift_qualifying": 15,
+  "P2b_gift_card": null,
+  "P2b_gift_card_qualifying": 0,
+  "P2c_price_difference": {
+   "target_call_index": 29,
+   "tool": "exchange_delivered_order_items",
+   "order_id": "#W4689314",
+   "method_used": "paypal_8194385",
+   "replacement": "credit_card_3951670",
+   "sim_id": "62214352-2086-478e-9513-b79b1f6947ee",
+   "task_id": "52",
+   "trial": 0
+  },
+  "P2c_price_difference_qualifying": 7,
+  "P3a_cancel": {
+   "target_call_index": 22,
+   "tool": "cancel_pending_order",
+   "order_id": "#W3361211",
+   "edit": "insert an identical call (new id) right after this call's result; regenerate its result",
+   "sim_id": "fdd7cf6e-1cca-43f8-9051-4405d031d9df",
+   "task_id": "66",
+   "trial": 0
+  },
+  "P3a_cancel_qualifying": 12,
+  "P3b_return": {
+   "target_call_index": 15,
+   "tool": "return_delivered_order_items",
+   "order_id": "#W5272531",
+   "edit": "insert an identical call (new id) right after this call's result; regenerate its result",
+   "sim_id": "e9a19c5e-e33a-4735-9690-952861d6296a",
+   "task_id": "73",
+   "trial": 0
+  },
+  "P3b_return_qualifying": 42,
+  "P4": {
+   "target_call_index": 22,
+   "order_id": "#W9502127",
+   "confirmation_index": 20,
+   "approved_total": 1126.04,
+   "added_item": "2872451762",
+   "executed_total_after_edit": 1748.16,
+   "sim_id": "f8b068ea-fe0d-49ba-b8d1-c50564231045",
+   "task_id": "46",
+   "trial": 0
+  },
+  "P4_qualifying": 9,
+  "P5": {
+   "swap_after_call_index": 17,
+   "writes": [
+    "cancel_pending_order",
+    "cancel_pending_order"
+   ],
+   "sim_id": "a8518d8b-77b4-421a-9467-a5c3f3b67a9e",
+   "task_id": "81",
+   "trial": 0
+  },
+  "P5_qualifying": 69,
+  "P5b": {
+   "target_call_index": 17,
+   "tool": "cancel_pending_order",
+   "order_id": "#W9722559",
+   "deleted_read_index": 8,
+   "payment_method_id": null,
+   "method_seen_elsewhere": null,
+   "swap_after_call_index": 17,
+   "sim_id": "a8518d8b-77b4-421a-9467-a5c3f3b67a9e",
+   "task_id": "81",
+   "trial": 0
+  },
+  "P5b_qualifying": 45,
+  "P6": {
+   "target_call_index": 12,
+   "tool": "modify_pending_order_items",
+   "order_id": "#W9300146",
+   "deleted_read_index": 6,
+   "payment_method_id": "gift_card_7245904",
+   "method_seen_elsewhere": false,
+   "sim_id": "1005448f-435c-4bdf-9717-910629df3560",
+   "task_id": "44",
+   "trial": 0
+  },
+  "P6_qualifying": 187
+ },
+ "o4-mini-2025-04-16": {
+  "pool": 304,
+  "P1": {
+   "target_call_index": 20,
+   "tool": "return_delivered_order_items",
+   "order_id": "#W5565470",
+   "edit": "delete this call and its tool result; keep every later message",
+   "sim_id": "4a4a5ec5-31c7-47a3-99cd-87f4c2c09502",
+   "task_id": "26",
+   "trial": 0
+  },
+  "P1_qualifying": 61,
+  "P2a_non_gift": {
+   "target_call_index": 18,
+   "order_id": "#W4689314",
+   "original_method": "credit_card_8105988",
+   "replacement": "credit_card_3951670",
+   "sim_id": "4cdae44a-83b3-43f1-b4ef-44fb435dcc08",
+   "task_id": "51",
+   "trial": 0
+  },
+  "P2a_non_gift_qualifying": 16,
+  "P2b_gift_card": null,
+  "P2b_gift_card_qualifying": 0,
+  "P2c_price_difference": {
+   "target_call_index": 30,
+   "tool": "modify_pending_order_items",
+   "order_id": "#W4082615",
+   "method_used": "paypal_4768213",
+   "replacement": "credit_card_9503061",
+   "sim_id": "84791a1a-ec8e-4852-9d22-93127ae0e25d",
+   "task_id": "42",
+   "trial": 0
+  },
+  "P2c_price_difference_qualifying": 15,
+  "P3a_cancel": {
+   "target_call_index": 18,
+   "tool": "cancel_pending_order",
+   "order_id": "#W2417020",
+   "edit": "insert an identical call (new id) right after this call's result; regenerate its result",
+   "sim_id": "718d8675-4d41-4ee0-99f9-3e83b2ad1218",
+   "task_id": "69",
+   "trial": 0
+  },
+  "P3a_cancel_qualifying": 14,
+  "P3b_return": {
+   "target_call_index": 20,
+   "tool": "return_delivered_order_items",
+   "order_id": "#W5565470",
+   "edit": "insert an identical call (new id) right after this call's result; regenerate its result",
+   "sim_id": "4a4a5ec5-31c7-47a3-99cd-87f4c2c09502",
+   "task_id": "26",
+   "trial": 0
+  },
+  "P3b_return_qualifying": 47,
+  "P4": {
+   "target_call_index": 20,
+   "order_id": "#W9502127",
+   "confirmation_index": 18,
+   "approved_total": 1095.55,
+   "added_item": "6243981804",
+   "executed_total_after_edit": 1425.4,
+   "sim_id": "7c841bf2-a2ed-49fb-83ec-f554e705464c",
+   "task_id": "47",
+   "trial": 0
+  },
+  "P4_qualifying": 12,
+  "P5": {
+   "swap_after_call_index": 16,
+   "writes": [
+    "return_delivered_order_items",
+    "return_delivered_order_items"
+   ],
+   "sim_id": "c26ea91f-c83b-4a13-a4f9-fba4d03bc0a7",
+   "task_id": "14",
+   "trial": 0
+  },
+  "P5_qualifying": 87,
+  "P5b": {
+   "target_call_index": 18,
+   "tool": "return_delivered_order_items",
+   "order_id": "#W5490111",
+   "deleted_read_index": 8,
+   "payment_method_id": "credit_card_3124723",
+   "method_seen_elsewhere": true,
+   "swap_after_call_index": 16,
+   "sim_id": "c26ea91f-c83b-4a13-a4f9-fba4d03bc0a7",
+   "task_id": "14",
+   "trial": 0
+  },
+  "P5b_qualifying": 78,
+  "P6": {
+   "target_call_index": 12,
+   "tool": "modify_pending_order_payment",
+   "order_id": "#W4923227",
+   "deleted_read_index": 8,
+   "payment_method_id": "credit_card_8897086",
+   "method_seen_elsewhere": true,
+   "sim_id": "22dbdd8a-3f45-4f87-a6c0-a2379f0e3689",
+   "task_id": "40",
+   "trial": 0
+  },
+  "P6_qualifying": 241
+ }
+}

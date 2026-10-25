@@ -1,0 +1,9 @@
+Run        published/gpt-4.1-2025-04-14/27_0 (task 27 trial 0, gpt-4.1-2025-04-14, sim d52b24d0)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      7 attempted, 6 authorized, 1 refused
+Refused    call 6 exchange_delivered_order_items: retail.return-exchange.delivered-only
+Write      call 5 return_delivered_order_items orders/#W7181492: observed complete: complete
+Accepted   NO under enforcement (final database differs from the answer key)
+           differs at orders/#W7181492 ['exchange_items', 'exchange_new_items', 'exchange_payment_method_id', 'exchange_price_difference', 'return_items', 'return_payment_method_id', 'status']
+Claim      "refund will be processed": executed, not the expected state
+Evidence   13 gate receipts, 2 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

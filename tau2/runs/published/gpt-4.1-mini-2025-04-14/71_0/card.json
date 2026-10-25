@@ -1,0 +1,165 @@
+{
+ "answer_key": {
+  "gold_db_hash": "c14be7c97f71be56b7f5bbb1bf5e1791c8f1b1f5ea9fb724eb52df49e5c02e8a",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 4,
+    "entity": "orders/#W5782623",
+    "status": "complete",
+    "tool": "modify_pending_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": false,
+   "recorded": false
+  },
+  "e3": {
+   "enforced": {
+    "orders/#W5270061": [
+     "address",
+     "items",
+     "payment_history",
+     "status"
+    ],
+    "orders/#W5782623": [
+     "items",
+     "payment_history",
+     "status"
+    ],
+    "users/ivan_khan_7475": [
+     "payment_methods"
+    ]
+   },
+   "recorded": {
+    "orders/#W5270061": [
+     "address",
+     "items",
+     "payment_history",
+     "status"
+    ],
+    "orders/#W5782623": [
+     "items",
+     "payment_history",
+     "status"
+    ],
+    "users/ivan_khan_7475": [
+     "payment_methods"
+    ]
+   }
+  },
+  "e4": [
+   {
+    "call": 4,
+    "customer_turn": 21,
+    "proposal_turn": 20,
+    "result": "established"
+   },
+   {
+    "call": 5,
+    "customer_turn": 25,
+    "proposal_turn": 24,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 4,
+    "executed": 10.84,
+    "result": "not stated"
+   },
+   {
+    "call": 5,
+    "executed": 492.2,
+    "result": "not stated"
+   }
+  ],
+  "e6": [
+   {
+    "call": 4,
+    "result": "not stated"
+   },
+   {
+    "call": 5,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [],
+   "recorded": []
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 5,
+    "call_id": "call_3AUR63d1cj2Eq2Sw2j9I7DP0",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "latest recorded observation of #W5782623 shows status 'pending (item modified)', the call needs 'pending'",
+      "grounded": true,
+      "policy_line": "96, 110",
+      "quote": "The agent will not be able to modify or cancel the order anymore",
+      "rule": "retail.modify.pending-only",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.modify.pending-only"
+    ],
+    "tool": "modify_pending_order_payment",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.modify.pending-only"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-mini-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": false,
+   "reward": 0.0
+  },
+  "run_id": "published/gpt-4.1-mini-2025-04-14/71_0",
+  "set": "published",
+  "sim_id": "d0278c91-07a3-406c-ac41-6f3c7fe6d978",
+  "task_id": "71",
+  "trial": 0
+ },
+ "summary": {
+  "accepted_enforced": false,
+  "accepted_recorded": false,
+  "enforced_db_hash": "64642295a63a0505e53de334dbfceb3d8db40d3a1272198c966ba799951684e8",
+  "findings_sha256": "936b2ac8bc0317de9c5e72db5e02fa8791e33c18a877d6c46d868e5e1590733f",
+  "gate_head": "sha256:8f7ac9b34474017ac5739ddbac5464b517b25277dc30865e39924f6f188c405b",
+  "gate_receipts": 11,
+  "gold_db_hash": "c14be7c97f71be56b7f5bbb1bf5e1791c8f1b1f5ea9fb724eb52df49e5c02e8a",
+  "harness_readbacks": 2,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "64642295a63a0505e53de334dbfceb3d8db40d3a1272198c966ba799951684e8",
+  "run_id": "published/gpt-4.1-mini-2025-04-14/71_0"
+ }
+}

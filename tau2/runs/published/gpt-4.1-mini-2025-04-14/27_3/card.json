@@ -1,0 +1,155 @@
+{
+ "answer_key": {
+  "gold_db_hash": "08a9f35dd8ee39c46d1538800cc251a33131272e6a540842f110fcb5b23cd8a5",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 7,
+    "entity": "orders/#W7181492",
+    "status": "complete",
+    "tool": "return_delivered_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": false,
+   "recorded": false
+  },
+  "e3": {
+   "enforced": {
+    "orders/#W7181492": [
+     "exchange_items",
+     "exchange_new_items",
+     "exchange_payment_method_id",
+     "exchange_price_difference",
+     "return_items",
+     "return_payment_method_id",
+     "status"
+    ]
+   },
+   "recorded": {
+    "orders/#W7181492": [
+     "exchange_items",
+     "exchange_new_items",
+     "exchange_payment_method_id",
+     "exchange_price_difference",
+     "return_items",
+     "return_payment_method_id",
+     "status"
+    ]
+   }
+  },
+  "e4": [
+   {
+    "call": 7,
+    "customer_turn": 22,
+    "proposal_turn": 21,
+    "result": "established"
+   },
+   {
+    "call": 8,
+    "customer_turn": 22,
+    "proposal_turn": 21,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 7,
+    "executed": 289.73,
+    "result": "not stated"
+   },
+   {
+    "call": 8,
+    "executed": 23.99,
+    "result": "not stated"
+   }
+  ],
+  "e6": [
+   {
+    "call": 7,
+    "result": "match"
+   },
+   {
+    "call": 8,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [],
+   "recorded": []
+  },
+  "e8": {
+   "turns_with_several_calls": 2,
+   "turns_with_text_and_call": 1
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 8,
+    "call_id": "call_gWci5WPSi8g22SAkgsSXiHBZ",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "latest recorded observation of #W7181492 shows status 'return requested', the call needs 'delivered'",
+      "grounded": true,
+      "policy_line": "118, 130",
+      "quote": "An order can only be returned if its status is 'delivered'",
+      "rule": "retail.return-exchange.delivered-only",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.return-exchange.delivered-only"
+    ],
+    "tool": "exchange_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.return-exchange.delivered-only"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-mini-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": false,
+   "reward": 0.0
+  },
+  "run_id": "published/gpt-4.1-mini-2025-04-14/27_3",
+  "set": "published",
+  "sim_id": "25babc82-8fe9-44e2-9ce3-dd65e40403ce",
+  "task_id": "27",
+  "trial": 3
+ },
+ "summary": {
+  "accepted_enforced": false,
+  "accepted_recorded": false,
+  "enforced_db_hash": "bdb79c5bc59481b656570010d5d536d525ae836e77642aa1b0d1a35f29873e90",
+  "findings_sha256": "60bca657fb00fb1c261f43d002beb530523aa88b23e9c0901f98ecc8a8728c05",
+  "gate_head": "sha256:a8fb6f40099f1fcf15a6c6fb81c9b05a599b29ae349b2fc44df4541158477b79",
+  "gate_receipts": 17,
+  "gold_db_hash": "08a9f35dd8ee39c46d1538800cc251a33131272e6a540842f110fcb5b23cd8a5",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "bdb79c5bc59481b656570010d5d536d525ae836e77642aa1b0d1a35f29873e90",
+  "run_id": "published/gpt-4.1-mini-2025-04-14/27_3"
+ }
+}

@@ -1,0 +1,9 @@
+Run        published/claude-3-7-sonnet-20250219/5_0 (task 5 trial 0, claude-3-7-sonnet-20250219, sim 416ddb54)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      8 attempted, 8 authorized, 0 refused
+Write      call 7 return_delivered_order_items orders/#W6390527: observed complete: complete
+Accepted   yes under enforcement (final database equals the answer key)
+Claim      "return requested": observed
+Claim      "refund of $45.13 will be processed": observed
+Claim      "refund of $45.13 will be processed": observed
+Evidence   16 gate receipts, 2 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

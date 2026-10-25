@@ -1,0 +1,183 @@
+{
+ "answer_key": {
+  "gold_db_hash": "1301e5413c383b7647b710051c6526553b0cec3836432cc3e93e3cbbafeb0a7d",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 8,
+    "entity": "orders/#W3730488",
+    "status": "complete",
+    "tool": "modify_pending_order_address"
+   },
+   {
+    "call": 9,
+    "entity": "orders/#W3730488",
+    "status": "complete",
+    "tool": "modify_pending_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": false,
+   "recorded": false
+  },
+  "e3": {
+   "enforced": {
+    "orders/#W9810810": [
+     "items",
+     "payment_history",
+     "status"
+    ],
+    "users/yara_silva_7567": [
+     "payment_methods"
+    ]
+   },
+   "recorded": {
+    "orders/#W9810810": [
+     "items",
+     "payment_history",
+     "status"
+    ],
+    "users/yara_silva_7567": [
+     "payment_methods"
+    ]
+   }
+  },
+  "e4": [
+   {
+    "call": 8,
+    "customer_turn": 25,
+    "proposal_turn": 24,
+    "result": "established"
+   },
+   {
+    "call": 9,
+    "customer_turn": 25,
+    "proposal_turn": 24,
+    "result": "established"
+   },
+   {
+    "call": 10,
+    "customer_turn": 25,
+    "proposal_turn": 24,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 8,
+    "result": "not computable"
+   },
+   {
+    "call": 9,
+    "executed": 181.37,
+    "result": "mismatch",
+    "stated": [
+     56.0,
+     1908.15,
+     2520.52
+    ]
+   },
+   {
+    "call": 10,
+    "executed": 77.15,
+    "result": "mismatch",
+    "stated": [
+     56.0,
+     1908.15,
+     2520.52
+    ]
+   }
+  ],
+  "e6": [
+   {
+    "call": 8,
+    "result": "n/a"
+   },
+   {
+    "call": 9,
+    "result": "match"
+   },
+   {
+    "call": 10,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [],
+   "recorded": []
+  },
+  "e8": {
+   "turns_with_several_calls": 3,
+   "turns_with_text_and_call": 1
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 10,
+    "call_id": "call_MTj3kabLXr28QGoyJqlkhdS9",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "latest recorded observation of #W9810810 shows status 'pending', the call needs 'delivered'",
+      "grounded": true,
+      "policy_line": "118, 130",
+      "quote": "An order can only be returned if its status is 'delivered'",
+      "rule": "retail.return-exchange.delivered-only",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.return-exchange.delivered-only"
+    ],
+    "tool": "exchange_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.return-exchange.delivered-only"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-mini-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": false,
+   "reward": 0.0
+  },
+  "run_id": "published/gpt-4.1-mini-2025-04-14/111_3",
+  "set": "published",
+  "sim_id": "4e7533b5-5497-45b6-8538-fe9689ad524a",
+  "task_id": "111",
+  "trial": 3
+ },
+ "summary": {
+  "accepted_enforced": false,
+  "accepted_recorded": false,
+  "enforced_db_hash": "7de4bc94f273e69ce786e3db90cf0a25aae32c4e0d67a43497bae4cdfb5bc808",
+  "findings_sha256": "849acd8ce82ec0ed433c1dbeb7e22ade0a47c9293d16b46160f0244cd0509039",
+  "gate_head": "sha256:a65b721bba6b3a7d03f26d00334d1011c3833ad2046332dab6a5e0193d7957ab",
+  "gate_receipts": 21,
+  "gold_db_hash": "1301e5413c383b7647b710051c6526553b0cec3836432cc3e93e3cbbafeb0a7d",
+  "harness_readbacks": 2,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "7de4bc94f273e69ce786e3db90cf0a25aae32c4e0d67a43497bae4cdfb5bc808",
+  "run_id": "published/gpt-4.1-mini-2025-04-14/111_3"
+ }
+}

@@ -1,0 +1,161 @@
+{
+ "answer_key": {
+  "gold_db_hash": "2e9d92ee0d0cdd9e1eb41bd72d3390e1bc442a9f8c1c878c7b542668ebf7da96",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 9,
+    "entity": "orders/#W7464385",
+    "status": "complete",
+    "tool": "modify_pending_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 8,
+    "customer_turn": 33,
+    "proposal_turn": 32,
+    "result": "established"
+   },
+   {
+    "call": 9,
+    "customer_turn": 43,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 42,
+    "result": "not established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 8,
+    "executed": 35.53,
+    "result": "not stated"
+   },
+   {
+    "call": 9,
+    "executed": 35.53,
+    "result": "not stated"
+   }
+  ],
+  "e6": [
+   {
+    "call": 8,
+    "missing": "the method is not in an observed profile",
+    "result": "not checkable"
+   },
+   {
+    "call": 9,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "refund of $35.53 has been issued",
+     "status": "observed",
+     "turn": 46,
+     "type": "refund"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "refund of $35.53 has been issued",
+     "status": "observed",
+     "turn": 46,
+     "type": "refund"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 1,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 8,
+    "call_id": "call_0lfi0VBid9LutPJog0EDi9X2",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "latest recorded observation of #W7464385 shows status 'pending', the call needs 'delivered'",
+      "grounded": true,
+      "policy_line": "118, 130",
+      "quote": "An order can only be returned if its status is 'delivered'",
+      "rule": "retail.return-exchange.delivered-only",
+      "test": "G2"
+     },
+     {
+      "evidence": "credit_card_0000000 appears in no recorded profile of james_sanchez_3954 and is not the order's original method",
+      "grounded": true,
+      "policy_line": "114, 122, 134",
+      "quote": "The user must provide a payment method",
+      "rule": "retail.payment.customer-method",
+      "test": "G1"
+     }
+    ],
+    "rules": [
+     "retail.return-exchange.delivered-only",
+     "retail.payment.customer-method"
+    ],
+    "tool": "exchange_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.return-exchange.delivered-only",
+      "retail.payment.customer-method"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-mini-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/gpt-4.1-mini-2025-04-14/64_1",
+  "set": "published",
+  "sim_id": "726a24b2-47e7-4d12-9f02-dede5eac4ba9",
+  "task_id": "64",
+  "trial": 1
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "2e9d92ee0d0cdd9e1eb41bd72d3390e1bc442a9f8c1c878c7b542668ebf7da96",
+  "findings_sha256": "2fa10bc54a6fefb43b474a743f5f4d6103936672871bd496197032fc271fbb92",
+  "gate_head": "sha256:a48e42cdaeebbd9c229ad1d3a217cc7823c9e90f82795d9a4208e272be8b2ba9",
+  "gate_receipts": 19,
+  "gold_db_hash": "2e9d92ee0d0cdd9e1eb41bd72d3390e1bc442a9f8c1c878c7b542668ebf7da96",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "2e9d92ee0d0cdd9e1eb41bd72d3390e1bc442a9f8c1c878c7b542668ebf7da96",
+  "run_id": "published/gpt-4.1-mini-2025-04-14/64_1"
+ }
+}

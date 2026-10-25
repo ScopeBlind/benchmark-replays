@@ -1,0 +1,6 @@
+Run        controls/o4-mini-2025-04-16/40_0 (task 40 trial 0, o4-mini-2025-04-16, sim 22dbdd8a)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      4 attempted, 4 authorized, 0 refused
+Write      call 3 modify_pending_order_payment orders/#W4923227: observed complete: complete
+Accepted   yes under enforcement (final database equals the answer key)
+Evidence   8 gate receipts, 2 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

@@ -1,0 +1,1823 @@
+{
+ "gold_writes": 176,
+ "refused": 2,
+ "refused_rows": [
+  {
+   "task": "64",
+   "action": 6,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W7464385",
+   "allowed": false,
+   "rules": [
+    "retail.return-exchange.delivered-only"
+   ],
+   "fails_in_tau2_too": true,
+   "tool_error": "Error: Non-delivered order cannot be exchanged"
+  },
+  {
+   "task": "105",
+   "action": 0,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W4316152",
+   "allowed": false,
+   "rules": [
+    "retail.payment.gift-card-balance"
+   ],
+   "fails_in_tau2_too": true,
+   "tool_error": "Error: Insufficient gift card balance to pay for the price difference"
+  }
+ ],
+ "refused_and_failing_in_tau2": 2,
+ "failing_in_tau2": [
+  {
+   "task": "64",
+   "action": 6,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W7464385",
+   "allowed": false,
+   "rules": [
+    "retail.return-exchange.delivered-only"
+   ],
+   "fails_in_tau2_too": true,
+   "tool_error": "Error: Non-delivered order cannot be exchanged"
+  },
+  {
+   "task": "105",
+   "action": 0,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W4316152",
+   "allowed": false,
+   "rules": [
+    "retail.payment.gift-card-balance"
+   ],
+   "fails_in_tau2_too": true,
+   "tool_error": "Error: Insufficient gift card balance to pay for the price difference"
+  }
+ ],
+ "rows": [
+  {
+   "task": "0",
+   "action": 4,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W2378156",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "1",
+   "action": 4,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W2378156",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "2",
+   "action": 10,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W2378156",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "3",
+   "action": 11,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W4776164",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "4",
+   "action": 11,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W6247578",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "4",
+   "action": 12,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W4776164",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "5",
+   "action": 4,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W6390527",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "6",
+   "action": 5,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W6390527",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "7",
+   "action": 5,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W6390527",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "8",
+   "action": 5,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W6390527",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "9",
+   "action": 5,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W6390527",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "11",
+   "action": 4,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W5490111",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "11",
+   "action": 5,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W7387996",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "13",
+   "action": 4,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W5490111",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "14",
+   "action": 4,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W5490111",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "14",
+   "action": 5,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W7387996",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "15",
+   "action": 6,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W5199551",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "16",
+   "action": 6,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W5199551",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "16",
+   "action": 7,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W8665881",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "16",
+   "action": 8,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W9389413",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "17",
+   "action": 5,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W8665881",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "18",
+   "action": 4,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W2890441",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "19",
+   "action": 6,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W2890441",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "20",
+   "action": 8,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W9911714",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "21",
+   "action": 11,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W9911714",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "22",
+   "action": 1,
+   "tool": "modify_user_address",
+   "order_or_user": "ethan_garcia_1261",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "22",
+   "action": 5,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W9911714",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "22",
+   "action": 6,
+   "tool": "modify_user_address",
+   "order_or_user": "ethan_garcia_1261",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "23",
+   "action": 7,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W3947049",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "23",
+   "action": 9,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W6876713",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "23",
+   "action": 11,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W3561391",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "26",
+   "action": 6,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W5565470",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "27",
+   "action": 5,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W7181492",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "28",
+   "action": 6,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W3792453",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "28",
+   "action": 7,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W7181492",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "28",
+   "action": 8,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W5565470",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "29",
+   "action": 4,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W3792453",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "29",
+   "action": 5,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W7181492",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "30",
+   "action": 6,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W2692684",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "30",
+   "action": 8,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W9373487",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "30",
+   "action": 12,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W7449508",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "31",
+   "action": 8,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W9373487",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "31",
+   "action": 11,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W7449508",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "32",
+   "action": 8,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W9373487",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "32",
+   "action": 10,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W5481803",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "32",
+   "action": 12,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W7449508",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "33",
+   "action": 5,
+   "tool": "modify_user_address",
+   "order_or_user": "noah_patel_6952",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "34",
+   "action": 5,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W1845024",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "35",
+   "action": 5,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W8528674",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "35",
+   "action": 6,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W9672333",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "36",
+   "action": 0,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W9348897",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "37",
+   "action": 3,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W9348897",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "38",
+   "action": 3,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W9348897",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "39",
+   "action": 4,
+   "tool": "modify_user_address",
+   "order_or_user": "fatima_taylor_3452",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "40",
+   "action": 3,
+   "tool": "modify_pending_order_payment",
+   "order_or_user": "#W4923227",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "41",
+   "action": 4,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W9583042",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "41",
+   "action": 5,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W4082615",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "41",
+   "action": 6,
+   "tool": "modify_user_address",
+   "order_or_user": "mei_patel_7272",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "41",
+   "action": 9,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W4082615",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "42",
+   "action": 4,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W9583042",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "42",
+   "action": 5,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W4082615",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "42",
+   "action": 6,
+   "tool": "modify_user_address",
+   "order_or_user": "mei_patel_7272",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "42",
+   "action": 9,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W4082615",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "43",
+   "action": 4,
+   "tool": "modify_user_address",
+   "order_or_user": "lucas_santos_6600",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "44",
+   "action": 4,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W9300146",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "45",
+   "action": 4,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W9502127",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "46",
+   "action": 5,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W9502127",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "47",
+   "action": 5,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W9502127",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "48",
+   "action": 5,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W9502127",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "49",
+   "action": 9,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W3470184",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "51",
+   "action": 5,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W4689314",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "52",
+   "action": 4,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W4689314",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "53",
+   "action": 5,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W3916020",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "54",
+   "action": 9,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W4836353",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "54",
+   "action": 10,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W7342738",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "54",
+   "action": 11,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W4597054",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "55",
+   "action": 9,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W4836353",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "55",
+   "action": 10,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W7342738",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "55",
+   "action": 11,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W4597054",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "55",
+   "action": 12,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W7773202",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "56",
+   "action": 6,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W4284542",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "58",
+   "action": 5,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W5838674",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "59",
+   "action": 3,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W8268610",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "59",
+   "action": 4,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W2702727",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "60",
+   "action": 3,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W5061109",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "61",
+   "action": 4,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W5061109",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "63",
+   "action": 6,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W5061109",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "64",
+   "action": 6,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W7464385",
+   "allowed": false,
+   "rules": [
+    "retail.return-exchange.delivered-only"
+   ],
+   "fails_in_tau2_too": true,
+   "tool_error": "Error: Non-delivered order cannot be exchanged"
+  },
+  {
+   "task": "64",
+   "action": 7,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W7464385",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "66",
+   "action": 4,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W3361211",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "69",
+   "action": 3,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W2417020",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "70",
+   "action": 0,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W3947049",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "71",
+   "action": 0,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W5270061",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "71",
+   "action": 1,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W5270061",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "72",
+   "action": 0,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W5270061",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "72",
+   "action": 1,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W5270061",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "73",
+   "action": 0,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W5272531",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "74",
+   "action": 0,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W3189752",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "74",
+   "action": 1,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W5166363",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "75",
+   "action": 0,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W6908222",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "76",
+   "action": 0,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W8367380",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "76",
+   "action": 1,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W1242543",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "77",
+   "action": 0,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W1671835",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "78",
+   "action": 0,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W5056519",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "78",
+   "action": 1,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W5056519",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "78",
+   "action": 2,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W5995614",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "79",
+   "action": 0,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W8661412",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "80",
+   "action": 0,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W7209932",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "81",
+   "action": 0,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W3289292",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "81",
+   "action": 1,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W9722559",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "82",
+   "action": 0,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W9571698",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "83",
+   "action": 0,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W9571698",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "84",
+   "action": 0,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W9571698",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "85",
+   "action": 0,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W2466703",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "86",
+   "action": 0,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W2466703",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "86",
+   "action": 1,
+   "tool": "modify_user_address",
+   "order_or_user": "yusuf_hernandez_6785",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "87",
+   "action": 0,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W2166301",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "87",
+   "action": 1,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W2466703",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "87",
+   "action": 2,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W6832752",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "87",
+   "action": 3,
+   "tool": "modify_user_address",
+   "order_or_user": "yusuf_hernandez_6785",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "88",
+   "action": 0,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W8835847",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "89",
+   "action": 0,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W4680753",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "90",
+   "action": 0,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W9284598",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "91",
+   "action": 0,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W7553978",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "91",
+   "action": 1,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W3239882",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "92",
+   "action": 0,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W7553978",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "92",
+   "action": 1,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W3239882",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "93",
+   "action": 0,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W4073673",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "94",
+   "action": 0,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W2905754",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "95",
+   "action": 0,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W2905754",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "95",
+   "action": 1,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W4073673",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "96",
+   "action": 0,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W6750959",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "96",
+   "action": 1,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W6750959",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "97",
+   "action": 0,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W6750959",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "97",
+   "action": 1,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W6750959",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "98",
+   "action": 0,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W4689314",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "98",
+   "action": 1,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W3916020",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "98",
+   "action": 2,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W8855135",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "99",
+   "action": 0,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W4689314",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "99",
+   "action": 1,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W3916020",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "100",
+   "action": 0,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W3295833",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "100",
+   "action": 1,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W8488728",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "101",
+   "action": 0,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W4219264",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "101",
+   "action": 1,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W4219264",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "101",
+   "action": 2,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W6729841",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "102",
+   "action": 0,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W4219264",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "102",
+   "action": 1,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W4219264",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "102",
+   "action": 2,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W3445693",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "103",
+   "action": 0,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W6239298",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "103",
+   "action": 1,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W9218746",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "103",
+   "action": 2,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W4860251",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "103",
+   "action": 3,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W4860251",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "104",
+   "action": 0,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W8660475",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "104",
+   "action": 1,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W9218746",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "104",
+   "action": 2,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W4860251",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "104",
+   "action": 3,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W4860251",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "104",
+   "action": 4,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W6239298",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "105",
+   "action": 0,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W4316152",
+   "allowed": false,
+   "rules": [
+    "retail.payment.gift-card-balance"
+   ],
+   "fails_in_tau2_too": true,
+   "tool_error": "Error: Insufficient gift card balance to pay for the price difference"
+  },
+  {
+   "task": "106",
+   "action": 0,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W3388163",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "107",
+   "action": 0,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W1304208",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "107",
+   "action": 1,
+   "tool": "exchange_delivered_order_items",
+   "order_or_user": "#W8353027",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "108",
+   "action": 0,
+   "tool": "return_delivered_order_items",
+   "order_or_user": "#W1679211",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "109",
+   "action": 0,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W1603792",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "109",
+   "action": 1,
+   "tool": "modify_user_address",
+   "order_or_user": "sophia_martin_8570",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "109",
+   "action": 2,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W1603792",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "110",
+   "action": 0,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W1092119",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "110",
+   "action": 1,
+   "tool": "modify_user_address",
+   "order_or_user": "sophia_martin_8570",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "110",
+   "action": 2,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W1603792",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "111",
+   "action": 0,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W9810810",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "111",
+   "action": 1,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W3730488",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "111",
+   "action": 2,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W3730488",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "112",
+   "action": 0,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W9810810",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "112",
+   "action": 1,
+   "tool": "modify_pending_order_address",
+   "order_or_user": "#W3730488",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "112",
+   "action": 2,
+   "tool": "modify_pending_order_items",
+   "order_or_user": "#W3730488",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "113",
+   "action": 0,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W5056519",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  },
+  {
+   "task": "113",
+   "action": 1,
+   "tool": "cancel_pending_order",
+   "order_or_user": "#W5995614",
+   "allowed": true,
+   "rules": [],
+   "fails_in_tau2_too": false,
+   "tool_error": null
+  }
+ ]
+}

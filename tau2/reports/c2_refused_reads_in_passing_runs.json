@@ -1,0 +1,106 @@
+[
+ {
+  "run_id": "published/o4-mini-2025-04-16/54_0",
+  "sim_id": "566817fb-455f-4f1f-8fb0-c1daae57a1e4",
+  "task": "54",
+  "trial": 0,
+  "model": "o4-mini-2025-04-16",
+  "call": 2,
+  "tool": "get_order_details",
+  "rules": [
+   "retail.identity.authenticate-first"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "no recorded successful customer lookup before this call",
+    "grounded": true,
+    "policy_line": "10",
+    "quote": "you have to authenticate the user identity",
+    "rule": "retail.identity.authenticate-first",
+    "test": "G1"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Order not found"
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/35_0",
+  "sim_id": "19fe2c53-6114-4506-af25-46fffe88595f",
+  "task": "35",
+  "trial": 0,
+  "model": "o4-mini-2025-04-16",
+  "call": 2,
+  "tool": "get_user_details",
+  "rules": [
+   "retail.identity.authenticate-first"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "no recorded successful customer lookup before this call",
+    "grounded": true,
+    "policy_line": "10",
+    "quote": "you have to authenticate the user identity",
+    "rule": "retail.identity.authenticate-first",
+    "test": "G1"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/35_0",
+  "sim_id": "19fe2c53-6114-4506-af25-46fffe88595f",
+  "task": "35",
+  "trial": 0,
+  "model": "o4-mini-2025-04-16",
+  "call": 3,
+  "tool": "get_order_details",
+  "rules": [
+   "retail.identity.authenticate-first"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "no recorded successful customer lookup before this call",
+    "grounded": true,
+    "policy_line": "10",
+    "quote": "you have to authenticate the user identity",
+    "rule": "retail.identity.authenticate-first",
+    "test": "G1"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/35_0",
+  "sim_id": "19fe2c53-6114-4506-af25-46fffe88595f",
+  "task": "35",
+  "trial": 0,
+  "model": "o4-mini-2025-04-16",
+  "call": 4,
+  "tool": "get_order_details",
+  "rules": [
+   "retail.identity.authenticate-first"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "no recorded successful customer lookup before this call",
+    "grounded": true,
+    "policy_line": "10",
+    "quote": "you have to authenticate the user identity",
+    "rule": "retail.identity.authenticate-first",
+    "test": "G1"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ }
+]

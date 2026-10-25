@@ -1,0 +1,7 @@
+Run        published/gpt-4.1-2025-04-14/83_1 (task 83 trial 1, gpt-4.1-2025-04-14, sim ebb37cf4)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      7 attempted, 7 authorized, 0 refused
+Write      call 6 return_delivered_order_items orders/#W9571698: observed complete: complete
+Accepted   yes under enforcement (final database equals the answer key)
+Claim      "refund of $989.70 will be issued": observed
+Evidence   14 gate receipts, 2 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

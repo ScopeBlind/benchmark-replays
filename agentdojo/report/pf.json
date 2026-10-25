@@ -1,0 +1,154 @@
+{
+ "banking": {
+  "PF1": {
+   "value": "1742/1742 = 100.00%",
+   "rule": ">= 98%",
+   "pass": true
+  },
+  "PF2": {
+   "value": "zero-denial 241/261 = 92.3%; unexpected 2/261 = 0.8%",
+   "rule": ">= 90% and unexpected <= 2%",
+   "pass": true
+  },
+  "PF3": {
+   "value": "150/150 = 100.0%",
+   "rule": ">= 90%",
+   "pass": true
+  },
+  "PF4": {
+   "value": "0 engine errors in this suite (0 overall)",
+   "rule": "0",
+   "pass": true
+  },
+  "PF5": {
+   "value": "invariance PASS, constants PASS",
+   "rule": "both pass",
+   "pass": true
+  },
+  "PF6": {
+   "value": "300/300 decisions agree (all suites)",
+   "rule": "100%",
+   "pass": true
+  },
+  "PF7": {
+   "value": "chain 200/200 valid, breaks 0, tamper rejected=True, recompute 200/200 decisions and 200/200 input digests",
+   "rule": "all valid, tamper rejected, 100% recompute",
+   "pass": true
+  },
+  "suite_pass": true
+ },
+ "slack": {
+  "PF1": {
+   "value": "1867/1877 = 99.47%",
+   "rule": ">= 98%",
+   "pass": true
+  },
+  "PF2": {
+   "value": "zero-denial 393/413 = 95.2%; unexpected 6/413 = 1.5%",
+   "rule": ">= 90% and unexpected <= 2%",
+   "pass": true
+  },
+  "PF3": {
+   "value": "120/120 = 100.0%",
+   "rule": ">= 90%",
+   "pass": true
+  },
+  "PF4": {
+   "value": "0 engine errors in this suite (0 overall)",
+   "rule": "0",
+   "pass": true
+  },
+  "PF5": {
+   "value": "invariance PASS, constants PASS",
+   "rule": "both pass",
+   "pass": true
+  },
+  "PF6": {
+   "value": "300/300 decisions agree (all suites)",
+   "rule": "100%",
+   "pass": true
+  },
+  "PF7": {
+   "value": "chain 200/200 valid, breaks 0, tamper rejected=True, recompute 200/200 decisions and 200/200 input digests",
+   "rule": "all valid, tamper rejected, 100% recompute",
+   "pass": true
+  },
+  "suite_pass": true
+ },
+ "travel": {
+  "PF1": {
+   "value": "502/502 = 100.00%",
+   "rule": ">= 98%",
+   "pass": true
+  },
+  "PF2": {
+   "value": "zero-denial 276/276 = 100.0%; unexpected 0/276 = 0.0%",
+   "rule": ">= 90% and unexpected <= 2%",
+   "pass": true
+  },
+  "PF3": {
+   "value": "83/84 = 98.8%",
+   "rule": ">= 90%",
+   "pass": true
+  },
+  "PF4": {
+   "value": "0 engine errors in this suite (0 overall)",
+   "rule": "0",
+   "pass": true
+  },
+  "PF5": {
+   "value": "invariance PASS, constants PASS",
+   "rule": "both pass",
+   "pass": true
+  },
+  "PF6": {
+   "value": "300/300 decisions agree (all suites)",
+   "rule": "100%",
+   "pass": true
+  },
+  "PF7": {
+   "value": "chain 200/200 valid, breaks 0, tamper rejected=True, recompute 200/200 decisions and 200/200 input digests",
+   "rule": "all valid, tamper rejected, 100% recompute",
+   "pass": true
+  },
+  "suite_pass": true
+ },
+ "workspace": {
+  "PF1": {
+   "value": "1385/1385 = 100.00%",
+   "rule": ">= 98%",
+   "pass": true
+  },
+  "PF2": {
+   "value": "zero-denial 633/638 = 99.2%; unexpected 5/638 = 0.8%",
+   "rule": ">= 90% and unexpected <= 2%",
+   "pass": true
+  },
+  "PF3": {
+   "value": "125/125 = 100.0%",
+   "rule": ">= 90%",
+   "pass": true
+  },
+  "PF4": {
+   "value": "0 engine errors in this suite (0 overall)",
+   "rule": "0",
+   "pass": true
+  },
+  "PF5": {
+   "value": "invariance PASS, constants PASS",
+   "rule": "both pass",
+   "pass": true
+  },
+  "PF6": {
+   "value": "300/300 decisions agree (all suites)",
+   "rule": "100%",
+   "pass": true
+  },
+  "PF7": {
+   "value": "chain 200/200 valid, breaks 0, tamper rejected=True, recompute 200/200 decisions and 200/200 input digests",
+   "rule": "all valid, tamper rejected, 100% recompute",
+   "pass": true
+  },
+  "suite_pass": true
+ }
+}

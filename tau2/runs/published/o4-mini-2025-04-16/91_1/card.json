@@ -1,0 +1,174 @@
+{
+ "answer_key": {
+  "gold_db_hash": "513010e85e47d540e3f67f010bcd1aba3007afccc88835116b073867442c90a9",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 7,
+    "entity": "orders/#W7553978",
+    "status": "complete",
+    "tool": "return_delivered_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": false,
+   "recorded": false
+  },
+  "e3": {
+   "enforced": {
+    "orders/#W3239882": [
+     "exchange_items",
+     "exchange_new_items",
+     "exchange_payment_method_id",
+     "exchange_price_difference",
+     "status"
+    ]
+   },
+   "recorded": {
+    "orders/#W3239882": [
+     "exchange_new_items",
+     "exchange_price_difference"
+    ]
+   }
+  },
+  "e4": [
+   {
+    "call": 6,
+    "customer_turn": 23,
+    "proposal_turn": 22,
+    "result": "established"
+   },
+   {
+    "call": 7,
+    "customer_turn": 23,
+    "proposal_turn": 22,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 6,
+    "executed": 0.0,
+    "result": "not stated"
+   },
+   {
+    "call": 7,
+    "executed": 728.04,
+    "result": "not stated"
+   }
+  ],
+  "e6": [
+   {
+    "call": 6,
+    "result": "not stated"
+   },
+   {
+    "call": 7,
+    "result": "not stated"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "Return requested",
+     "status": "observed",
+     "turn": 28,
+     "type": "return"
+    },
+    {
+     "match": "Exchange requested",
+     "status": "refused",
+     "turn": 28,
+     "type": "exchange"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "Return requested",
+     "status": "observed",
+     "turn": 28,
+     "type": "return"
+    },
+    {
+     "match": "Exchange requested",
+     "status": "executed, not the expected state",
+     "turn": 28,
+     "type": "exchange"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 6,
+    "call_id": "call_bPvI9qz47R9N6BYDLtHn5znc",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "new item ids equal to the replaced ones: ['9494281769']; present in the recorded order: True",
+      "grounded": true,
+      "policy_line": "112, 132",
+      "quote": "available new item of the same product but of different product option",
+      "rule": "retail.items.different-option",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.items.different-option"
+    ],
+    "tool": "exchange_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.items.different-option"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "o4-mini-2025-04-16",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/o4-mini-2025-04-16/91_1",
+  "set": "published",
+  "sim_id": "a70c8def-6016-414d-8c28-a956116357ba",
+  "task_id": "91",
+  "trial": 1
+ },
+ "summary": {
+  "accepted_enforced": false,
+  "accepted_recorded": false,
+  "enforced_db_hash": "ebb5d05a7947c6224b4ffd5996a77cdbc4c3d89fdfa324f099e8403585586ecb",
+  "findings_sha256": "f1498079c370221a5ba653421455f050aa49669f829d0864871fff899725d9ff",
+  "gate_head": "sha256:5fec648030a404efc1b44149903477a6585f708b6b1eae1ca4db1e9fc4a5c270",
+  "gate_receipts": 15,
+  "gold_db_hash": "513010e85e47d540e3f67f010bcd1aba3007afccc88835116b073867442c90a9",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "138cc87a13846cf3339cc8f1ac82580fa4b04118e273443a0ba98c4fe4450c46",
+  "run_id": "published/o4-mini-2025-04-16/91_1"
+ }
+}

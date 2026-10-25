@@ -1,0 +1,212 @@
+{
+ "answer_key": {
+  "gold_db_hash": "7261dbb2b5feffa798d080a3e2b2b4c3bf5c32c7a281bc94205bc1b3015a7e5f",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 6,
+    "entity": "orders/#W9300146",
+    "status": "complete",
+    "tool": "modify_pending_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [
+   {
+    "said": true,
+    "string": "17.99"
+   }
+  ],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 6,
+    "customer_turn": 3,
+    "missing": "no affirmative customer turn after the last proposal; the proposal does not name the call's order or user",
+    "proposal_turn": 2,
+    "result": "not established"
+   },
+   {
+    "call": 7,
+    "customer_turn": 19,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 18,
+    "result": "not established"
+   },
+   {
+    "call": 8,
+    "customer_turn": 27,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 26,
+    "result": "not established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 6,
+    "executed": 17.99,
+    "result": "not stated"
+   },
+   {
+    "call": 7,
+    "result": "not computable"
+   },
+   {
+    "call": 8,
+    "executed": 0.0,
+    "result": "not stated"
+   }
+  ],
+  "e6": [
+   {
+    "call": 6,
+    "result": "not stated"
+   },
+   {
+    "call": 7,
+    "result": "match"
+   },
+   {
+    "call": 8,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [],
+   "recorded": []
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 1
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 7,
+    "call_id": "call_IPp7LPDeY626537Q3NOq3Tec",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "latest recorded observation of #W9300146 shows status 'pending (item modified)', the call needs 'pending'",
+      "grounded": true,
+      "policy_line": "96, 110",
+      "quote": "The agent will not be able to modify or cancel the order anymore",
+      "rule": "retail.modify.pending-only",
+      "test": "G2"
+     },
+     {
+      "evidence": "1 recorded successful item change(s) on #W9300146 before this call",
+      "grounded": true,
+      "policy_line": "84",
+      "quote": "Exchange or modify order tools can only be called once per order",
+      "rule": "retail.items.once-per-order",
+      "test": "G2"
+     },
+     {
+      "evidence": "items not in the recorded order: ['9190635437']",
+      "grounded": true,
+      "policy_line": "120",
+      "quote": "confirm the order id and the list of items to be returned",
+      "rule": "retail.items.in-order",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.modify.pending-only",
+     "retail.items.once-per-order",
+     "retail.items.in-order"
+    ],
+    "tool": "modify_pending_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.modify.pending-only",
+      "retail.items.once-per-order",
+      "retail.items.in-order"
+     ]
+    }
+   },
+   {
+    "call": 8,
+    "call_id": "call_OAylIUvTToUNI3orWa1Mx7qI",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "latest recorded observation of #W9300146 shows status 'pending (item modified)', the call needs 'delivered'",
+      "grounded": true,
+      "policy_line": "118, 130",
+      "quote": "An order can only be returned if its status is 'delivered'",
+      "rule": "retail.return-exchange.delivered-only",
+      "test": "G2"
+     },
+     {
+      "evidence": "items not in the recorded order: ['9190635437']",
+      "grounded": true,
+      "policy_line": "120",
+      "quote": "confirm the order id and the list of items to be returned",
+      "rule": "retail.items.in-order",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.return-exchange.delivered-only",
+     "retail.items.in-order"
+    ],
+    "tool": "return_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.return-exchange.delivered-only",
+      "retail.items.in-order"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/gpt-4.1-2025-04-14/44_1",
+  "set": "published",
+  "sim_id": "c5617c15-63fa-422f-a128-50a19e78c2f6",
+  "task_id": "44",
+  "trial": 1
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "7261dbb2b5feffa798d080a3e2b2b4c3bf5c32c7a281bc94205bc1b3015a7e5f",
+  "findings_sha256": "68152ad92c321056c04f3b1f6f6685e57fc886225567977ee8a75b4601a40da6",
+  "gate_head": "sha256:d5f9e0aeec610b505431aa4da2bd65e70cd6279d122846d7a990815fd67a8fd7",
+  "gate_receipts": 16,
+  "gold_db_hash": "7261dbb2b5feffa798d080a3e2b2b4c3bf5c32c7a281bc94205bc1b3015a7e5f",
+  "harness_readbacks": 2,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "7261dbb2b5feffa798d080a3e2b2b4c3bf5c32c7a281bc94205bc1b3015a7e5f",
+  "run_id": "published/gpt-4.1-2025-04-14/44_1"
+ }
+}

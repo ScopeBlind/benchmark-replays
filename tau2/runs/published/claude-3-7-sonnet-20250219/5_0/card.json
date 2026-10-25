@@ -1,0 +1,132 @@
+{
+ "answer_key": {
+  "gold_db_hash": "9f1e45fc84a6995edead46216e4f7b07c27c4511524aedb38dc898ab9c52e866",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 7,
+    "entity": "orders/#W6390527",
+    "status": "complete",
+    "tool": "return_delivered_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 7,
+    "customer_turn": 29,
+    "proposal_turn": 28,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 7,
+    "executed": 45.13,
+    "result": "match"
+   }
+  ],
+  "e6": [
+   {
+    "call": 7,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "return requested",
+     "status": "observed",
+     "turn": 32,
+     "type": "return"
+    },
+    {
+     "match": "refund of $45.13 will be processed",
+     "status": "observed",
+     "turn": 32,
+     "type": "refund"
+    },
+    {
+     "match": "refund of $45.13 will be processed",
+     "status": "observed",
+     "turn": 34,
+     "type": "refund"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "return requested",
+     "status": "observed",
+     "turn": 32,
+     "type": "return"
+    },
+    {
+     "match": "refund of $45.13 will be processed",
+     "status": "observed",
+     "turn": 32,
+     "type": "refund"
+    },
+    {
+     "match": "refund of $45.13 will be processed",
+     "status": "observed",
+     "turn": 34,
+     "type": "refund"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 3
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": []
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "claude-3-7-sonnet-20250219",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/claude-3-7-sonnet-20250219/5_0",
+  "set": "published",
+  "sim_id": "416ddb54-3243-4f07-b9a4-b163d21a163c",
+  "task_id": "5",
+  "trial": 0
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "9f1e45fc84a6995edead46216e4f7b07c27c4511524aedb38dc898ab9c52e866",
+  "findings_sha256": "b25ec0b12f03cfa3f83c619f9198932fe4188cb678b0c88dbd242fc95f50b2d2",
+  "gate_head": "sha256:a78efb2aa357c4df59a4a659db204be259ec1bec667831398964ed2d111c50e9",
+  "gate_receipts": 16,
+  "gold_db_hash": "9f1e45fc84a6995edead46216e4f7b07c27c4511524aedb38dc898ab9c52e866",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "9f1e45fc84a6995edead46216e4f7b07c27c4511524aedb38dc898ab9c52e866",
+  "run_id": "published/claude-3-7-sonnet-20250219/5_0"
+ }
+}

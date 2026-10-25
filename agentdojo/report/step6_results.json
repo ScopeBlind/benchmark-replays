@@ -1,0 +1,75 @@
+{
+ "bundle_signing": {
+  "denies": 115,
+  "n": 200,
+  "receipt_matches_library": 200,
+  "seconds_sign": 32.2,
+  "sign_exit_zero": 200,
+  "signed": 200
+ },
+ "equivalence": {
+  "decision_agreement": 300,
+  "denies": 109,
+  "deny_rule_id_agreement": 109,
+  "digests_consistent": true,
+  "n": 300,
+  "seconds_evaluate": 35.6,
+  "seconds_sign": 45.3
+ },
+ "experiment_key": {
+  "kid": "generated",
+  "mode": "0600",
+  "path": "keys/protect-mcp.key",
+  "public_key": "ca3f64a477db88d97fc5945ea010adc76a4947e87aafde6627a188a6caeeebb6"
+ },
+ "recompute": {
+  "decision_match": 200,
+  "digest_match": 200,
+  "input_hash_match": 200,
+  "input_size_match": 200,
+  "kid": {
+   "generated": 200
+  },
+  "mismatches": 0,
+  "n": 200,
+  "public_key_match": 200,
+  "reason_match": 200,
+  "tool_match": 200
+ },
+ "tamper_test": {
+  "original_valid": true,
+  "tampered_error": "invalid_signature",
+  "tampered_valid": false
+ },
+ "verifier": {
+  "explanation": "the local tarball was packed from v0.11.0 plus 3 commits that change only tests, fixtures, package.json files/scripts lists, CONTRIBUTING and CI; the published tarball was not downloaded (approval covered metadata only)",
+  "local_tarball": {
+   "integrity": "sha512-fk6IvcWvGKUSMtCNXUhDdlIg3RPZAg9Wm2R9Np0WqYLPRK5EVf6azg9mQ+AXVXb9SbzYlVhUS/vCqZ69PoT3Ug==",
+   "shasum": "09586892289a857f8ec9e68feded2991a0a6de98"
+  },
+  "match": false,
+  "npm_published": [
+   "dist.integrity = 'sha512-DTnac59XFunHXAZ+n2SpkZwMHN2yaMilJ6nHiIOlRDSuF+QTf5iVtZ5XesNlmD5sprDnUCBSaU0jzBN2iASRhw=='",
+   "dist.shasum = 'a24ec48a0efd916cb086aaed2ae4c93a725571ea'"
+  ],
+  "used": "verify/cli.js in a local checkout of github.com/VeritasActa/verify, version 0.11.0, git v0.11.0-3-g05138ad; cli.js and all 58 src files byte-identical to tag v0.11.0"
+ },
+ "verify_replay_chain_bundle": {
+  "chainBreaks": 0,
+  "chains": 1,
+  "failed": 0,
+  "outcome": "valid",
+  "total": 200,
+  "undecidable": 0,
+  "verified": 200
+ },
+ "verify_replay_chain_equivalence": {
+  "chainBreaks": 0,
+  "chains": 1,
+  "failed": 0,
+  "outcome": "valid",
+  "total": 300,
+  "undecidable": 0,
+  "verified": 300
+ }
+}

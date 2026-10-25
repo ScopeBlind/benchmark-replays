@@ -1,0 +1,42 @@
+{
+ "calls": 135745,
+ "evaluations": 271490,
+ "seconds": 134.58,
+ "per_eval_ms": 0.4957,
+ "counts": {
+  "banking|A|allow": 17645,
+  "banking|full|allow": 17396,
+  "banking|A|deny": 1795,
+  "banking|full|deny": 2044,
+  "slack|A|allow": 29131,
+  "slack|full|allow": 28243,
+  "slack|A|deny": 1897,
+  "slack|full|deny": 2785,
+  "travel|A|allow": 42888,
+  "travel|full|allow": 42262,
+  "travel|full|deny": 788,
+  "workspace|A|allow": 40836,
+  "workspace|full|allow": 40296,
+  "workspace|A|deny": 1391,
+  "workspace|full|deny": 1931,
+  "travel|A|deny": 162
+ },
+ "digests": {
+  "banking": {
+   "A": "sha256:faee2d91c1087332955d0b77604bee11de2e35c82353acefedf3a6efdb1fa771",
+   "full": "sha256:d066cd46a372021dac4fea3c9b7e9bf7aac3854bb409dd79cbec2ca6c42d1cc5"
+  },
+  "slack": {
+   "A": "sha256:581fe1577a2db41e26b34f9c76d7af3bb53aba0fa863c0086d96487bb582d78a",
+   "full": "sha256:1ae2c9d95297828c593d4b18a86b626fa1901f1fb5e67b6ff49d1d2f5d07b288"
+  },
+  "travel": {
+   "A": "sha256:ec589386c45c6da3f531c9789cda39c410f346d16d3c40b831e98d3882f2688e",
+   "full": "sha256:e7cb400203c3327bdbf996465ea8ad77e9b1376119f04e10c8f7119335deeb69"
+  },
+  "workspace": {
+   "A": "sha256:6491fbaa71bd6cecdcbfe1d4a80ae02c4c2ae0d3eba3910ef08ff3ae68c0e619",
+   "full": "sha256:bc5c640849961121be4f8ea071506940a1c4053cfe6da95b3dc12278f161ec70"
+  }
+ }
+}

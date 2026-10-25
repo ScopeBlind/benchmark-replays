@@ -1,0 +1,12 @@
+{
+ "traces": 36194,
+ "groups": 3719,
+ "groups_with_more_than_one_facts_value": 0,
+ "distinct_msg1_tool_args_combinations": 12417,
+ "combinations_with_more_than_one_facts_value": 0,
+ "calls_seen": 135745,
+ "sample_recomputed": 3000,
+ "sample_mismatches": 0,
+ "failures": [],
+ "result": "PASS"
+}

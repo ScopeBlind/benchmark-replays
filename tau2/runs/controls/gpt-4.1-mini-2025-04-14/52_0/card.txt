@@ -1,0 +1,7 @@
+Run        controls/gpt-4.1-mini-2025-04-14/52_0 (task 52 trial 0, gpt-4.1-mini-2025-04-14, sim 62214352)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      9 attempted, 9 authorized, 0 refused
+Write      call 8 exchange_delivered_order_items orders/#W4689314: observed complete: complete
+Accepted   yes under enforcement (final database equals the answer key)
+Claim      "exchange requested": observed
+Evidence   18 gate receipts, 2 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

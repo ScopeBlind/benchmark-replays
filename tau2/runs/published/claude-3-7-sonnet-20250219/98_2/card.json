@@ -1,0 +1,272 @@
+{
+ "answer_key": {
+  "gold_db_hash": "a38fddcc78ebe2ba2a41b1cffaff27fd678aa60e52c505a0cd0a43e3963ea641",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 9,
+    "entity": "orders/#W8855135",
+    "status": "complete",
+    "tool": "cancel_pending_order"
+   },
+   {
+    "call": 10,
+    "entity": "orders/#W3916020",
+    "status": "complete",
+    "tool": "exchange_delivered_order_items"
+   },
+   {
+    "call": 12,
+    "entity": "orders/#W5416052",
+    "status": "complete",
+    "tool": "exchange_delivered_order_items"
+   },
+   {
+    "call": 13,
+    "entity": "orders/#W4689314",
+    "status": "complete",
+    "tool": "exchange_delivered_order_items"
+   }
+  ],
+  "e10": [
+   {
+    "call": 9,
+    "declared": "no longer needed",
+    "phrase": null,
+    "result": "not established"
+   }
+  ],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": false,
+   "recorded": false
+  },
+  "e3": {
+   "enforced": {
+    "orders/#W3916020": [
+     "exchange_items",
+     "exchange_new_items",
+     "exchange_price_difference"
+    ],
+    "orders/#W5416052": [
+     "exchange_items",
+     "exchange_new_items",
+     "exchange_payment_method_id",
+     "exchange_price_difference",
+     "status"
+    ]
+   },
+   "recorded": {
+    "orders/#W3916020": [
+     "exchange_items",
+     "exchange_new_items",
+     "exchange_price_difference"
+    ],
+    "orders/#W5416052": [
+     "exchange_items",
+     "exchange_new_items",
+     "exchange_payment_method_id",
+     "exchange_price_difference",
+     "status"
+    ]
+   }
+  },
+  "e4": [
+   {
+    "call": 9,
+    "customer_turn": 3,
+    "missing": "no affirmative customer turn after the last proposal; the proposal does not name the call's order or user",
+    "proposal_turn": 2,
+    "result": "not established"
+   },
+   {
+    "call": 10,
+    "customer_turn": 25,
+    "missing": "no affirmative customer turn after the last proposal; the proposal does not name the call's order or user",
+    "proposal_turn": 24,
+    "result": "not established"
+   },
+   {
+    "call": 11,
+    "customer_turn": 25,
+    "missing": "no affirmative customer turn after the last proposal; the proposal does not name the call's order or user",
+    "proposal_turn": 24,
+    "result": "not established"
+   },
+   {
+    "call": 12,
+    "customer_turn": 25,
+    "missing": "no affirmative customer turn after the last proposal; the proposal does not name the call's order or user",
+    "proposal_turn": 24,
+    "result": "not established"
+   },
+   {
+    "call": 13,
+    "customer_turn": 25,
+    "missing": "no affirmative customer turn after the last proposal; the proposal does not name the call's order or user",
+    "proposal_turn": 24,
+    "result": "not established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 9,
+    "executed": 1058.79,
+    "result": "not stated"
+   },
+   {
+    "call": 10,
+    "executed": 14.54,
+    "result": "not stated"
+   },
+   {
+    "call": 11,
+    "executed": 6.01,
+    "result": "not stated"
+   },
+   {
+    "call": 12,
+    "executed": 6.01,
+    "result": "not stated"
+   },
+   {
+    "call": 13,
+    "executed": 71.59,
+    "result": "not stated"
+   }
+  ],
+  "e6": [
+   {
+    "call": 9,
+    "result": "n/a"
+   },
+   {
+    "call": 10,
+    "result": "match"
+   },
+   {
+    "call": 11,
+    "result": "match"
+   },
+   {
+    "call": 12,
+    "result": "match"
+   },
+   {
+    "call": 13,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "has been cancelled",
+     "status": "observed",
+     "turn": 34,
+     "type": "cancel"
+    },
+    {
+     "match": "refund of $1,058.79 will be processed",
+     "status": "observed",
+     "turn": 34,
+     "type": "refund"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "has been cancelled",
+     "status": "observed",
+     "turn": 34,
+     "type": "cancel"
+    },
+    {
+     "match": "refund of $1,058.79 will be processed",
+     "status": "observed",
+     "turn": 34,
+     "type": "refund"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 11
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 11,
+    "call_id": "toolu_01AVP7eykgnpoQW3U6YH32e9",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "latest recorded observation of #W3916020 shows status 'exchange requested', the call needs 'delivered'",
+      "grounded": true,
+      "policy_line": "118, 130",
+      "quote": "An order can only be returned if its status is 'delivered'",
+      "rule": "retail.return-exchange.delivered-only",
+      "test": "G2"
+     },
+     {
+      "evidence": "1 recorded successful item change(s) on #W3916020 before this call",
+      "grounded": true,
+      "policy_line": "84",
+      "quote": "Exchange or modify order tools can only be called once per order",
+      "rule": "retail.items.once-per-order",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.return-exchange.delivered-only",
+     "retail.items.once-per-order"
+    ],
+    "tool": "exchange_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.return-exchange.delivered-only",
+      "retail.items.once-per-order"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "claude-3-7-sonnet-20250219",
+  "plant": null,
+  "published": {
+   "db_match": false,
+   "reward": 0.0
+  },
+  "run_id": "published/claude-3-7-sonnet-20250219/98_2",
+  "set": "published",
+  "sim_id": "65b223ab-0370-4856-8e2a-99db5a928949",
+  "task_id": "98",
+  "trial": 2
+ },
+ "summary": {
+  "accepted_enforced": false,
+  "accepted_recorded": false,
+  "enforced_db_hash": "b58924a250d43e208bb94fafc00a55caf82971cda43df02c9ecdc8986a6943ec",
+  "findings_sha256": "0a81ff2708d4b37cac57056f30ad29d5a4fc2e0759a2c8c1309bfa4416d7a090",
+  "gate_head": "sha256:a0e8d89eb87e29de1891ff4f5c3a47b842300bb274ac7fdaa00608c3aa2f6111",
+  "gate_receipts": 27,
+  "gold_db_hash": "a38fddcc78ebe2ba2a41b1cffaff27fd678aa60e52c505a0cd0a43e3963ea641",
+  "harness_readbacks": 4,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "b58924a250d43e208bb94fafc00a55caf82971cda43df02c9ecdc8986a6943ec",
+  "run_id": "published/claude-3-7-sonnet-20250219/98_2"
+ }
+}

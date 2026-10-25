@@ -1,0 +1,162 @@
+{
+ "answer_key": {
+  "gold_db_hash": "513010e85e47d540e3f67f010bcd1aba3007afccc88835116b073867442c90a9",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 6,
+    "entity": "orders/#W7553978",
+    "status": "complete",
+    "tool": "return_delivered_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": false,
+   "recorded": false
+  },
+  "e3": {
+   "enforced": {
+    "orders/#W3239882": [
+     "exchange_items",
+     "exchange_new_items",
+     "exchange_payment_method_id",
+     "exchange_price_difference",
+     "status"
+    ]
+   },
+   "recorded": {
+    "orders/#W3239882": [
+     "exchange_new_items",
+     "exchange_price_difference"
+    ]
+   }
+  },
+  "e4": [
+   {
+    "call": 6,
+    "customer_turn": 19,
+    "proposal_turn": 18,
+    "result": "established"
+   },
+   {
+    "call": 7,
+    "customer_turn": 19,
+    "proposal_turn": 18,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 6,
+    "executed": 728.04,
+    "result": "not stated"
+   },
+   {
+    "call": 7,
+    "executed": 0.0,
+    "result": "not stated"
+   }
+  ],
+  "e6": [
+   {
+    "call": 6,
+    "result": "match"
+   },
+   {
+    "call": 7,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "refund will be issued",
+     "status": "observed",
+     "turn": 23,
+     "type": "refund"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "refund will be issued",
+     "status": "observed",
+     "turn": 23,
+     "type": "refund"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 2,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 7,
+    "call_id": "call_15u9IqNlX1pMv2albgUvUBNN",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "new item ids equal to the replaced ones: ['9494281769']; present in the recorded order: True",
+      "grounded": true,
+      "policy_line": "112, 132",
+      "quote": "available new item of the same product but of different product option",
+      "rule": "retail.items.different-option",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.items.different-option"
+    ],
+    "tool": "exchange_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.items.different-option"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/gpt-4.1-2025-04-14/91_2",
+  "set": "published",
+  "sim_id": "cb75be22-9cb4-4c65-8671-4bccf57caa25",
+  "task_id": "91",
+  "trial": 2
+ },
+ "summary": {
+  "accepted_enforced": false,
+  "accepted_recorded": false,
+  "enforced_db_hash": "ebb5d05a7947c6224b4ffd5996a77cdbc4c3d89fdfa324f099e8403585586ecb",
+  "findings_sha256": "bffc0b5c78415c716281738601a58962c2ad7fe428214c8c1310b4da116dcee6",
+  "gate_head": "sha256:36e7922564934ea0626e012dcec775b7b02e42913309af8cb0c74b06a2e9191b",
+  "gate_receipts": 15,
+  "gold_db_hash": "513010e85e47d540e3f67f010bcd1aba3007afccc88835116b073867442c90a9",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "138cc87a13846cf3339cc8f1ac82580fa4b04118e273443a0ba98c4fe4450c46",
+  "run_id": "published/gpt-4.1-2025-04-14/91_2"
+ }
+}

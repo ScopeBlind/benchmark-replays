@@ -1,0 +1,6 @@
+Run        published/gpt-4.1-2025-04-14/105_2 (task 105 trial 2, gpt-4.1-2025-04-14, sim c3d90924)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      5 attempted, 4 authorized, 1 refused
+Refused    call 4 exchange_delivered_order_items: retail.payment.gift-card-balance
+Accepted   yes under enforcement (final database equals the answer key)
+Evidence   9 gate receipts, 1 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

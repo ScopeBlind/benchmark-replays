@@ -1,0 +1,127 @@
+{
+ "answer_key": {
+  "gold_db_hash": "6351938a2a69905bed11ed932017971167d30590cc4f506c2ce3d16a5fcfd8b0",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 3,
+    "entity": "orders/#W5490111",
+    "status": "complete",
+    "tool": "return_delivered_order_items"
+   },
+   {
+    "call": 4,
+    "entity": "orders/#W7387996",
+    "status": "complete",
+    "tool": "return_delivered_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 3,
+    "customer_turn": 11,
+    "proposal_turn": 10,
+    "result": "established"
+   },
+   {
+    "call": 4,
+    "customer_turn": 11,
+    "proposal_turn": 10,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 3,
+    "executed": 268.77,
+    "result": "not stated"
+   },
+   {
+    "call": 4,
+    "result": "not computable"
+   }
+  ],
+  "e6": [
+   {
+    "call": 3,
+    "result": "match"
+   },
+   {
+    "call": 4,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "Refund will be issued",
+     "status": "observed",
+     "turn": 15,
+     "type": "refund"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "Refund will be issued",
+     "status": "observed",
+     "turn": 15,
+     "type": "refund"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 1,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": []
+ },
+ "policy": {
+  "digests": [
+   "sha256:0309aca8eb596bd90407b213e30d04dcf4dd7a7fac73818e62a92af269d4de14",
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-2025-04-14",
+  "plant": "P5b",
+  "published": null,
+  "run_id": "planted/P5b/gpt-4.1-2025-04-14/14_0",
+  "set": "planted",
+  "sim_id": "387ad524-36b4-4564-baf7-ee2dcc499b09",
+  "task_id": "14",
+  "trial": 0
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "6351938a2a69905bed11ed932017971167d30590cc4f506c2ce3d16a5fcfd8b0",
+  "findings_sha256": "9fa632226ac2097e8db12be2f45d10b2541866623e6440f71731188ecb2232de",
+  "gate_head": "sha256:ddff72bc85ca8bf91891b5625eca6c7fc0e827dcc7cd311b1dadb2c8f1623fe7",
+  "gate_receipts": 10,
+  "gold_db_hash": "6351938a2a69905bed11ed932017971167d30590cc4f506c2ce3d16a5fcfd8b0",
+  "harness_readbacks": 2,
+  "policy_digests": [
+   "sha256:0309aca8eb596bd90407b213e30d04dcf4dd7a7fac73818e62a92af269d4de14",
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "6351938a2a69905bed11ed932017971167d30590cc4f506c2ce3d16a5fcfd8b0",
+  "run_id": "planted/P5b/gpt-4.1-2025-04-14/14_0"
+ }
+}

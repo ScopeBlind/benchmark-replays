@@ -1,0 +1,208 @@
+{
+ "answer_key": {
+  "gold_db_hash": "6eb2be1662a3ddae310baf9b4a6ce65a3ef63b6f6885285463c7bcaed978dfdc",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 10,
+    "entity": "orders/#W3730488",
+    "status": "complete",
+    "tool": "modify_pending_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": false,
+   "recorded": false
+  },
+  "e3": {
+   "enforced": {
+    "orders/#W3730488": [
+     "address"
+    ],
+    "orders/#W9810810": [
+     "items",
+     "payment_history",
+     "status"
+    ],
+    "users/yara_silva_7567": [
+     "payment_methods"
+    ]
+   },
+   "recorded": {
+    "orders/#W3730488": [
+     "address"
+    ],
+    "orders/#W9810810": [
+     "items",
+     "payment_history",
+     "status"
+    ],
+    "users/yara_silva_7567": [
+     "payment_methods"
+    ]
+   }
+  },
+  "e4": [
+   {
+    "call": 7,
+    "customer_turn": 33,
+    "proposal_turn": 32,
+    "result": "established"
+   },
+   {
+    "call": 9,
+    "customer_turn": 41,
+    "proposal_turn": 40,
+    "result": "established"
+   },
+   {
+    "call": 10,
+    "customer_turn": 49,
+    "proposal_turn": 48,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 7,
+    "result": "not computable"
+   },
+   {
+    "call": 9,
+    "result": "not computable"
+   },
+   {
+    "call": 10,
+    "result": "not computable"
+   }
+  ],
+  "e6": [
+   {
+    "call": 7,
+    "missing": "the method is not in an observed profile",
+    "result": "not checkable"
+   },
+   {
+    "call": 9,
+    "missing": "the method is not in an observed profile",
+    "result": "not checkable"
+   },
+   {
+    "call": 10,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [],
+   "recorded": []
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 1
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 7,
+    "call_id": "call_LqPO4ld46QdXr9IF6rOG5z97",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "items not in the recorded order: ['1355937109']",
+      "grounded": true,
+      "policy_line": "120",
+      "quote": "confirm the order id and the list of items to be returned",
+      "rule": "retail.items.in-order",
+      "test": "G2"
+     },
+     {
+      "evidence": "credit_card_0000000 appears in no recorded profile of yara_silva_7567 and is not the order's original method",
+      "grounded": true,
+      "policy_line": "114, 122, 134",
+      "quote": "The user must provide a payment method",
+      "rule": "retail.payment.customer-method",
+      "test": "G1"
+     }
+    ],
+    "rules": [
+     "retail.items.in-order",
+     "retail.payment.customer-method"
+    ],
+    "tool": "modify_pending_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.items.in-order",
+      "retail.payment.customer-method"
+     ]
+    }
+   },
+   {
+    "call": 9,
+    "call_id": "call_jDIknZAmIddEbjNpiwiz9Mc6",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "credit_card_0000000 appears in no recorded profile of yara_silva_7567 and is not the order's original method",
+      "grounded": true,
+      "policy_line": "114, 122, 134",
+      "quote": "The user must provide a payment method",
+      "rule": "retail.payment.customer-method",
+      "test": "G1"
+     }
+    ],
+    "rules": [
+     "retail.payment.customer-method"
+    ],
+    "tool": "modify_pending_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.payment.customer-method"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-mini-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": false,
+   "reward": 0.0
+  },
+  "run_id": "published/gpt-4.1-mini-2025-04-14/112_1",
+  "set": "published",
+  "sim_id": "cb624adc-e916-4968-a902-e2b0e4df1d79",
+  "task_id": "112",
+  "trial": 1
+ },
+ "summary": {
+  "accepted_enforced": false,
+  "accepted_recorded": false,
+  "enforced_db_hash": "0e2dba876fb1297dbc206316f00180cbc29d1739baeb03f1c2db6c7f6052711b",
+  "findings_sha256": "f09409c061f0a0d8a9f81a3082c6c1a256d67b590ffad04da3927f6ca35a02d0",
+  "gate_head": "sha256:574bd659057857a19a521da3cf89177bb853fed37c65a626057e20e2afd22d84",
+  "gate_receipts": 20,
+  "gold_db_hash": "6eb2be1662a3ddae310baf9b4a6ce65a3ef63b6f6885285463c7bcaed978dfdc",
+  "harness_readbacks": 2,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "0e2dba876fb1297dbc206316f00180cbc29d1739baeb03f1c2db6c7f6052711b",
+  "run_id": "published/gpt-4.1-mini-2025-04-14/112_1"
+ }
+}

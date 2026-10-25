@@ -1,0 +1,27 @@
+{
+ "cause": {
+  "call": 7,
+  "control": "controls/claude-3-7-sonnet-20250219/41_0",
+  "grounding": "G2: recorded status 'pending (item modified)' after the item change at call 5",
+  "order": "#W4082615",
+  "rule": "retail.modify.pending-only",
+  "tool": "modify_pending_order_address"
+ },
+ "moved": [
+  "P2c-R/claude-3-7-sonnet-20250219",
+  "P2c-A/claude-3-7-sonnet-20250219"
+ ],
+ "new_base": {
+  "offset": 1,
+  "task": "42",
+  "trial": 0
+ },
+ "new_controls_clean": true,
+ "offsets_v2_sha256": "9dc2e726933f0e6a24dac3596f30411cb64dee7b6243da5907a08b8b62d381f3",
+ "plants_v2_sha256": "fbebe24ccc27fd5e7495cfd346601feaa7e906d9d5a99dc31ef1f520b01b1651",
+ "registration": "v1",
+ "registration_sha256": "ee8868e34e6c5bed22be2e38d37568bfd9d23c3a559bf47b6fad0d755b62f650",
+ "replay_py_sha256": "71d4fcbd17abc5f4817a0316c0d55e551ee4862151b32bc2053712d67eb42584",
+ "rule": "design section 3.1: a control with a refused write moves that base's plants to the next qualifying run in file order",
+ "type": "tau2-retail-replay.substitution"
+}

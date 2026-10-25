@@ -1,0 +1,210 @@
+{
+ "answer_key": {
+  "gold_db_hash": "c263b7ca5913ee44ccb614b4b5fd2b672049d710741063b90239ef46a3112c3c",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 12,
+    "entity": "orders/#W9348897",
+    "status": "complete",
+    "tool": "modify_pending_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [
+   {
+    "said": true,
+    "string": "camera"
+   },
+   {
+    "said": true,
+    "string": "481.50"
+   }
+  ],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 10,
+    "customer_turn": 27,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 26,
+    "result": "not established"
+   },
+   {
+    "call": 11,
+    "customer_turn": 31,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 30,
+    "result": "not established"
+   },
+   {
+    "call": 12,
+    "customer_turn": 35,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 34,
+    "result": "not established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 10,
+    "result": "not computable"
+   },
+   {
+    "call": 11,
+    "executed": 36.13,
+    "result": "not stated"
+   },
+   {
+    "call": 12,
+    "executed": 36.13,
+    "result": "not stated"
+   }
+  ],
+  "e6": [
+   {
+    "call": 10,
+    "result": "not stated"
+   },
+   {
+    "call": 11,
+    "result": "not stated"
+   },
+   {
+    "call": 12,
+    "result": "not stated"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "order has been updated",
+     "status": "observed",
+     "turn": 38,
+     "type": "item_change"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "order has been updated",
+     "status": "observed",
+     "turn": 38,
+     "type": "item_change"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 1,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 10,
+    "call_id": "call_4elWSYHMSh2rW0b5KztOTMq2",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "new item ids equal to the replaced ones: ['9851293632']; present in the recorded order: True",
+      "grounded": true,
+      "policy_line": "112, 132",
+      "quote": "available new item of the same product but of different product option",
+      "rule": "retail.items.different-option",
+      "test": "G2"
+     },
+     {
+      "evidence": "recorded product observations show these new items missing or unavailable: ['3111466194']",
+      "grounded": true,
+      "policy_line": "112, 132",
+      "quote": "available new item of the same product but of different product option",
+      "rule": "retail.items.available-same-product",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.items.different-option",
+     "retail.items.available-same-product"
+    ],
+    "tool": "modify_pending_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.items.different-option",
+      "retail.items.available-same-product"
+     ]
+    }
+   },
+   {
+    "call": 11,
+    "call_id": "call_l91rLCrdteInZxi7zLqRcJz8",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "new item ids equal to the replaced ones: ['9879255677', '9851293632']; present in the recorded order: True",
+      "grounded": true,
+      "policy_line": "112, 132",
+      "quote": "available new item of the same product but of different product option",
+      "rule": "retail.items.different-option",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.items.different-option"
+    ],
+    "tool": "modify_pending_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.items.different-option"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/gpt-4.1-2025-04-14/37_2",
+  "set": "published",
+  "sim_id": "7aaf6604-0f10-451c-b501-fbb84d67e8a3",
+  "task_id": "37",
+  "trial": 2
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "c263b7ca5913ee44ccb614b4b5fd2b672049d710741063b90239ef46a3112c3c",
+  "findings_sha256": "6120279f114c2c56382e958f730cfadc0fe28cdce753cf2cd32965f0cf6fd3b3",
+  "gate_head": "sha256:72f06dfdf8a3b128a4457d3379fe4882c2bb0950afde321d58a92ef289c8d6aa",
+  "gate_receipts": 24,
+  "gold_db_hash": "c263b7ca5913ee44ccb614b4b5fd2b672049d710741063b90239ef46a3112c3c",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "c263b7ca5913ee44ccb614b4b5fd2b672049d710741063b90239ef46a3112c3c",
+  "run_id": "published/gpt-4.1-2025-04-14/37_2"
+ }
+}

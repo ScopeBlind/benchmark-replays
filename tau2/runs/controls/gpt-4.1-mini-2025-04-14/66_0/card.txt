@@ -1,0 +1,8 @@
+Run        controls/gpt-4.1-mini-2025-04-14/66_0 (task 66 trial 0, gpt-4.1-mini-2025-04-14, sim fdd7cf6e)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      5 attempted, 5 authorized, 0 refused
+Write      call 4 cancel_pending_order orders/#W3361211: observed complete: complete
+Accepted   yes under enforcement (final database equals the answer key)
+Claim      "has been successfully cancelled": observed
+Claim      "refund of $1464.00 will be processed": observed
+Evidence   10 gate receipts, 2 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

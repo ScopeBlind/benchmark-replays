@@ -1,0 +1,8 @@
+Run        published/gpt-4.1-mini-2025-04-14/85_3 (task 85 trial 3, gpt-4.1-mini-2025-04-14, sim ab5f9f11)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      5 attempted, 4 authorized, 1 refused
+Refused    call 4 exchange_delivered_order_items: retail.return-exchange.delivered-only, retail.payment.customer-method
+Accepted   NO under enforcement (final database differs from the answer key)
+           differs at orders/#W2466703 ['items', 'payment_history', 'status']
+Mismatch   amount at call 4: stated [153.18, 159.92], executed 6.74
+Evidence   9 gate receipts, 1 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

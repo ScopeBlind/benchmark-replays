@@ -1,0 +1,194 @@
+{
+ "answer_key": {
+  "gold_db_hash": "a0d1b0eab2e1e283dbf84607d02b637eb6bc61fc1cd4c8d3bed3d3377ecbba6b",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 6,
+    "entity": "orders/#W2905754",
+    "status": "complete",
+    "tool": "exchange_delivered_order_items"
+   },
+   {
+    "call": 8,
+    "entity": "orders/#W4073673",
+    "status": "complete",
+    "tool": "exchange_delivered_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [
+   {
+    "said": true,
+    "string": "167.87"
+   },
+   {
+    "said": true,
+    "string": "60.78"
+   },
+   {
+    "said": true,
+    "string": "107.09"
+   }
+  ],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 6,
+    "customer_turn": 3,
+    "missing": "no affirmative customer turn after the last proposal; the proposal does not name the call's order or user",
+    "proposal_turn": 2,
+    "result": "not established"
+   },
+   {
+    "call": 7,
+    "customer_turn": 19,
+    "proposal_turn": 18,
+    "result": "established"
+   },
+   {
+    "call": 8,
+    "customer_turn": 19,
+    "proposal_turn": 18,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 6,
+    "executed": 167.87,
+    "result": "not stated"
+   },
+   {
+    "call": 7,
+    "executed": 167.87,
+    "result": "not stated"
+   },
+   {
+    "call": 8,
+    "executed": 60.78,
+    "result": "not stated"
+   }
+  ],
+  "e6": [
+   {
+    "call": 6,
+    "result": "not stated"
+   },
+   {
+    "call": 7,
+    "result": "match"
+   },
+   {
+    "call": 8,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "You will receive a refund",
+     "status": "observed",
+     "turn": 23,
+     "type": "refund"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "You will receive a refund",
+     "status": "observed",
+     "turn": 23,
+     "type": "refund"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 2,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 7,
+    "call_id": "call_KcGpHb4ojh1ZpIipo42VWTTq",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "latest recorded observation of #W2905754 shows status 'exchange requested', the call needs 'delivered'",
+      "grounded": true,
+      "policy_line": "118, 130",
+      "quote": "An order can only be returned if its status is 'delivered'",
+      "rule": "retail.return-exchange.delivered-only",
+      "test": "G2"
+     },
+     {
+      "evidence": "1 recorded successful item change(s) on #W2905754 before this call",
+      "grounded": true,
+      "policy_line": "84",
+      "quote": "Exchange or modify order tools can only be called once per order",
+      "rule": "retail.items.once-per-order",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.return-exchange.delivered-only",
+     "retail.items.once-per-order"
+    ],
+    "tool": "exchange_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.return-exchange.delivered-only",
+      "retail.items.once-per-order"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/gpt-4.1-2025-04-14/95_3",
+  "set": "published",
+  "sim_id": "027ee1c4-0e4d-4f8b-bf00-8c8548f54322",
+  "task_id": "95",
+  "trial": 3
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "a0d1b0eab2e1e283dbf84607d02b637eb6bc61fc1cd4c8d3bed3d3377ecbba6b",
+  "findings_sha256": "ce67d27a8ff2c7061ebad80d4d96523ad796c3984d967a47d5fa1f2b5cc7d14e",
+  "gate_head": "sha256:d2d57886cc80879268a7ce7eefddfef1fd85cd3d58a73c8a2ef0f09df9d26f88",
+  "gate_receipts": 17,
+  "gold_db_hash": "a0d1b0eab2e1e283dbf84607d02b637eb6bc61fc1cd4c8d3bed3d3377ecbba6b",
+  "harness_readbacks": 2,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "a0d1b0eab2e1e283dbf84607d02b637eb6bc61fc1cd4c8d3bed3d3377ecbba6b",
+  "run_id": "published/gpt-4.1-2025-04-14/95_3"
+ }
+}

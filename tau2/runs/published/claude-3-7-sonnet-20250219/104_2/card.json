@@ -1,0 +1,236 @@
+{
+ "answer_key": {
+  "gold_db_hash": "86fb873c6582ce78b085a9938e25ac6ca4d14a2f7c149d990b6def658854e155",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 7,
+    "entity": "orders/#W6239298",
+    "status": "complete",
+    "tool": "return_delivered_order_items"
+   },
+   {
+    "call": 8,
+    "entity": "orders/#W8660475",
+    "status": "complete",
+    "tool": "return_delivered_order_items"
+   },
+   {
+    "call": 9,
+    "entity": "orders/#W9218746",
+    "status": "complete",
+    "tool": "return_delivered_order_items"
+   },
+   {
+    "call": 11,
+    "entity": "orders/#W4860251",
+    "status": "complete",
+    "tool": "modify_pending_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [
+   {
+    "said": true,
+    "string": "286422338955"
+   }
+  ],
+  "e13": [],
+  "e2": {
+   "enforced": false,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {
+    "orders/#W4860251": [
+     "address"
+    ]
+   },
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 7,
+    "customer_turn": 21,
+    "proposal_turn": 20,
+    "result": "established"
+   },
+   {
+    "call": 8,
+    "customer_turn": 27,
+    "proposal_turn": 26,
+    "result": "established"
+   },
+   {
+    "call": 9,
+    "customer_turn": 33,
+    "proposal_turn": 32,
+    "result": "established"
+   },
+   {
+    "call": 11,
+    "customer_turn": 41,
+    "proposal_turn": 40,
+    "result": "established"
+   },
+   {
+    "call": 12,
+    "customer_turn": 41,
+    "proposal_turn": 40,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 7,
+    "executed": 510.03,
+    "result": "mismatch",
+    "stated": [
+     46.99,
+     463.04
+    ]
+   },
+   {
+    "call": 8,
+    "executed": 451.01,
+    "result": "match"
+   },
+   {
+    "call": 9,
+    "executed": 200.38,
+    "result": "match"
+   },
+   {
+    "call": 11,
+    "executed": 17.86,
+    "result": "match"
+   },
+   {
+    "call": 12,
+    "result": "not computable"
+   }
+  ],
+  "e6": [
+   {
+    "call": 7,
+    "result": "match"
+   },
+   {
+    "call": 8,
+    "result": "match"
+   },
+   {
+    "call": 9,
+    "result": "match"
+   },
+   {
+    "call": 11,
+    "result": "match"
+   },
+   {
+    "call": 12,
+    "result": "n/a"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "address has been updated",
+     "status": "refused",
+     "turn": 48,
+     "type": "address"
+    },
+    {
+     "match": "refund of $2,084.78 was processed",
+     "status": "observed",
+     "turn": 48,
+     "type": "refund"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "address has been updated",
+     "status": "observed",
+     "turn": 48,
+     "type": "address"
+    },
+    {
+     "match": "refund of $2,084.78 was processed",
+     "status": "observed",
+     "turn": 48,
+     "type": "refund"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 3
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 12,
+    "call_id": "toolu_015eBu4hgzKisEwouEV1rdWe",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "latest recorded observation of #W4860251 shows status 'pending (item modified)', the call needs 'pending'",
+      "grounded": true,
+      "policy_line": "96, 110",
+      "quote": "The agent will not be able to modify or cancel the order anymore",
+      "rule": "retail.modify.pending-only",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.modify.pending-only"
+    ],
+    "tool": "modify_pending_order_address",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.modify.pending-only"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "claude-3-7-sonnet-20250219",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/claude-3-7-sonnet-20250219/104_2",
+  "set": "published",
+  "sim_id": "46b225c4-0088-46f2-9dcf-19741e4ad87f",
+  "task_id": "104",
+  "trial": 2
+ },
+ "summary": {
+  "accepted_enforced": false,
+  "accepted_recorded": true,
+  "enforced_db_hash": "adbfb94d124370d1e11ca639a01faf86644655d98d62dcf5b64f8bc285a3839d",
+  "findings_sha256": "077f11c783263cd714950e8b3d6c3e5c45511523b07649fd461bd2ea44edb4ae",
+  "gate_head": "sha256:d6e80d7451f53efae40a998fa790a008eef99a4b0f444945cbd73ebc362aa7e8",
+  "gate_receipts": 27,
+  "gold_db_hash": "86fb873c6582ce78b085a9938e25ac6ca4d14a2f7c149d990b6def658854e155",
+  "harness_readbacks": 4,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "86fb873c6582ce78b085a9938e25ac6ca4d14a2f7c149d990b6def658854e155",
+  "run_id": "published/claude-3-7-sonnet-20250219/104_2"
+ }
+}

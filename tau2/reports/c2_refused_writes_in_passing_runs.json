@@ -1,0 +1,4534 @@
+[
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/13_0",
+  "sim_id": "d9dbc923-abfb-4ad2-940d-d891a9c3493f",
+  "task": "13",
+  "trial": 0,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 4,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to paypal_9497703; recorded original method credit_card_3124723; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/37_0",
+  "sim_id": "03415dd4-18c7-47cd-8f13-84daf4a8a088",
+  "task": "37",
+  "trial": 0,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 9,
+  "tool": "modify_pending_order_items",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['9879255677', '9851293632']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: The new item id should be different from the old item id"
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/83_0",
+  "sim_id": "c7019e12-20c9-4bc5-9fe6-08940e644dc0",
+  "task": "83",
+  "trial": 0,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 6,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to credit_card_1565124; recorded original method gift_card_7250692; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/105_0",
+  "sim_id": "05974b3a-3476-4eb0-babb-e95f227c2cbc",
+  "task": "105",
+  "trial": 0,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 4,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.payment.gift-card-balance"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "recorded gift card balance 17.0, amount due 21.1",
+    "grounded": true,
+    "policy_line": "104, 114, 134",
+    "quote": "it must have enough balance to cover",
+    "rule": "retail.payment.gift-card-balance",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Insufficient gift card balance to pay for the price difference"
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/112_1",
+  "sim_id": "9991156b-aea1-491c-b677-aa67e832d0d6",
+  "task": "112",
+  "trial": 1,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 9,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W3730488 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/11_2",
+  "sim_id": "f6c84ff1-6645-42fe-ae48-2bf1c56a6b4d",
+  "task": "11",
+  "trial": 2,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 4,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to paypal_9497703; recorded original method credit_card_3124723; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/19_2",
+  "sim_id": "dd1a27a2-09a5-44aa-a1ff-0f78838456e9",
+  "task": "19",
+  "trial": 2,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 8,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W2890441 shows status 'return requested', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/100_2",
+  "sim_id": "f88359af-ec3a-4f68-8415-409959d9f197",
+  "task": "100",
+  "trial": 2,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 11,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to credit_card_3261838; recorded original method paypal_3650980; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/13_3",
+  "sim_id": "e56b6c61-7766-4226-80c4-4f6d7e8b436d",
+  "task": "13",
+  "trial": 3,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 4,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to paypal_9497703; recorded original method credit_card_3124723; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/30_3",
+  "sim_id": "c8a5c2ea-81be-448c-989c-dafe02883984",
+  "task": "30",
+  "trial": 3,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 5,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['3788616824']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: New item 3788616824 not found or available"
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/97_3",
+  "sim_id": "82623e08-5487-46a3-8afd-187bec348e3e",
+  "task": "97",
+  "trial": 3,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 6,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W6750959 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/86_0",
+  "sim_id": "af564ee6-4ded-47eb-858b-2054026a7005",
+  "task": "86",
+  "trial": 0,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 8,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W2466703 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/30_0",
+  "sim_id": "98ae528d-1bfb-48fa-ad2f-b7fb68ada3f4",
+  "task": "30",
+  "trial": 0,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 5,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['3788616824']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: New item 3788616824 not found or available"
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/97_1",
+  "sim_id": "5d3377c9-8fff-41be-ad1b-894a4fdacf2a",
+  "task": "97",
+  "trial": 1,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 6,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W6750959 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/30_1",
+  "sim_id": "1818a171-4289-49f2-8566-9c809793e73f",
+  "task": "30",
+  "trial": 1,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 7,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['3788616824']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: New item 3788616824 not found or available"
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/36_2",
+  "sim_id": "5014092b-cea5-499e-ae84-5ae2fd06cac7",
+  "task": "36",
+  "trial": 2,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 9,
+  "tool": "modify_pending_order_items",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['9879255677', '9851293632']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: The new item id should be different from the old item id"
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/104_2",
+  "sim_id": "53885d0b-8ae4-4d18-8087-30b3db4681a5",
+  "task": "104",
+  "trial": 2,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 12,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W4860251 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/19_3",
+  "sim_id": "284665d7-f571-4b39-a44b-42dc71c5b330",
+  "task": "19",
+  "trial": 3,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 8,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['2366567022']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: New item 2366567022 not found or available"
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/19_3",
+  "sim_id": "284665d7-f571-4b39-a44b-42dc71c5b330",
+  "task": "19",
+  "trial": 3,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 10,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W2890441 shows status 'return requested', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/37_3",
+  "sim_id": "5e99b683-4da7-45c0-a289-efb80265b767",
+  "task": "37",
+  "trial": 3,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 9,
+  "tool": "modify_pending_order_items",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['9879255677', '9851293632']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: The new item id should be different from the old item id"
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/110_2",
+  "sim_id": "f5885092-55de-4b23-8caa-7bb69944d8d0",
+  "task": "110",
+  "trial": 2,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 7,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W1603792 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/97_3",
+  "sim_id": "ae4625ff-6392-40ed-8abf-463e059aa657",
+  "task": "97",
+  "trial": 3,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 6,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W6750959 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/95_3",
+  "sim_id": "027ee1c4-0e4d-4f8b-bf00-8c8548f54322",
+  "task": "95",
+  "trial": 3,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 7,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only",
+   "retail.items.once-per-order"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W2905754 shows status 'exchange requested', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   },
+   {
+    "evidence": "1 recorded successful item change(s) on #W2905754 before this call",
+    "grounded": true,
+    "policy_line": "84",
+    "quote": "Exchange or modify order tools can only be called once per order",
+    "rule": "retail.items.once-per-order",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/86_3",
+  "sim_id": "46ee583e-dc18-439e-a443-44564b7366d7",
+  "task": "86",
+  "trial": 3,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 9,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W2466703 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/104_3",
+  "sim_id": "72887f1b-a4a8-43d7-8bcf-9c636786f9ce",
+  "task": "104",
+  "trial": 3,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 12,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W4860251 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/37_0",
+  "sim_id": "bb2313ba-2ae5-40c6-a24e-f826bb62ea73",
+  "task": "37",
+  "trial": 0,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 10,
+  "tool": "modify_pending_order_items",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['9879255677', '9851293632']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: The new item id should be different from the old item id"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/13_0",
+  "sim_id": "ce40a938-68a2-4e9a-86c1-0558240a6bd9",
+  "task": "13",
+  "trial": 0,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 4,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to paypal_9497703; recorded original method credit_card_3124723; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/83_0",
+  "sim_id": "b18adc8a-e930-4a1d-a3b1-5d240125ccdc",
+  "task": "83",
+  "trial": 0,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 6,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to credit_card_1565124; recorded original method gift_card_7250692; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/11_0",
+  "sim_id": "ffa1968c-a39c-42c7-a862-5a38d490aad3",
+  "task": "11",
+  "trial": 0,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 4,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.order.status-checked-first"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "no recorded read or write result of #W5490111 before this call",
+    "grounded": true,
+    "policy_line": "88, 96, 118, 130",
+    "quote": "you should check its status before taking the action",
+    "rule": "retail.order.status-checked-first",
+    "test": "G1"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/11_0",
+  "sim_id": "ffa1968c-a39c-42c7-a862-5a38d490aad3",
+  "task": "11",
+  "trial": 0,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 5,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.order.status-checked-first"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "no recorded read or write result of #W7387996 before this call",
+    "grounded": true,
+    "policy_line": "88, 96, 118, 130",
+    "quote": "you should check its status before taking the action",
+    "rule": "retail.order.status-checked-first",
+    "test": "G1"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Some item not found"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/85_0",
+  "sim_id": "27cc58b5-cd5c-405c-8d52-8a6049724660",
+  "task": "85",
+  "trial": 0,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 8,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W2466703 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/19_0",
+  "sim_id": "d61bf366-548f-4fb0-99b2-278b3c82d79d",
+  "task": "19",
+  "trial": 0,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 8,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W2890441 shows status 'return requested', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/82_0",
+  "sim_id": "19498051-52fe-4a81-a6fd-819ad5c69bf8",
+  "task": "82",
+  "trial": 0,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 6,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to credit_card_1565124; recorded original method gift_card_7250692; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/11_1",
+  "sim_id": "feb26c96-b37b-46dd-a67b-057445d33d71",
+  "task": "11",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 4,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to paypal_9497703; recorded original method credit_card_3124723; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/11_1",
+  "sim_id": "feb26c96-b37b-46dd-a67b-057445d33d71",
+  "task": "11",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 5,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to credit_card_3124723; recorded original method paypal_9497703; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/13_1",
+  "sim_id": "074b5179-5941-4186-a66d-acfb5da11d8a",
+  "task": "13",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 4,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to paypal_9497703; recorded original method credit_card_3124723; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/103_0",
+  "sim_id": "25abd4ef-1c47-4af2-a82a-9bf763c18679",
+  "task": "103",
+  "trial": 0,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 11,
+  "tool": "modify_pending_order_items",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['5209958006']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: The new item id should be different from the old item id"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/25_1",
+  "sim_id": "edf0b7f1-6c57-4502-ae76-f69e06495ee3",
+  "task": "25",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 6,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination",
+   "retail.payment.customer-method"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to credit_card_amex; recorded original method paypal_3024827; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   },
+   {
+    "evidence": "credit_card_amex appears in no recorded profile of isabella_johansson_2152 and is not the order's original method",
+    "grounded": true,
+    "policy_line": "114, 122, 134",
+    "quote": "The user must provide a payment method",
+    "rule": "retail.payment.customer-method",
+    "test": "G1"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method not found"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/37_1",
+  "sim_id": "a1cbf1b9-104b-4dd5-aaf8-0b33254b861e",
+  "task": "37",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 10,
+  "tool": "modify_pending_order_items",
+  "rules": [
+   "retail.items.different-option",
+   "retail.items.available-same-product"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['9851293632']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   },
+   {
+    "evidence": "recorded product observations show these new items missing or unavailable: ['3111466194']",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.available-same-product",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: New item 3111466194 not found or available"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/37_1",
+  "sim_id": "a1cbf1b9-104b-4dd5-aaf8-0b33254b861e",
+  "task": "37",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 11,
+  "tool": "modify_pending_order_items",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['9879255677', '9851293632']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: The new item id should be different from the old item id"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/45_1",
+  "sim_id": "3f4689b0-2714-4926-94b7-afb4d045b95e",
+  "task": "45",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 4,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.payment.customer-method"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "gift_card_0000000 appears in no recorded profile of daiki_johnson_9523 and is not the order's original method",
+    "grounded": true,
+    "policy_line": "114, 122, 134",
+    "quote": "The user must provide a payment method",
+    "rule": "retail.payment.customer-method",
+    "test": "G1"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method not found"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/97_1",
+  "sim_id": "7bb77b31-f76a-4542-8552-106588357b64",
+  "task": "97",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 6,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W6750959 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/33_1",
+  "sim_id": "6613382e-a107-4b52-a356-0a9927fe3d88",
+  "task": "33",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 6,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W1845024 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be returned"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/86_1",
+  "sim_id": "5cad79b4-8157-465f-8c32-1138179ebc39",
+  "task": "86",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 8,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W2466703 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/74_1",
+  "sim_id": "18574845-2ad1-4b11-a5cb-2a8e3a671ad1",
+  "task": "74",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 6,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W5166363 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/22_2",
+  "sim_id": "40328eeb-7ae6-416e-98d0-1bae1faed678",
+  "task": "22",
+  "trial": 2,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 3,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.order.status-checked-first"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "no recorded read or write result of #W4967593 before this call",
+    "grounded": true,
+    "policy_line": "88, 96, 118, 130",
+    "quote": "you should check its status before taking the action",
+    "rule": "retail.order.status-checked-first",
+    "test": "G1"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-pending order cannot be modified"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/22_2",
+  "sim_id": "40328eeb-7ae6-416e-98d0-1bae1faed678",
+  "task": "22",
+  "trial": 2,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 4,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.order.status-checked-first"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "no recorded read or write result of #W9911714 before this call",
+    "grounded": true,
+    "policy_line": "88, 96, 118, 130",
+    "quote": "you should check its status before taking the action",
+    "rule": "retail.order.status-checked-first",
+    "test": "G1"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/22_2",
+  "sim_id": "40328eeb-7ae6-416e-98d0-1bae1faed678",
+  "task": "22",
+  "trial": 2,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 5,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.order.status-checked-first"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "no recorded read or write result of #W5733668 before this call",
+    "grounded": true,
+    "policy_line": "88, 96, 118, 130",
+    "quote": "you should check its status before taking the action",
+    "rule": "retail.order.status-checked-first",
+    "test": "G1"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-pending order cannot be modified"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/64_1",
+  "sim_id": "726a24b2-47e7-4d12-9f02-dede5eac4ba9",
+  "task": "64",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 8,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only",
+   "retail.payment.customer-method"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W7464385 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   },
+   {
+    "evidence": "credit_card_0000000 appears in no recorded profile of james_sanchez_3954 and is not the order's original method",
+    "grounded": true,
+    "policy_line": "114, 122, 134",
+    "quote": "The user must provide a payment method",
+    "rule": "retail.payment.customer-method",
+    "test": "G1"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/6_2",
+  "sim_id": "0eb1a57e-0b49-4c55-a0cc-4a65d32a1ca8",
+  "task": "6",
+  "trial": 2,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 7,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.payment.customer-method"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "credit_card_0000000 appears in no recorded profile of mei_kovacs_8020 and is not the order's original method",
+    "grounded": true,
+    "policy_line": "114, 122, 134",
+    "quote": "The user must provide a payment method",
+    "rule": "retail.payment.customer-method",
+    "test": "G1"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method not found"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/100_1",
+  "sim_id": "278a1d28-1e91-48d4-9d65-9da45b727f6a",
+  "task": "100",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 11,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to credit_card_3261838; recorded original method paypal_3650980; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/42_2",
+  "sim_id": "ca6228a5-bc0c-47ae-b32a-58cac7c367bc",
+  "task": "42",
+  "trial": 2,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 3,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.order.status-checked-first"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "no recorded read or write result of #W9583042 before this call",
+    "grounded": true,
+    "policy_line": "88, 96, 118, 130",
+    "quote": "you should check its status before taking the action",
+    "rule": "retail.order.status-checked-first",
+    "test": "G1"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/42_2",
+  "sim_id": "ca6228a5-bc0c-47ae-b32a-58cac7c367bc",
+  "task": "42",
+  "trial": 2,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 4,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.order.status-checked-first"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "no recorded read or write result of #W4082615 before this call",
+    "grounded": true,
+    "policy_line": "88, 96, 118, 130",
+    "quote": "you should check its status before taking the action",
+    "rule": "retail.order.status-checked-first",
+    "test": "G1"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/42_2",
+  "sim_id": "ca6228a5-bc0c-47ae-b32a-58cac7c367bc",
+  "task": "42",
+  "trial": 2,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 7,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W4082615 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/97_2",
+  "sim_id": "9fb67843-ea69-436c-8cdd-0ab9a758855b",
+  "task": "97",
+  "trial": 2,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 6,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W6750959 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/86_2",
+  "sim_id": "1e4046e8-25dc-4e4d-bc2d-7346280f8164",
+  "task": "86",
+  "trial": 2,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 9,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W2466703 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/85_2",
+  "sim_id": "6006adaf-1e0f-41dd-81aa-ca636f659c24",
+  "task": "85",
+  "trial": 2,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 8,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W2466703 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/100_2",
+  "sim_id": "8bb38997-ef8c-4781-b50b-2b7c94dbd99a",
+  "task": "100",
+  "trial": 2,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 10,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to credit_card_3261838; recorded original method paypal_3650980; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/95_2",
+  "sim_id": "1d67f5e1-d262-4214-9e39-a73237b99980",
+  "task": "95",
+  "trial": 2,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 6,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.items.in-order"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "items not in the recorded order: ['3478699712']",
+    "grounded": true,
+    "policy_line": "120",
+    "quote": "confirm the order id and the list of items to be returned",
+    "rule": "retail.items.in-order",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Number of 3478699712 not found."
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/95_2",
+  "sim_id": "1d67f5e1-d262-4214-9e39-a73237b99980",
+  "task": "95",
+  "trial": 2,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 7,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.items.in-order"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "items not in the recorded order: ['3478699712']",
+    "grounded": true,
+    "policy_line": "120",
+    "quote": "confirm the order id and the list of items to be returned",
+    "rule": "retail.items.in-order",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Number of 3478699712 not found."
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/33_3",
+  "sim_id": "f41a585a-6f78-48ae-bc47-fc1b6e6f1333",
+  "task": "33",
+  "trial": 3,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 5,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W1845024 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be returned"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/34_3",
+  "sim_id": "8f3a32fd-41da-4a97-a461-1f5366bf0be5",
+  "task": "34",
+  "trial": 3,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 5,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W1845024 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be returned"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/103_2",
+  "sim_id": "0c687b2c-04b4-4548-b47e-8b62129822b3",
+  "task": "103",
+  "trial": 2,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 16,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W4860251 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/72_3",
+  "sim_id": "464d45d6-4338-406d-a635-b1b049c561b5",
+  "task": "72",
+  "trial": 3,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 9,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W5270061 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/83_3",
+  "sim_id": "eea750c6-6b87-4da1-9b4e-1ba0697270b3",
+  "task": "83",
+  "trial": 3,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 6,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to credit_card_1565124; recorded original method gift_card_7250692; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/97_3",
+  "sim_id": "f354c950-abed-4791-a388-d2caded0a482",
+  "task": "97",
+  "trial": 3,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 6,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W6750959 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/97_3",
+  "sim_id": "f354c950-abed-4791-a388-d2caded0a482",
+  "task": "97",
+  "trial": 3,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 9,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W6750959 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/30_3",
+  "sim_id": "e513b993-0531-46d8-9e8c-f63d04801373",
+  "task": "30",
+  "trial": 3,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 7,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['3788616824']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: New item 3788616824 not found or available"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/99_3",
+  "sim_id": "466de614-3e2d-4d63-b436-268370b8a330",
+  "task": "99",
+  "trial": 3,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 10,
+  "tool": "modify_pending_order_items",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W3916020 shows status 'delivered', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-pending order cannot be modified"
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/11_2",
+  "sim_id": "3fc1e0f5-566f-4f3d-9c51-1f7fa96d8142",
+  "task": "11",
+  "trial": 2,
+  "model": "o4-mini-2025-04-16",
+  "call": 4,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to paypal_9497703; recorded original method credit_card_3124723; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/104_2",
+  "sim_id": "f6c64d36-2b02-426e-9eaf-74763e5749b5",
+  "task": "104",
+  "trial": 2,
+  "model": "o4-mini-2025-04-16",
+  "call": 12,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W4860251 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/45_3",
+  "sim_id": "a5bcb1c2-1d05-4afc-b4b7-2b564959a0e8",
+  "task": "45",
+  "trial": 3,
+  "model": "o4-mini-2025-04-16",
+  "call": 4,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.payment.customer-method"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new_gift_card appears in no recorded profile of daiki_johnson_9523 and is not the order's original method",
+    "grounded": true,
+    "policy_line": "114, 122, 134",
+    "quote": "The user must provide a payment method",
+    "rule": "retail.payment.customer-method",
+    "test": "G1"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method not found"
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/30_3",
+  "sim_id": "5e84e6c7-9205-402a-959d-9338f8e46e3f",
+  "task": "30",
+  "trial": 3,
+  "model": "o4-mini-2025-04-16",
+  "call": 7,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['3788616824']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: New item 3788616824 not found or available"
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/82_3",
+  "sim_id": "350b1f95-dabf-4cab-951b-addd248c6174",
+  "task": "82",
+  "trial": 3,
+  "model": "o4-mini-2025-04-16",
+  "call": 3,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to credit_card_1565124; recorded original method gift_card_7250692; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/97_3",
+  "sim_id": "3bfd10da-fd6e-4cf5-8f0c-bfa1bf23c311",
+  "task": "97",
+  "trial": 3,
+  "model": "o4-mini-2025-04-16",
+  "call": 6,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W6750959 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/104_3",
+  "sim_id": "f932c770-30a3-4ac3-a33c-32a695190dbf",
+  "task": "104",
+  "trial": 3,
+  "model": "o4-mini-2025-04-16",
+  "call": 12,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W4860251 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/111_3",
+  "sim_id": "1db71196-5020-43ae-9843-c45530877555",
+  "task": "111",
+  "trial": 3,
+  "model": "o4-mini-2025-04-16",
+  "call": 10,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W9810810 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/27_0",
+  "sim_id": "a82e90f5-e41d-4830-b387-917a3eb4067b",
+  "task": "27",
+  "trial": 0,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 6,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W7181492 shows status 'exchange requested', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be returned"
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/41_0",
+  "sim_id": "470bd37a-7c56-42ef-9ac3-9ec04495c39b",
+  "task": "41",
+  "trial": 0,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 7,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W4082615 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/104_0",
+  "sim_id": "8328babb-52e8-419b-b87e-75485fbab380",
+  "task": "104",
+  "trial": 0,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 13,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W4860251 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/111_0",
+  "sim_id": "e84f411e-4ec2-4ebd-a385-c0b28f191f1a",
+  "task": "111",
+  "trial": 0,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 10,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W9810810 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/69_1",
+  "sim_id": "129854de-cb15-4241-9811-78fb51c9095f",
+  "task": "69",
+  "trial": 1,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 5,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W2417020 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be returned"
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/74_1",
+  "sim_id": "1c3ce8f0-151d-464c-bb39-2a6f3a9de8db",
+  "task": "74",
+  "trial": 1,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 8,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W5166363 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/83_1",
+  "sim_id": "3877fdfd-9be1-4204-93bd-b422f15701ca",
+  "task": "83",
+  "trial": 1,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 6,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to credit_card_1565124; recorded original method gift_card_7250692; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/104_1",
+  "sim_id": "079873ac-30c7-4224-98b0-f980fabe372d",
+  "task": "104",
+  "trial": 1,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 12,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W4860251 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/27_2",
+  "sim_id": "0c80e0c6-fd85-44c5-a4fb-475c73a96fc2",
+  "task": "27",
+  "trial": 2,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 6,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W7181492 shows status 'exchange requested', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be returned"
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/36_2",
+  "sim_id": "dcf041d1-cef2-43df-9290-f53660385c75",
+  "task": "36",
+  "trial": 2,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 9,
+  "tool": "modify_pending_order_items",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['9879255677', '9851293632']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: The new item id should be different from the old item id"
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/41_2",
+  "sim_id": "91db8934-89db-4c19-9e31-a89adc3549ed",
+  "task": "41",
+  "trial": 2,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 7,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W4082615 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/97_2",
+  "sim_id": "60810f29-e400-45b8-902f-6d2da4a89ebe",
+  "task": "97",
+  "trial": 2,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 6,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W6750959 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/104_2",
+  "sim_id": "46b225c4-0088-46f2-9dcf-19741e4ad87f",
+  "task": "104",
+  "trial": 2,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 12,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W4860251 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/19_3",
+  "sim_id": "5a8df32f-ee2b-4394-8a39-5a8932f6486d",
+  "task": "19",
+  "trial": 3,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 8,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W2890441 shows status 'return requested', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/27_3",
+  "sim_id": "fe72daa1-c408-4a0d-9e41-f4d628f5701a",
+  "task": "27",
+  "trial": 3,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 6,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W7181492 shows status 'exchange requested', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be returned"
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/69_3",
+  "sim_id": "5cc63438-5f26-4652-98f2-02accac90640",
+  "task": "69",
+  "trial": 3,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 6,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W2417020 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be returned"
+ },
+ {
+  "run_id": "published/claude-3-7-sonnet-20250219/103_3",
+  "sim_id": "2a83e09f-e2c1-44f4-8088-7e20ad01bb06",
+  "task": "103",
+  "trial": 3,
+  "model": "claude-3-7-sonnet-20250219",
+  "call": 12,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W4860251 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/97_0",
+  "sim_id": "9a5fda53-2b27-4edc-8d2d-49883e5e8c02",
+  "task": "97",
+  "trial": 0,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 6,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W6750959 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/13_1",
+  "sim_id": "e9928700-e0af-4ec9-b1bf-88667d159b7a",
+  "task": "13",
+  "trial": 1,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 4,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to paypal_9497703; recorded original method credit_card_3124723; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/12_1",
+  "sim_id": "afe1ad86-fedf-4c29-b6f8-0fdd24986852",
+  "task": "12",
+  "trial": 1,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 4,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to paypal_9497703; recorded original method credit_card_3124723; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/37_0",
+  "sim_id": "d2d9392e-57d7-4c3f-9994-25d39764367d",
+  "task": "37",
+  "trial": 0,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 10,
+  "tool": "modify_pending_order_items",
+  "rules": [
+   "retail.items.different-option",
+   "retail.items.available-same-product"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['9851293632']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   },
+   {
+    "evidence": "recorded product observations show these new items missing or unavailable: ['3111466194']",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.available-same-product",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: New item 3111466194 not found or available"
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/37_0",
+  "sim_id": "d2d9392e-57d7-4c3f-9994-25d39764367d",
+  "task": "37",
+  "trial": 0,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 11,
+  "tool": "modify_pending_order_items",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['9879255677', '9851293632']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: The new item id should be different from the old item id"
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/111_0",
+  "sim_id": "0ef7a3e6-6564-4530-b584-898cc8f67ec8",
+  "task": "111",
+  "trial": 0,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 9,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W3730488 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/111_0",
+  "sim_id": "0ef7a3e6-6564-4530-b584-898cc8f67ec8",
+  "task": "111",
+  "trial": 0,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 10,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W9810810 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/44_1",
+  "sim_id": "c5617c15-63fa-422f-a128-50a19e78c2f6",
+  "task": "44",
+  "trial": 1,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 7,
+  "tool": "modify_pending_order_items",
+  "rules": [
+   "retail.modify.pending-only",
+   "retail.items.once-per-order",
+   "retail.items.in-order"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W9300146 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   },
+   {
+    "evidence": "1 recorded successful item change(s) on #W9300146 before this call",
+    "grounded": true,
+    "policy_line": "84",
+    "quote": "Exchange or modify order tools can only be called once per order",
+    "rule": "retail.items.once-per-order",
+    "test": "G2"
+   },
+   {
+    "evidence": "items not in the recorded order: ['9190635437']",
+    "grounded": true,
+    "policy_line": "120",
+    "quote": "confirm the order id and the list of items to be returned",
+    "rule": "retail.items.in-order",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-pending order cannot be modified"
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/44_1",
+  "sim_id": "c5617c15-63fa-422f-a128-50a19e78c2f6",
+  "task": "44",
+  "trial": 1,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 8,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only",
+   "retail.items.in-order"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W9300146 shows status 'pending (item modified)', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   },
+   {
+    "evidence": "items not in the recorded order: ['9190635437']",
+    "grounded": true,
+    "policy_line": "120",
+    "quote": "confirm the order id and the list of items to be returned",
+    "rule": "retail.items.in-order",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be returned"
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/105_0",
+  "sim_id": "c0ceb7b2-628d-454a-877b-5b398036ab6c",
+  "task": "105",
+  "trial": 0,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 4,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.payment.gift-card-balance"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "recorded gift card balance 17.0, amount due 21.1",
+    "grounded": true,
+    "policy_line": "104, 114, 134",
+    "quote": "it must have enough balance to cover",
+    "rule": "retail.payment.gift-card-balance",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Insufficient gift card balance to pay for the price difference"
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/111_1",
+  "sim_id": "a800d7ba-9342-4040-91f4-eb646bc07c21",
+  "task": "111",
+  "trial": 1,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 9,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W3730488 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/112_1",
+  "sim_id": "1b9848b5-e64d-4af8-8bc3-199ad3019f2a",
+  "task": "112",
+  "trial": 1,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 8,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W3730488 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/104_1",
+  "sim_id": "138f4638-21e6-4761-9e9c-535b6183d5dc",
+  "task": "104",
+  "trial": 1,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 13,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W4860251 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/97_2",
+  "sim_id": "b3208d12-b571-4cf3-9563-095bf8c02631",
+  "task": "97",
+  "trial": 2,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 7,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W6750959 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/37_2",
+  "sim_id": "7aaf6604-0f10-451c-b501-fbb84d67e8a3",
+  "task": "37",
+  "trial": 2,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 10,
+  "tool": "modify_pending_order_items",
+  "rules": [
+   "retail.items.different-option",
+   "retail.items.available-same-product"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['9851293632']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   },
+   {
+    "evidence": "recorded product observations show these new items missing or unavailable: ['3111466194']",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.available-same-product",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: New item 3111466194 not found or available"
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/37_2",
+  "sim_id": "7aaf6604-0f10-451c-b501-fbb84d67e8a3",
+  "task": "37",
+  "trial": 2,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 11,
+  "tool": "modify_pending_order_items",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['9879255677', '9851293632']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: The new item id should be different from the old item id"
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/71_2",
+  "sim_id": "01405363-4faa-4afd-8bab-4cefaed840ad",
+  "task": "71",
+  "trial": 2,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 9,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W5270061 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/86_2",
+  "sim_id": "999f0178-2200-471f-b50c-93799108d36c",
+  "task": "86",
+  "trial": 2,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 8,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W2466703 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/105_2",
+  "sim_id": "c3d90924-4cbb-411c-9f3d-4b5dae8e4316",
+  "task": "105",
+  "trial": 2,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 4,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.payment.gift-card-balance"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "recorded gift card balance 17.0, amount due 21.1",
+    "grounded": true,
+    "policy_line": "104, 114, 134",
+    "quote": "it must have enough balance to cover",
+    "rule": "retail.payment.gift-card-balance",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Insufficient gift card balance to pay for the price difference"
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/41_3",
+  "sim_id": "53874645-882e-4fa7-8852-6690b01ca022",
+  "task": "41",
+  "trial": 3,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 8,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W4082615 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/83_3",
+  "sim_id": "038cc04e-b05d-42be-83b0-50ccb316ba86",
+  "task": "83",
+  "trial": 3,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 6,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to credit_card_1565124; recorded original method gift_card_7250692; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/gpt-4.1-2025-04-14/105_3",
+  "sim_id": "99402129-5077-45eb-83fb-a5979c25d17d",
+  "task": "105",
+  "trial": 3,
+  "model": "gpt-4.1-2025-04-14",
+  "call": 4,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.payment.gift-card-balance"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "recorded gift card balance 17.0, amount due 21.1",
+    "grounded": true,
+    "policy_line": "104, 114, 134",
+    "quote": "it must have enough balance to cover",
+    "rule": "retail.payment.gift-card-balance",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Insufficient gift card balance to pay for the price difference"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/97_0",
+  "sim_id": "1a7486b0-2f8a-419e-90f6-9a13fb000052",
+  "task": "97",
+  "trial": 0,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 6,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W6750959 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/12_0",
+  "sim_id": "1f004778-5a08-4111-a2c7-69054b1dc0c7",
+  "task": "12",
+  "trial": 0,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 4,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to paypal_9497703; recorded original method credit_card_3124723; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/65_0",
+  "sim_id": "9ff9e0bd-d2b1-4119-be8c-da99b5f03bfb",
+  "task": "65",
+  "trial": 0,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 6,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W5362037 shows status 'processed', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be returned"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/86_0",
+  "sim_id": "70ee9bee-694f-42d1-a82b-35cbfa72e711",
+  "task": "86",
+  "trial": 0,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 8,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W2466703 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/45_0",
+  "sim_id": "209b770c-a346-43ff-b64b-f089eca6c301",
+  "task": "45",
+  "trial": 0,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 6,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.payment.customer-method"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "gift_card_0000000 appears in no recorded profile of daiki_johnson_9523 and is not the order's original method",
+    "grounded": true,
+    "policy_line": "114, 122, 134",
+    "quote": "The user must provide a payment method",
+    "rule": "retail.payment.customer-method",
+    "test": "G1"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method not found"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/42_0",
+  "sim_id": "2489d942-ce3d-4d33-8ce3-1bdf9353a358",
+  "task": "42",
+  "trial": 0,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 9,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W4082615 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/64_0",
+  "sim_id": "c6584bfe-e36b-4930-ada2-bd16b0f549c3",
+  "task": "64",
+  "trial": 0,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 6,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W7464385 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/10_1",
+  "sim_id": "cb34172d-f3f9-4c61-80c7-cfc7cd4cef73",
+  "task": "10",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 4,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to paypal_9497703; recorded original method credit_card_3124723; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/10_1",
+  "sim_id": "cb34172d-f3f9-4c61-80c7-cfc7cd4cef73",
+  "task": "10",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 5,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to credit_card_3124723; recorded original method paypal_9497703; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/78_0",
+  "sim_id": "9e49bcce-2564-4ba1-9a36-18b323bf8431",
+  "task": "78",
+  "trial": 0,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 6,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W5056519 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/21_0",
+  "sim_id": "2a70a937-a189-4936-8d9d-96f11e49670e",
+  "task": "21",
+  "trial": 0,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 9,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only",
+   "retail.items.in-order"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W9911714 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   },
+   {
+    "evidence": "items not in the recorded order: ['1656367028']",
+    "grounded": true,
+    "policy_line": "120",
+    "quote": "confirm the order id and the list of items to be returned",
+    "rule": "retail.items.in-order",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/21_0",
+  "sim_id": "2a70a937-a189-4936-8d9d-96f11e49670e",
+  "task": "21",
+  "trial": 0,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 10,
+  "tool": "modify_pending_order_items",
+  "rules": [
+   "retail.items.in-order"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "items not in the recorded order: ['1656367028']",
+    "grounded": true,
+    "policy_line": "120",
+    "quote": "confirm the order id and the list of items to be returned",
+    "rule": "retail.items.in-order",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: 1656367028 not found"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/12_1",
+  "sim_id": "bfc6c6ec-e664-4a13-9ef0-df4d9e7a42cc",
+  "task": "12",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 4,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to paypal_9497703; recorded original method credit_card_3124723; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/34_1",
+  "sim_id": "a36f5397-dc5e-4b34-a0ed-a71107dc7879",
+  "task": "34",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 3,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W1845024 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be returned"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/110_0",
+  "sim_id": "8c321026-17f0-414c-8e21-3ba308b7893f",
+  "task": "110",
+  "trial": 0,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 8,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W1603792 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/6_1",
+  "sim_id": "e8e5afee-4410-4478-9a6f-43943f00d5cb",
+  "task": "6",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 8,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.payment.customer-method"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "credit_card_7644869 appears in no recorded profile of mei_kovacs_8020 and is not the order's original method",
+    "grounded": true,
+    "policy_line": "114, 122, 134",
+    "quote": "The user must provide a payment method",
+    "rule": "retail.payment.customer-method",
+    "test": "G1"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method not found"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/30_1",
+  "sim_id": "70477bae-5ce6-4065-914e-08812932ed96",
+  "task": "30",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 7,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['3788616824']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: New item 3788616824 not found or available"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/21_1",
+  "sim_id": "28f09e2d-f30a-4028-8a34-75968b522050",
+  "task": "21",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 7,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only",
+   "retail.items.in-order"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W9911714 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   },
+   {
+    "evidence": "items not in the recorded order: ['1656367028']",
+    "grounded": true,
+    "policy_line": "120",
+    "quote": "confirm the order id and the list of items to be returned",
+    "rule": "retail.items.in-order",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/21_1",
+  "sim_id": "28f09e2d-f30a-4028-8a34-75968b522050",
+  "task": "21",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 8,
+  "tool": "modify_pending_order_items",
+  "rules": [
+   "retail.items.in-order"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "items not in the recorded order: ['1656367028']",
+    "grounded": true,
+    "policy_line": "120",
+    "quote": "confirm the order id and the list of items to be returned",
+    "rule": "retail.items.in-order",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: 1656367028 not found"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/65_1",
+  "sim_id": "2bfd7b48-578c-4180-a290-7b2e89f28426",
+  "task": "65",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 8,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W5362037 shows status 'processed', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be returned"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/65_1",
+  "sim_id": "2bfd7b48-578c-4180-a290-7b2e89f28426",
+  "task": "65",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 9,
+  "tool": "modify_pending_order_items",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W5362037 shows status 'processed', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-pending order cannot be modified"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/65_1",
+  "sim_id": "2bfd7b48-578c-4180-a290-7b2e89f28426",
+  "task": "65",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 10,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W5362037 shows status 'processed', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be returned"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/78_1",
+  "sim_id": "e3d903f3-2734-4691-8dc3-0c7c35238f19",
+  "task": "78",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 7,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W5056519 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/13_2",
+  "sim_id": "f17866d8-ec02-421b-afec-5e60d3f6b2bd",
+  "task": "13",
+  "trial": 2,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 4,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to paypal_9497703; recorded original method credit_card_3124723; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/105_1",
+  "sim_id": "02af5b05-f501-4f77-9aab-bc14e8e8d1d6",
+  "task": "105",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 5,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.payment.gift-card-balance"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "recorded gift card balance 17.0, amount due 21.1",
+    "grounded": true,
+    "policy_line": "104, 114, 134",
+    "quote": "it must have enough balance to cover",
+    "rule": "retail.payment.gift-card-balance",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Insufficient gift card balance to pay for the price difference"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/85_1",
+  "sim_id": "1f687cc5-e640-4c96-b2a5-beb48b17a30f",
+  "task": "85",
+  "trial": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 8,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W2466703 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/12_2",
+  "sim_id": "1eb9e7b8-f40c-48c5-9dca-c1b1607677d4",
+  "task": "12",
+  "trial": 2,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 4,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to paypal_9497703; recorded original method credit_card_3124723; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/65_2",
+  "sim_id": "e1dac49e-106b-4961-939a-ab76da3888b7",
+  "task": "65",
+  "trial": 2,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 3,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W5362037 shows status 'processed', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be returned"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/37_2",
+  "sim_id": "b4871726-81c0-4dfe-9c41-c20d6ec5003a",
+  "task": "37",
+  "trial": 2,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 11,
+  "tool": "modify_pending_order_items",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['9879255677', '9851293632']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: The new item id should be different from the old item id"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/8_2",
+  "sim_id": "8fde3f77-1fb7-4f55-a240-50efbba67942",
+  "task": "8",
+  "trial": 2,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 7,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.payment.customer-method"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "credit_card_0000000 appears in no recorded profile of mei_kovacs_8020 and is not the order's original method",
+    "grounded": true,
+    "policy_line": "114, 122, 134",
+    "quote": "The user must provide a payment method",
+    "rule": "retail.payment.customer-method",
+    "test": "G1"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method not found"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/34_2",
+  "sim_id": "375dc41f-da7e-4b8d-a82b-bc694f225e36",
+  "task": "34",
+  "trial": 2,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 5,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W1845024 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be returned"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/30_2",
+  "sim_id": "1b66da44-cb24-413c-8b64-04311f277823",
+  "task": "30",
+  "trial": 2,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 7,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['3788616824']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: New item 3788616824 not found or available"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/83_2",
+  "sim_id": "b22df78f-1c1c-4ab0-aad4-285c7a6528b6",
+  "task": "83",
+  "trial": 2,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 6,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to credit_card_1565124; recorded original method gift_card_7250692; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/74_2",
+  "sim_id": "5d257878-5453-4d6c-8a2d-eb59102ca829",
+  "task": "74",
+  "trial": 2,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 7,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W5166363 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/15_3",
+  "sim_id": "4dcf3b3f-1445-4b5b-b9d6-1aef39935389",
+  "task": "15",
+  "trial": 3,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 6,
+  "tool": "modify_pending_order_items",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W9389413 shows status 'delivered', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-pending order cannot be modified"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/37_3",
+  "sim_id": "5172e9a0-ff3a-46d9-9cdf-3503cbf31d3a",
+  "task": "37",
+  "trial": 3,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 10,
+  "tool": "modify_pending_order_items",
+  "rules": [
+   "retail.items.different-option",
+   "retail.items.available-same-product"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['9851293632']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   },
+   {
+    "evidence": "recorded product observations show these new items missing or unavailable: ['3111466194']",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.available-same-product",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: New item 3111466194 not found or available"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/37_3",
+  "sim_id": "5172e9a0-ff3a-46d9-9cdf-3503cbf31d3a",
+  "task": "37",
+  "trial": 3,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 12,
+  "tool": "modify_pending_order_items",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['9879255677', '9851293632']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: The new item id should be different from the old item id"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/86_3",
+  "sim_id": "ef0372dd-a080-45a9-8d15-f18242eb3fbb",
+  "task": "86",
+  "trial": 3,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 8,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W2466703 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/82_3",
+  "sim_id": "221cbbf9-1598-4f64-8c53-ea8d4e2c13ad",
+  "task": "82",
+  "trial": 3,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 6,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to credit_card_1565124; recorded original method gift_card_7250692; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/gpt-4.1-mini-2025-04-14/65_3",
+  "sim_id": "3433e544-66fb-4329-8a79-16eb5abe48c5",
+  "task": "65",
+  "trial": 3,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "call": 52,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W5362037 shows status 'processed', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/10_0",
+  "sim_id": "7f7f3e49-810a-443e-a4b1-cec86d647e33",
+  "task": "10",
+  "trial": 0,
+  "model": "o4-mini-2025-04-16",
+  "call": 4,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to paypal_9497703; recorded original method credit_card_3124723; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/12_0",
+  "sim_id": "1fae59db-d383-4da8-add5-90d47f8cd628",
+  "task": "12",
+  "trial": 0,
+  "model": "o4-mini-2025-04-16",
+  "call": 4,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to paypal_9497703; recorded original method credit_card_3124723; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/19_0",
+  "sim_id": "893683e2-4182-4bd7-8d50-90f07b1100f4",
+  "task": "19",
+  "trial": 0,
+  "model": "o4-mini-2025-04-16",
+  "call": 6,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W2890441 shows status 'return requested', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/35_0",
+  "sim_id": "19fe2c53-6114-4506-af25-46fffe88595f",
+  "task": "35",
+  "trial": 0,
+  "model": "o4-mini-2025-04-16",
+  "call": 6,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.identity.authenticate-first",
+   "retail.order.status-checked-first",
+   "retail.payment.customer-method"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "no recorded successful customer lookup before this call",
+    "grounded": true,
+    "policy_line": "10",
+    "quote": "you have to authenticate the user identity",
+    "rule": "retail.identity.authenticate-first",
+    "test": "G1"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/35_0",
+  "sim_id": "19fe2c53-6114-4506-af25-46fffe88595f",
+  "task": "35",
+  "trial": 0,
+  "model": "o4-mini-2025-04-16",
+  "call": 7,
+  "tool": "modify_pending_order_items",
+  "rules": [
+   "retail.identity.authenticate-first",
+   "retail.order.status-checked-first",
+   "retail.payment.customer-method"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "no recorded successful customer lookup before this call",
+    "grounded": true,
+    "policy_line": "10",
+    "quote": "you have to authenticate the user identity",
+    "rule": "retail.identity.authenticate-first",
+    "test": "G1"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/27_0",
+  "sim_id": "0376eb76-6aaa-4b47-94c5-83b97f8d4208",
+  "task": "27",
+  "trial": 0,
+  "model": "o4-mini-2025-04-16",
+  "call": 7,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W7181492 shows status 'exchange requested', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be returned"
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/13_1",
+  "sim_id": "f1114390-a99e-4451-9718-90e9dad9cebd",
+  "task": "13",
+  "trial": 1,
+  "model": "o4-mini-2025-04-16",
+  "call": 3,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to paypal_9497703; recorded original method credit_card_3124723; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/12_1",
+  "sim_id": "ca2d6d54-b624-4b21-840f-232eccac73d0",
+  "task": "12",
+  "trial": 1,
+  "model": "o4-mini-2025-04-16",
+  "call": 4,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to paypal_9497703; recorded original method credit_card_3124723; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/82_1",
+  "sim_id": "1d62d68f-fcee-4dc1-92dd-3b561547f821",
+  "task": "82",
+  "trial": 1,
+  "model": "o4-mini-2025-04-16",
+  "call": 3,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to credit_card_1565124; recorded original method gift_card_7250692; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/97_1",
+  "sim_id": "726c1e08-04b9-451c-8637-03e33039c44b",
+  "task": "97",
+  "trial": 1,
+  "model": "o4-mini-2025-04-16",
+  "call": 6,
+  "tool": "modify_pending_order_address",
+  "rules": [
+   "retail.modify.pending-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W6750959 shows status 'pending (item modified)', the call needs 'pending'",
+    "grounded": true,
+    "policy_line": "96, 110",
+    "quote": "The agent will not be able to modify or cancel the order anymore",
+    "rule": "retail.modify.pending-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": false,
+  "recorded_result_head": null
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/13_2",
+  "sim_id": "f3ee31e4-5129-4d6f-baf2-685de898bc86",
+  "task": "13",
+  "trial": 2,
+  "model": "o4-mini-2025-04-16",
+  "call": 4,
+  "tool": "return_delivered_order_items",
+  "rules": [
+   "retail.return.refund-destination"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "call refunds to paypal_9497703; recorded original method credit_card_3124723; customer gift card: False",
+    "grounded": true,
+    "policy_line": "124",
+    "quote": "must either go to the original payment method, or an existing gift card",
+    "rule": "retail.return.refund-destination",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Payment method should be the original payment method"
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/19_2",
+  "sim_id": "bfc60361-a265-480c-bc86-1086bc84501c",
+  "task": "19",
+  "trial": 2,
+  "model": "o4-mini-2025-04-16",
+  "call": 6,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W2890441 shows status 'return requested', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/30_2",
+  "sim_id": "8205eed4-40f5-4366-81f8-e4fcc60f4830",
+  "task": "30",
+  "trial": 2,
+  "model": "o4-mini-2025-04-16",
+  "call": 5,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.items.different-option"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "new item ids equal to the replaced ones: ['3788616824']; present in the recorded order: True",
+    "grounded": true,
+    "policy_line": "112, 132",
+    "quote": "available new item of the same product but of different product option",
+    "rule": "retail.items.different-option",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: New item 3788616824 not found or available"
+ },
+ {
+  "run_id": "published/o4-mini-2025-04-16/96_2",
+  "sim_id": "548da1c2-3ce3-4820-a0cc-f8943aa79eae",
+  "task": "96",
+  "trial": 2,
+  "model": "o4-mini-2025-04-16",
+  "call": 6,
+  "tool": "exchange_delivered_order_items",
+  "rules": [
+   "retail.return-exchange.delivered-only"
+  ],
+  "first_order": true,
+  "class": "grounded",
+  "tests": [
+   {
+    "evidence": "latest recorded observation of #W6750959 shows status 'pending', the call needs 'delivered'",
+    "grounded": true,
+    "policy_line": "118, 130",
+    "quote": "An order can only be returned if its status is 'delivered'",
+    "rule": "retail.return-exchange.delivered-only",
+    "test": "G2"
+   }
+  ],
+  "recorded_tool_error": true,
+  "recorded_result_head": "Error: Non-delivered order cannot be exchanged"
+ }
+]

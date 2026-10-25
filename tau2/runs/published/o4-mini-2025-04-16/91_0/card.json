@@ -1,0 +1,188 @@
+{
+ "answer_key": {
+  "gold_db_hash": "513010e85e47d540e3f67f010bcd1aba3007afccc88835116b073867442c90a9",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 7,
+    "entity": "orders/#W7553978",
+    "status": "complete",
+    "tool": "return_delivered_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": false,
+   "recorded": false
+  },
+  "e3": {
+   "enforced": {
+    "orders/#W3239882": [
+     "exchange_items",
+     "exchange_new_items",
+     "exchange_payment_method_id",
+     "exchange_price_difference",
+     "status"
+    ]
+   },
+   "recorded": {
+    "orders/#W3239882": [
+     "exchange_new_items",
+     "exchange_price_difference"
+    ]
+   }
+  },
+  "e4": [
+   {
+    "call": 7,
+    "customer_turn": 25,
+    "proposal_turn": 24,
+    "result": "established"
+   },
+   {
+    "call": 8,
+    "customer_turn": 25,
+    "proposal_turn": 24,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 7,
+    "executed": 728.04,
+    "result": "mismatch",
+    "stated": [
+     186.06,
+     202.13,
+     315.61,
+     323.19,
+     339.85
+    ]
+   },
+   {
+    "call": 8,
+    "executed": 0.0,
+    "result": "mismatch",
+    "stated": [
+     186.06,
+     202.13,
+     315.61,
+     323.19,
+     339.85
+    ]
+   }
+  ],
+  "e6": [
+   {
+    "call": 7,
+    "result": "match"
+   },
+   {
+    "call": 8,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "Return requested",
+     "status": "observed",
+     "turn": 30,
+     "type": "return"
+    },
+    {
+     "match": "Exchange requested",
+     "status": "refused",
+     "turn": 30,
+     "type": "exchange"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "Return requested",
+     "status": "observed",
+     "turn": 30,
+     "type": "return"
+    },
+    {
+     "match": "Exchange requested",
+     "status": "executed, not the expected state",
+     "turn": 30,
+     "type": "exchange"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 8,
+    "call_id": "call_Rs9gd9i9J7AwMrLvwKNklFXn",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "new item ids equal to the replaced ones: ['9494281769']; present in the recorded order: True",
+      "grounded": true,
+      "policy_line": "112, 132",
+      "quote": "available new item of the same product but of different product option",
+      "rule": "retail.items.different-option",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.items.different-option"
+    ],
+    "tool": "exchange_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.items.different-option"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "o4-mini-2025-04-16",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/o4-mini-2025-04-16/91_0",
+  "set": "published",
+  "sim_id": "6a0296fa-8559-413e-a5ae-3a12d7ae1438",
+  "task_id": "91",
+  "trial": 0
+ },
+ "summary": {
+  "accepted_enforced": false,
+  "accepted_recorded": false,
+  "enforced_db_hash": "ebb5d05a7947c6224b4ffd5996a77cdbc4c3d89fdfa324f099e8403585586ecb",
+  "findings_sha256": "1c5bf2cf74d6d7fe3bda490009636f9b32e326e5c1296991e9a94b29239e5f6e",
+  "gate_head": "sha256:cf0741c55c8fde8634a4bb2cc009a02975f3fc0cbe11c8c5199822013f7222df",
+  "gate_receipts": 17,
+  "gold_db_hash": "513010e85e47d540e3f67f010bcd1aba3007afccc88835116b073867442c90a9",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "138cc87a13846cf3339cc8f1ac82580fa4b04118e273443a0ba98c4fe4450c46",
+  "run_id": "published/o4-mini-2025-04-16/91_0"
+ }
+}

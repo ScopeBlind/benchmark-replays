@@ -1,0 +1,6 @@
+Run        published/claude-3-7-sonnet-20250219/17_1 (task 17 trial 1, claude-3-7-sonnet-20250219, sim a2bb3216)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      3 attempted, 3 authorized, 0 refused
+Write      call 2 modify_pending_order_address orders/#W8665881: observed complete: complete
+Accepted   yes under enforcement (final database equals the answer key)
+Evidence   6 gate receipts, 2 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

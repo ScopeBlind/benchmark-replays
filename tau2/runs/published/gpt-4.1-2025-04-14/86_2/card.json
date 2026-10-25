@@ -1,0 +1,156 @@
+{
+ "answer_key": {
+  "gold_db_hash": "4d145d54e2a023348b16a5c6deb1c6f18dca8cb0241e45d10d9287be7c3edfa2",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 9,
+    "entity": "users/yusuf_hernandez_6785",
+    "status": "complete",
+    "tool": "modify_user_address"
+   },
+   {
+    "call": 10,
+    "entity": "orders/#W2466703",
+    "status": "complete",
+    "tool": "modify_pending_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 8,
+    "customer_turn": 23,
+    "proposal_turn": 22,
+    "result": "established"
+   },
+   {
+    "call": 9,
+    "customer_turn": 23,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 22,
+    "result": "not established"
+   },
+   {
+    "call": 10,
+    "customer_turn": 28,
+    "proposal_turn": 27,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 8,
+    "executed": 6.74,
+    "result": "match"
+   },
+   {
+    "call": 9,
+    "result": "not computable"
+   },
+   {
+    "call": 10,
+    "executed": 6.74,
+    "result": "not stated"
+   }
+  ],
+  "e6": [
+   {
+    "call": 8,
+    "result": "match"
+   },
+   {
+    "call": 9,
+    "result": "n/a"
+   },
+   {
+    "call": 10,
+    "result": "not stated"
+   }
+  ],
+  "e7": {
+   "enforced": [],
+   "recorded": []
+  },
+  "e8": {
+   "turns_with_several_calls": 2,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 8,
+    "call_id": "call_o652nI4lkADNzO4W2GyPgaTY",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "latest recorded observation of #W2466703 shows status 'pending', the call needs 'delivered'",
+      "grounded": true,
+      "policy_line": "118, 130",
+      "quote": "An order can only be returned if its status is 'delivered'",
+      "rule": "retail.return-exchange.delivered-only",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.return-exchange.delivered-only"
+    ],
+    "tool": "exchange_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.return-exchange.delivered-only"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/gpt-4.1-2025-04-14/86_2",
+  "set": "published",
+  "sim_id": "999f0178-2200-471f-b50c-93799108d36c",
+  "task_id": "86",
+  "trial": 2
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "4d145d54e2a023348b16a5c6deb1c6f18dca8cb0241e45d10d9287be7c3edfa2",
+  "findings_sha256": "e8739357766422d81a2d03dfd353d26aafe3983cfcd80c8bf8da9e1e95239df1",
+  "gate_head": "sha256:c087066947ec36bbcb225c4be6cd35a1b98567c065e4f460065496687b507804",
+  "gate_receipts": 21,
+  "gold_db_hash": "4d145d54e2a023348b16a5c6deb1c6f18dca8cb0241e45d10d9287be7c3edfa2",
+  "harness_readbacks": 2,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "4d145d54e2a023348b16a5c6deb1c6f18dca8cb0241e45d10d9287be7c3edfa2",
+  "run_id": "published/gpt-4.1-2025-04-14/86_2"
+ }
+}

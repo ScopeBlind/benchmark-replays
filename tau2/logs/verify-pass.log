@@ -1,0 +1,222 @@
+{
+ "runs": {
+  "controls": {
+   "runs": 35,
+   "problem_runs": 0,
+   "calls": 233,
+   "reexec_own_ok": 233,
+   "reexec_pinned_flips": 0,
+   "examples": []
+  },
+  "planted": {
+   "runs": 44,
+   "problem_runs": 0,
+   "calls": 286,
+   "reexec_own_ok": 286,
+   "reexec_pinned_flips": 4,
+   "examples": []
+  },
+  "published": {
+   "runs": 1824,
+   "problem_runs": 0,
+   "calls": 13870,
+   "reexec_own_ok": 13870,
+   "reexec_pinned_flips": 0,
+   "examples": []
+  }
+ },
+ "verify": {
+  "controls": {
+   "gate_exit0": 35,
+   "harness_exit0": 35,
+   "runs": 35,
+   "other": []
+  },
+  "planted": {
+   "gate_exit0": 44,
+   "harness_exit0": 44,
+   "runs": 44,
+   "other": []
+  },
+  "published": {
+   "claude-3-7-sonnet-20250219/gate": {
+    "exit": 0,
+    "outcome": null,
+    "verified": null,
+    "failed": null,
+    "undecidable": null,
+    "chains": null,
+    "total": null,
+    "valid": null,
+    "chainBreaks": null,
+    "runs": 456
+   },
+   "claude-3-7-sonnet-20250219/harness": {
+    "exit": 0,
+    "outcome": null,
+    "verified": null,
+    "failed": null,
+    "undecidable": null,
+    "chains": null,
+    "total": null,
+    "valid": null,
+    "chainBreaks": null,
+    "runs": 456
+   },
+   "gpt-4.1-2025-04-14/gate": {
+    "exit": 0,
+    "outcome": null,
+    "verified": null,
+    "failed": null,
+    "undecidable": null,
+    "chains": null,
+    "total": null,
+    "valid": null,
+    "chainBreaks": null,
+    "runs": 456
+   },
+   "gpt-4.1-2025-04-14/harness": {
+    "exit": 0,
+    "outcome": null,
+    "verified": null,
+    "failed": null,
+    "undecidable": null,
+    "chains": null,
+    "total": null,
+    "valid": null,
+    "chainBreaks": null,
+    "runs": 456
+   },
+   "gpt-4.1-mini-2025-04-14/gate": {
+    "exit": 0,
+    "outcome": null,
+    "verified": null,
+    "failed": null,
+    "undecidable": null,
+    "chains": null,
+    "total": null,
+    "valid": null,
+    "chainBreaks": null,
+    "runs": 456
+   },
+   "gpt-4.1-mini-2025-04-14/harness": {
+    "exit": 0,
+    "outcome": null,
+    "verified": null,
+    "failed": null,
+    "undecidable": null,
+    "chains": null,
+    "total": null,
+    "valid": null,
+    "chainBreaks": null,
+    "runs": 456
+   },
+   "o4-mini-2025-04-16/gate": {
+    "exit": 0,
+    "outcome": null,
+    "verified": null,
+    "failed": null,
+    "undecidable": null,
+    "chains": null,
+    "total": null,
+    "valid": null,
+    "chainBreaks": null,
+    "runs": 456
+   },
+   "o4-mini-2025-04-16/harness": {
+    "exit": 0,
+    "outcome": null,
+    "verified": null,
+    "failed": null,
+    "undecidable": null,
+    "chains": null,
+    "total": null,
+    "valid": null,
+    "chainBreaks": null,
+    "runs": 456
+   }
+  }
+ },
+ "cli": {
+  "runs": 36,
+  "decisions": 284,
+  "sign_match": 284,
+  "evaluate_match": 284,
+  "mismatches": []
+ }
+}
+[
+ {
+  "run": "controls/claude-3-7-sonnet-20250219/14_0",
+  "flipped": {
+   "exit": 1,
+   "outcome": "invalid",
+   "invalid_signature": true
+  },
+  "deleted": {
+   "exit": 1,
+   "outcome": "invalid",
+   "chain_break": true
+  },
+  "wrong_key": {
+   "exit": 1,
+   "outcome": "invalid",
+   "key_mismatch": true
+  }
+ },
+ {
+  "run": "controls/gpt-4.1-2025-04-14/14_0",
+  "flipped": {
+   "exit": 1,
+   "outcome": "invalid",
+   "invalid_signature": true
+  },
+  "deleted": {
+   "exit": 1,
+   "outcome": "invalid",
+   "chain_break": true
+  },
+  "wrong_key": {
+   "exit": 1,
+   "outcome": "invalid",
+   "key_mismatch": true
+  }
+ },
+ {
+  "run": "controls/gpt-4.1-mini-2025-04-14/44_0",
+  "flipped": {
+   "exit": 1,
+   "outcome": "invalid",
+   "invalid_signature": true
+  },
+  "deleted": {
+   "exit": 1,
+   "outcome": "invalid",
+   "chain_break": true
+  },
+  "wrong_key": {
+   "exit": 1,
+   "outcome": "invalid",
+   "key_mismatch": true
+  }
+ },
+ {
+  "run": "controls/o4-mini-2025-04-16/14_0",
+  "flipped": {
+   "exit": 1,
+   "outcome": "invalid",
+   "invalid_signature": true
+  },
+  "deleted": {
+   "exit": 1,
+   "outcome": "invalid",
+   "chain_break": true
+  },
+  "wrong_key": {
+   "exit": 1,
+   "outcome": "invalid",
+   "key_mismatch": true
+  }
+ }
+]
+exit=0

@@ -1,0 +1,11 @@
+Run        published/gpt-4.1-2025-04-14/100_0 (task 100 trial 0, gpt-4.1-2025-04-14, sim 8f2ea0b2)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      11 attempted, 11 authorized, 0 refused
+Write      call 9 modify_pending_order_items orders/#W3295833: observed complete: complete
+Write      call 10 return_delivered_order_items orders/#W8488728: observed complete: complete
+Accepted   NO under enforcement (final database differs from the answer key)
+           differs at orders/#W3295833 ['payment_history']
+Not established  confirmation before call 9: the proposal does not name the call's order or user
+Not established  confirmation before call 10: the proposal does not name the call's order or user
+Claim      "order has been updated": executed, not the expected state
+Evidence   22 gate receipts, 3 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

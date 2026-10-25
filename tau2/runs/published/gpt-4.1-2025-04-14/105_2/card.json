@@ -1,0 +1,113 @@
+{
+ "answer_key": {
+  "gold_db_hash": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 4,
+    "customer_turn": 15,
+    "proposal_turn": 14,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 4,
+    "executed": 21.1,
+    "result": "not stated"
+   }
+  ],
+  "e6": [
+   {
+    "call": 4,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [],
+   "recorded": []
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 4,
+    "call_id": "call_nkBGfeUGzaNTFENX1YcxKDT9",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "recorded gift card balance 17.0, amount due 21.1",
+      "grounded": true,
+      "policy_line": "104, 114, 134",
+      "quote": "it must have enough balance to cover",
+      "rule": "retail.payment.gift-card-balance",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.payment.gift-card-balance"
+    ],
+    "tool": "exchange_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.payment.gift-card-balance"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/gpt-4.1-2025-04-14/105_2",
+  "set": "published",
+  "sim_id": "c3d90924-4cbb-411c-9f3d-4b5dae8e4316",
+  "task_id": "105",
+  "trial": 2
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+  "findings_sha256": "bd05d8b017c4c7ac6563f0808709e019a8f6070ecbe536f57dae786ea5bf8634",
+  "gate_head": "sha256:5b30d1f1c7dd841f5d16b521112e4266ffc27e4de44de6293abf308bcb7f7c4c",
+  "gate_receipts": 9,
+  "gold_db_hash": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+  "harness_readbacks": 0,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+  "run_id": "published/gpt-4.1-2025-04-14/105_2"
+ }
+}

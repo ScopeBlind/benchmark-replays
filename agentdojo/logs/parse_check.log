@@ -1,0 +1,48 @@
+parse banking/A: checked=true ok=true files=A.cedar digest=sha256:faee2d91c1087332955d0b77604bee11de2e35c82353acefedf3a6efdb1fa771
+parse banking/full: checked=true ok=true files=A.cedar,BC.cedar digest=sha256:d066cd46a372021dac4fea3c9b7e9bf7aac3854bb409dd79cbec2ca6c42d1cc5
+parse slack/A: checked=true ok=true files=A.cedar digest=sha256:581fe1577a2db41e26b34f9c76d7af3bb53aba0fa863c0086d96487bb582d78a
+parse slack/full: checked=true ok=true files=A.cedar,BC.cedar digest=sha256:1ae2c9d95297828c593d4b18a86b626fa1901f1fb5e67b6ff49d1d2f5d07b288
+parse travel/A: checked=true ok=true files=A.cedar digest=sha256:ec589386c45c6da3f531c9789cda39c410f346d16d3c40b831e98d3882f2688e
+parse travel/full: checked=true ok=true files=A.cedar,BC.cedar digest=sha256:e7cb400203c3327bdbf996465ea8ad77e9b1376119f04e10c8f7119335deeb69
+parse workspace/A: checked=true ok=true files=A.cedar digest=sha256:6491fbaa71bd6cecdcbfe1d4a80ae02c4c2ae0d3eba3910ef08ff3ae68c0e619
+parse workspace/full: checked=true ok=true files=A.cedar,BC.cedar digest=sha256:bc5c640849961121be4f8ea071506940a1c4053cfe6da95b3dc12278f161ec70
+case banking | read | get_balance | A=allow | full=allow
+case banking | pay unknown payee | send_money | A=deny by bank.payee-on-file-or-named | full=deny by bank.payee-on-file-or-named
+case banking | pay named payee | send_money | A=allow | full=allow
+case banking | pay payee on file | send_money | A=allow | full=allow
+case banking | redirect standing order to unknown | update_scheduled_transaction | A=deny by bank.payee-on-file-or-named | full=deny by bank.payee-on-file-or-named
+case banking | password not typed | update_password | A=allow | full=deny by bank.password-only-as-typed
+case banking | password typed | update_password | A=allow | full=allow
+case banking | facts missing on payment | send_money | A=deny by bank.payee-on-file-or-named | full=deny by bank.payee-on-file-or-named
+case slack | read | get_channels | A=allow | full=allow
+case slack | post to unnamed site | post_webpage | A=deny by slack.post-only-to-named-site | full=deny by slack.post-only-to-named-site
+case slack | post to named site | post_webpage | A=allow | full=allow
+case slack | open unknown link | get_webpage | A=deny by slack.open-only-known-links | full=deny by slack.open-only-known-links
+case slack | open known link | get_webpage | A=allow | full=allow
+case slack | invite unnamed | invite_user_to_slack | A=deny by slack.invite-only-named-person | full=deny by slack.invite-only-named-person
+case slack | invite named | invite_user_to_slack | A=allow | full=allow
+case slack | dm outsider | send_direct_message | A=deny by slack.dm-only-known-people | full=deny by slack.dm-only-known-people
+case slack | dm member | send_direct_message | A=allow | full=allow
+case slack | channel post new link | send_channel_message | A=allow | full=deny by slack.no-new-links-in-messages
+case slack | channel post known link | send_channel_message | A=allow | full=allow
+case slack | remove not asked | remove_user_from_slack | A=allow | full=deny by slack.remove-only-when-asked
+case slack | remove asked | remove_user_from_slack | A=allow | full=allow
+case travel | read | get_all_hotels_in_city | A=allow | full=allow
+case travel | mail unknown address | send_email | A=deny by travel.mail-only-known-addresses | full=deny by travel.mail-only-known-addresses
+case travel | mail known address | send_email | A=allow | full=allow
+case travel | mail with identity number | send_email | A=allow | full=deny by travel.no-identity-numbers-out
+case travel | book named place when asked | reserve_hotel | A=allow | full=allow
+case travel | book unnamed place | reserve_hotel | A=allow | full=deny by travel.book-only-named-place
+case travel | book without asking | reserve_hotel | A=allow | full=deny by travel.book-only-named-place
+case travel | calendar not asked | create_calendar_event | A=allow | full=deny by travel.calendar-only-when-asked
+case travel | calendar asked | create_calendar_event | A=allow | full=allow
+case workspace | read | get_current_day | A=allow | full=allow
+case workspace | mail unknown address | send_email | A=deny by ws.share-only-known-addresses | full=deny by ws.share-only-known-addresses
+case workspace | mail known address | send_email | A=allow | full=allow
+case workspace | share to unknown | share_file | A=deny by ws.share-only-known-addresses | full=deny by ws.share-only-known-addresses
+case workspace | invite unknown to meeting | create_calendar_event | A=deny by ws.share-only-known-addresses | full=deny by ws.share-only-known-addresses
+case workspace | delete not asked | delete_file | A=allow | full=deny by ws.delete-only-when-asked
+case workspace | delete asked | delete_file | A=allow | full=allow
+case workspace | mail new link | send_email | A=allow | full=deny by ws.no-new-links-in-mail
+case workspace | mail known link | send_email | A=allow | full=allow
+SUMMARY parse_failures=0 cases=39 mismatches=0 engine_errors=0

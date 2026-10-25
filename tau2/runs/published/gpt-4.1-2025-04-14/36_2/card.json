@@ -1,0 +1,181 @@
+{
+ "answer_key": {
+  "gold_db_hash": "c263b7ca5913ee44ccb614b4b5fd2b672049d710741063b90239ef46a3112c3c",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 10,
+    "entity": "orders/#W9348897",
+    "status": "complete",
+    "tool": "modify_pending_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [
+   {
+    "said": true,
+    "string": "camera"
+   },
+   {
+    "said": true,
+    "string": "481.5"
+   }
+  ],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 9,
+    "customer_turn": 27,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 26,
+    "result": "not established"
+   },
+   {
+    "call": 10,
+    "customer_turn": 31,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 30,
+    "result": "not established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 9,
+    "executed": 36.13,
+    "result": "mismatch",
+    "stated": [
+     46.66,
+     135.24,
+     193.38,
+     288.82,
+     466.75,
+     1130.85,
+     1131.0
+    ]
+   },
+   {
+    "call": 10,
+    "executed": 36.13,
+    "result": "not stated"
+   }
+  ],
+  "e6": [
+   {
+    "call": 9,
+    "result": "not stated"
+   },
+   {
+    "call": 10,
+    "result": "not stated"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "order has been updated",
+     "status": "observed",
+     "turn": 34,
+     "type": "item_change"
+    },
+    {
+     "match": "you will receive a refund",
+     "status": "observed",
+     "turn": 34,
+     "type": "refund"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "order has been updated",
+     "status": "observed",
+     "turn": 34,
+     "type": "item_change"
+    },
+    {
+     "match": "you will receive a refund",
+     "status": "observed",
+     "turn": 34,
+     "type": "refund"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 1,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 9,
+    "call_id": "call_ETJh8XJ0zUIWSEwVOPsDyoIp",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "new item ids equal to the replaced ones: ['9879255677', '9851293632']; present in the recorded order: True",
+      "grounded": true,
+      "policy_line": "112, 132",
+      "quote": "available new item of the same product but of different product option",
+      "rule": "retail.items.different-option",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.items.different-option"
+    ],
+    "tool": "modify_pending_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.items.different-option"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/gpt-4.1-2025-04-14/36_2",
+  "set": "published",
+  "sim_id": "5014092b-cea5-499e-ae84-5ae2fd06cac7",
+  "task_id": "36",
+  "trial": 2
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "c263b7ca5913ee44ccb614b4b5fd2b672049d710741063b90239ef46a3112c3c",
+  "findings_sha256": "f567a4521eba095b6b6afa354e7b1948c9d3e4edaa9d568af05fde87efacfd8c",
+  "gate_head": "sha256:c805c5fff4d61b02b3283561712e924a2808396b04135b6e7abf90118363f2c6",
+  "gate_receipts": 21,
+  "gold_db_hash": "c263b7ca5913ee44ccb614b4b5fd2b672049d710741063b90239ef46a3112c3c",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "c263b7ca5913ee44ccb614b4b5fd2b672049d710741063b90239ef46a3112c3c",
+  "run_id": "published/gpt-4.1-2025-04-14/36_2"
+ }
+}

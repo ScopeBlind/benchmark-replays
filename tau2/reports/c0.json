@@ -1,0 +1,73 @@
+{
+ "disagreements": [],
+ "mismatch_examples": [],
+ "per_model": {
+  "claude-3-7-sonnet-20250219": {
+   "agree_16oct_regrade": 456,
+   "agree_published_db_match": 456,
+   "calls_with_result_mismatch": 0,
+   "embedded_label_pass": 365,
+   "have_16oct_label": 456,
+   "published_db_match_true": 365,
+   "runs": 456,
+   "runs_with_result_mismatch": 0,
+   "v101_label_pass": 360
+  },
+  "gpt-4.1-2025-04-14": {
+   "agree_16oct_regrade": 456,
+   "agree_published_db_match": 456,
+   "calls_with_result_mismatch": 0,
+   "embedded_label_pass": 354,
+   "have_16oct_label": 456,
+   "published_db_match_true": 354,
+   "runs": 456,
+   "runs_with_result_mismatch": 0,
+   "v101_label_pass": 348
+  },
+  "gpt-4.1-mini-2025-04-14": {
+   "agree_16oct_regrade": 456,
+   "agree_published_db_match": 456,
+   "calls_with_result_mismatch": 0,
+   "embedded_label_pass": 330,
+   "have_16oct_label": 456,
+   "published_db_match_true": 330,
+   "runs": 456,
+   "runs_with_result_mismatch": 0,
+   "v101_label_pass": 321
+  },
+  "o4-mini-2025-04-16": {
+   "agree_16oct_regrade": 456,
+   "agree_published_db_match": 456,
+   "calls_with_result_mismatch": 0,
+   "embedded_label_pass": 338,
+   "have_16oct_label": 456,
+   "published_db_match_true": 338,
+   "runs": 456,
+   "runs_with_result_mismatch": 0,
+   "v101_label_pass": 329
+  }
+ },
+ "result_mismatch_by_tool": {},
+ "tau2_crosscheck": {
+  "embedded_gold_equal": 456,
+  "embedded_gold_n": 456,
+  "errors": 0,
+  "model_clients_loaded": [],
+  "network_attempts": 0,
+  "recorded_hash_equal": 1824,
+  "runs": 1824,
+  "tau2_db_path": "<tau2-bench install at commit 96a3ef92>/data/tau2/domains/retail/db.json",
+  "v101_gold_equal": 114
+ },
+ "tau2_errors": null,
+ "tau2_network_attempts": null,
+ "totals": {
+  "agree_16oct_regrade": 1824,
+  "agree_published_db_match": 1824,
+  "embedded_label_pass": 1387,
+  "have_16oct_label": 1824,
+  "published_db_match_true": 1387,
+  "runs": 1824,
+  "v101_label_pass": 1358
+ }
+}

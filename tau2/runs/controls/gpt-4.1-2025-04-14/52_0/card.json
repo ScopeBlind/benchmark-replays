@@ -1,0 +1,106 @@
+{
+ "answer_key": {
+  "gold_db_hash": "0a993bd7f7029816e26055cbef876c8c0d62570e4c8ad16389962fff00b22dba",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 7,
+    "entity": "orders/#W4689314",
+    "status": "complete",
+    "tool": "exchange_delivered_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 7,
+    "customer_turn": 22,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 21,
+    "result": "not established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 7,
+    "executed": 170.68,
+    "result": "match"
+   }
+  ],
+  "e6": [
+   {
+    "call": 7,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "exchange has been processed",
+     "status": "observed",
+     "turn": 25,
+     "type": "exchange"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "exchange has been processed",
+     "status": "observed",
+     "turn": 25,
+     "type": "exchange"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 1,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": []
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-2025-04-14",
+  "plant": null,
+  "published": null,
+  "run_id": "controls/gpt-4.1-2025-04-14/52_0",
+  "set": "control",
+  "sim_id": "f041e4e7-c273-4c69-a76b-fa22492cc50c",
+  "task_id": "52",
+  "trial": 0
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "0a993bd7f7029816e26055cbef876c8c0d62570e4c8ad16389962fff00b22dba",
+  "findings_sha256": "6de77e5129357b8a42d23027e2818116d897a3ba567673546301f2bd4d8761b8",
+  "gate_head": "sha256:d2a8024f2d9d7fdac7892daa4691348557b9fc2a13272a47bd83d27bf6c570ea",
+  "gate_receipts": 16,
+  "gold_db_hash": "0a993bd7f7029816e26055cbef876c8c0d62570e4c8ad16389962fff00b22dba",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "0a993bd7f7029816e26055cbef876c8c0d62570e4c8ad16389962fff00b22dba",
+  "run_id": "controls/gpt-4.1-2025-04-14/52_0"
+ }
+}

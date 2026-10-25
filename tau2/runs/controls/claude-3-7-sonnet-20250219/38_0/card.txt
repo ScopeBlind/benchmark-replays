@@ -1,0 +1,7 @@
+Run        controls/claude-3-7-sonnet-20250219/38_0 (task 38 trial 0, claude-3-7-sonnet-20250219, sim dcec8d38)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      10 attempted, 10 authorized, 0 refused
+Write      call 9 cancel_pending_order orders/#W9348897: observed complete: complete
+Accepted   yes under enforcement (final database equals the answer key)
+Claim      "has been successfully canceled": observed
+Evidence   20 gate receipts, 2 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

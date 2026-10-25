@@ -1,0 +1,13 @@
+Run        published/gpt-4.1-2025-04-14/37_0 (task 37 trial 0, gpt-4.1-2025-04-14, sim d2d9392e)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      13 attempted, 11 authorized, 2 refused
+Refused    call 10 modify_pending_order_items: retail.items.different-option, retail.items.available-same-product
+Refused    call 11 modify_pending_order_items: retail.items.different-option
+Write      call 12 modify_pending_order_items orders/#W9348897: observed complete: complete
+Accepted   yes under enforcement (final database equals the answer key)
+Not established  confirmation before call 10: the proposal does not name the call's order or user
+Not established  confirmation before call 11: no affirmative customer turn after the last proposal; the proposal does not name the call's order or user
+Not established  confirmation before call 12: the proposal does not name the call's order or user
+Mismatch   amount at call 11: stated [288.82], executed 36.13
+Claim      "order has been updated": observed
+Evidence   24 gate receipts, 2 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

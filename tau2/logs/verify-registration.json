@@ -1,0 +1,58 @@
+{
+  "total": 1,
+  "verified": 1,
+  "failed": 0,
+  "undecidable": 0,
+  "chainBreaks": 0,
+  "byTier": {
+    "1": 1,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0
+  },
+  "errors": [],
+  "receipts": [
+    {
+      "index": 0,
+      "valid": true,
+      "outcome": "valid",
+      "tier": 1,
+      "kid": "tau2-replay-harness",
+      "type": "protectmcp:decision",
+      "checks": {
+        "signing_input": {
+          "result": "pass"
+        },
+        "signature": {
+          "result": "pass"
+        },
+        "carried_key": {
+          "result": "pass"
+        },
+        "issuer_kid": {
+          "result": "pass"
+        },
+        "chain_link": {
+          "result": "absent"
+        },
+        "key_window": {
+          "result": "not_established"
+        }
+      },
+      "keyStatus": {
+        "source": "provided",
+        "window": null,
+        "issued_at": "2026-10-25T03:42:40.420Z",
+        "applied": false,
+        "result": "not_established",
+        "detail": "The key was given directly, so no key source gives it a validity window: its validity at issuance is not established."
+      }
+    }
+  ],
+  "valid": true,
+  "legacyLinks": 0,
+  "chains": 1,
+  "warnings": [],
+  "outcome": "valid"
+}

@@ -1,0 +1,6 @@
+Run        published/gpt-4.1-2025-04-14/9_0 (task 9 trial 0, gpt-4.1-2025-04-14, sim 8d1d946f)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      8 attempted, 8 authorized, 0 refused
+Write      call 7 exchange_delivered_order_items orders/#W6390527: observed complete: complete
+Accepted   yes under enforcement (final database equals the answer key)
+Evidence   16 gate receipts, 2 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

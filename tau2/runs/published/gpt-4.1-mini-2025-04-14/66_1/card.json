@@ -1,0 +1,168 @@
+{
+ "answer_key": {
+  "gold_db_hash": "a60e11827d3f533573fdd0fe8ab3a1870834454995a58c2b8eba2faf2e6c1dfb",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": false,
+   "recorded": false
+  },
+  "e3": {
+   "enforced": {
+    "orders/#W3361211": [
+     "cancel_reason",
+     "payment_history",
+     "status"
+    ]
+   },
+   "recorded": {
+    "orders/#W3361211": [
+     "cancel_reason",
+     "payment_history",
+     "status"
+    ]
+   }
+  },
+  "e4": [
+   {
+    "call": 7,
+    "customer_turn": 27,
+    "proposal_turn": 26,
+    "result": "established"
+   },
+   {
+    "call": 9,
+    "customer_turn": 27,
+    "proposal_turn": 26,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 7,
+    "result": "not computable"
+   },
+   {
+    "call": 9,
+    "result": "not computable"
+   }
+  ],
+  "e6": [
+   {
+    "call": 7,
+    "result": "match"
+   },
+   {
+    "call": 9,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [],
+   "recorded": []
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 3
+  },
+  "e9": [
+   {
+    "call": 10,
+    "exact_sentence": true
+   }
+  ],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 7,
+    "call_id": "call_nKfOqAq6RFG7fY5JpsHT44TE",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "recorded product observations show these new items missing or unavailable: ['7528037711']",
+      "grounded": true,
+      "policy_line": "112, 132",
+      "quote": "available new item of the same product but of different product option",
+      "rule": "retail.items.available-same-product",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.items.available-same-product"
+    ],
+    "tool": "modify_pending_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.items.available-same-product"
+     ]
+    }
+   },
+   {
+    "call": 9,
+    "call_id": "call_ZAaVfHUJztvTKVrZubcpoS6W",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "recorded product observations show these new items missing or unavailable: ['7528037711']",
+      "grounded": true,
+      "policy_line": "112, 132",
+      "quote": "available new item of the same product but of different product option",
+      "rule": "retail.items.available-same-product",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.items.available-same-product"
+    ],
+    "tool": "modify_pending_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.items.available-same-product"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-mini-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": false,
+   "reward": 0.0
+  },
+  "run_id": "published/gpt-4.1-mini-2025-04-14/66_1",
+  "set": "published",
+  "sim_id": "df831418-797d-4c7d-9d74-91a4926dc1c4",
+  "task_id": "66",
+  "trial": 1
+ },
+ "summary": {
+  "accepted_enforced": false,
+  "accepted_recorded": false,
+  "enforced_db_hash": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+  "findings_sha256": "14755101fe5b559749e5fb7ff9249b648e1df9224a7eec53326eb9c415f17bcf",
+  "gate_head": "sha256:5c11cb6f897c33092b10f50b15d8b3bbf1aa2c5fa70dfefeae3f65500e5145de",
+  "gate_receipts": 20,
+  "gold_db_hash": "a60e11827d3f533573fdd0fe8ab3a1870834454995a58c2b8eba2faf2e6c1dfb",
+  "harness_readbacks": 0,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+  "run_id": "published/gpt-4.1-mini-2025-04-14/66_1"
+ }
+}

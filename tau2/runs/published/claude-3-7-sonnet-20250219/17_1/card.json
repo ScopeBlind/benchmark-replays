@@ -1,0 +1,93 @@
+{
+ "answer_key": {
+  "gold_db_hash": "582f5d9c8242800c8bd77208017d9074c34e8b69b8e0cbfc2cb464dd5f604f98",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 2,
+    "entity": "orders/#W8665881",
+    "status": "complete",
+    "tool": "modify_pending_order_address"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 2,
+    "customer_turn": 13,
+    "proposal_turn": 12,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 2,
+    "result": "not computable"
+   }
+  ],
+  "e6": [
+   {
+    "call": 2,
+    "result": "n/a"
+   }
+  ],
+  "e7": {
+   "enforced": [],
+   "recorded": []
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 2
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": []
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "claude-3-7-sonnet-20250219",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/claude-3-7-sonnet-20250219/17_1",
+  "set": "published",
+  "sim_id": "a2bb3216-b857-41aa-a29f-b043e4de76ac",
+  "task_id": "17",
+  "trial": 1
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "582f5d9c8242800c8bd77208017d9074c34e8b69b8e0cbfc2cb464dd5f604f98",
+  "findings_sha256": "2b8c24fd2316fd279234264a31845ffc02e3251efa0782b8db6e62ba698d4184",
+  "gate_head": "sha256:dff06af00e79bb0ef71085bc0a73ab311ffa508db4913e120911130555b6bc88",
+  "gate_receipts": 6,
+  "gold_db_hash": "582f5d9c8242800c8bd77208017d9074c34e8b69b8e0cbfc2cb464dd5f604f98",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "582f5d9c8242800c8bd77208017d9074c34e8b69b8e0cbfc2cb464dd5f604f98",
+  "run_id": "published/claude-3-7-sonnet-20250219/17_1"
+ }
+}

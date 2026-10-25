@@ -1,0 +1,138 @@
+{
+ "answer_key": {
+  "gold_db_hash": "2053905d31cc52d9e2833383690e2a1853ea66cc0074b0e306699ad516950da7",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 9,
+    "entity": "orders/#W6390527",
+    "status": "complete",
+    "tool": "exchange_delivered_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 8,
+    "customer_turn": 29,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 28,
+    "result": "not established"
+   },
+   {
+    "call": 9,
+    "customer_turn": 33,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 32,
+    "result": "not established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 8,
+    "executed": 12.07,
+    "result": "match"
+   },
+   {
+    "call": 9,
+    "executed": 12.07,
+    "result": "match"
+   }
+  ],
+  "e6": [
+   {
+    "call": 8,
+    "missing": "the method is not in an observed profile",
+    "result": "not checkable"
+   },
+   {
+    "call": 9,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [],
+   "recorded": []
+  },
+  "e8": {
+   "turns_with_several_calls": 1,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 8,
+    "call_id": "call_6nDnUJo7YrJYx9D5PAYkCpMB",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "credit_card_7644869 appears in no recorded profile of mei_kovacs_8020 and is not the order's original method",
+      "grounded": true,
+      "policy_line": "114, 122, 134",
+      "quote": "The user must provide a payment method",
+      "rule": "retail.payment.customer-method",
+      "test": "G1"
+     }
+    ],
+    "rules": [
+     "retail.payment.customer-method"
+    ],
+    "tool": "exchange_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.payment.customer-method"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-mini-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/gpt-4.1-mini-2025-04-14/6_1",
+  "set": "published",
+  "sim_id": "e8e5afee-4410-4478-9a6f-43943f00d5cb",
+  "task_id": "6",
+  "trial": 1
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "2053905d31cc52d9e2833383690e2a1853ea66cc0074b0e306699ad516950da7",
+  "findings_sha256": "1f6ac56db365679549dd7ac11a4e635be3bed0507272dbff35b1c03cb457e3b4",
+  "gate_head": "sha256:07595ad48c61d5318008532df8089e0658297eb9b529ec7364326e687f161ec0",
+  "gate_receipts": 19,
+  "gold_db_hash": "2053905d31cc52d9e2833383690e2a1853ea66cc0074b0e306699ad516950da7",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "2053905d31cc52d9e2833383690e2a1853ea66cc0074b0e306699ad516950da7",
+  "run_id": "published/gpt-4.1-mini-2025-04-14/6_1"
+ }
+}

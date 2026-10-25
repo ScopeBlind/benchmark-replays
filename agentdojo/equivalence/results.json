@@ -1,0 +1,28 @@
+{
+ "n": 300,
+ "decision_agreement": 300,
+ "denies": 109,
+ "deny_rule_id_agreement": 109,
+ "digests_consistent": true,
+ "by_suite_library_decisions": {
+  "banking": {
+   "allow": 49,
+   "deny": 26
+  },
+  "slack": {
+   "allow": 45,
+   "deny": 30
+  },
+  "travel": {
+   "allow": 50,
+   "deny": 25
+  },
+  "workspace": {
+   "allow": 47,
+   "deny": 28
+  }
+ },
+ "seconds_evaluate": 35.6,
+ "seconds_sign": 45.3,
+ "disagreements": []
+}

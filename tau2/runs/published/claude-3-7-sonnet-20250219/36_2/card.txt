@@ -1,0 +1,9 @@
+Run        published/claude-3-7-sonnet-20250219/36_2 (task 36 trial 2, claude-3-7-sonnet-20250219, sim dcf041d1)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      11 attempted, 10 authorized, 1 refused
+Refused    call 9 modify_pending_order_items: retail.items.different-option
+Write      call 10 modify_pending_order_items orders/#W9348897: observed complete: complete
+Accepted   yes under enforcement (final database equals the answer key)
+Mismatch   amount at call 9: stated [46.66, 135.24, 193.38, 288.82, 466.75, 1130.85, 1131.0], executed 36.13
+Mismatch   amount at call 10: stated [46.66, 135.24, 193.38, 288.82, 466.75, 1130.85, 1131.0], executed 36.13
+Evidence   21 gate receipts, 2 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

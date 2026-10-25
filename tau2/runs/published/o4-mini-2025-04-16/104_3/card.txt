@@ -1,0 +1,12 @@
+Run        published/o4-mini-2025-04-16/104_3 (task 104 trial 3, o4-mini-2025-04-16, sim f932c770)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      14 attempted, 13 authorized, 1 refused
+Refused    call 12 modify_pending_order_address: retail.modify.pending-only
+Write      call 4 return_delivered_order_items orders/#W6239298: observed complete: complete
+Write      call 5 return_delivered_order_items orders/#W8660475: observed complete: complete
+Write      call 8 return_delivered_order_items orders/#W9218746: observed complete: complete
+Write      call 11 modify_pending_order_items orders/#W4860251: observed complete: complete
+Accepted   NO under enforcement (final database differs from the answer key)
+           differs at orders/#W4860251 ['address']
+           as recorded: yes (the refused calls ran in the recording)
+Evidence   27 gate receipts, 5 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

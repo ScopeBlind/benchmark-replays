@@ -1,0 +1,92 @@
+{
+ "answer_key": {
+  "gold_db_hash": "232e66188bb835cef11147346b2c4e73b0cf9440951e99a123366b5cc4bc01dd",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": false,
+   "recorded": false
+  },
+  "e3": {
+   "enforced": {
+    "orders/#W5565470": [
+     "return_items",
+     "return_payment_method_id",
+     "status"
+    ]
+   },
+   "recorded": {
+    "orders/#W5565470": [
+     "return_items",
+     "return_payment_method_id",
+     "status"
+    ]
+   }
+  },
+  "e4": [],
+  "e5": [],
+  "e6": [],
+  "e7": {
+   "enforced": [
+    {
+     "match": "return requested",
+     "status": "not attempted",
+     "turn": 20,
+     "type": "return"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "return requested",
+     "status": "not attempted",
+     "turn": 20,
+     "type": "return"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": []
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "o4-mini-2025-04-16",
+  "plant": "P1",
+  "published": null,
+  "run_id": "planted/P1/o4-mini-2025-04-16/26_0",
+  "set": "planted",
+  "sim_id": "4a4a5ec5-31c7-47a3-99cd-87f4c2c09502",
+  "task_id": "26",
+  "trial": 0
+ },
+ "summary": {
+  "accepted_enforced": false,
+  "accepted_recorded": false,
+  "enforced_db_hash": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+  "findings_sha256": "fd8df4a6f20e980a00704b0f8b4ba06ad2c9114386628799445b9051efedccb5",
+  "gate_head": "sha256:4f0faac622d0555e47e628ea22135699e82fbaf68d8d309b3ed1fa27e8f33b66",
+  "gate_receipts": 10,
+  "gold_db_hash": "232e66188bb835cef11147346b2c4e73b0cf9440951e99a123366b5cc4bc01dd",
+  "harness_readbacks": 0,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+  "run_id": "planted/P1/o4-mini-2025-04-16/26_0"
+ }
+}

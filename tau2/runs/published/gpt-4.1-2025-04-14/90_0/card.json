@@ -1,0 +1,115 @@
+{
+ "answer_key": {
+  "gold_db_hash": "c01984ba9743cde5dfd0f047505140ed7bb45246f2f0bf13585ea9e028081aa6",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 4,
+    "entity": "orders/#W9284598",
+    "status": "complete",
+    "tool": "cancel_pending_order"
+   }
+  ],
+  "e10": [
+   {
+    "call": 4,
+    "declared": "ordered by mistake",
+    "phrase": "ordered by mistake",
+    "result": "established"
+   }
+  ],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 4,
+    "customer_turn": 17,
+    "proposal_turn": 16,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 4,
+    "executed": 3930.54,
+    "result": "not stated"
+   }
+  ],
+  "e6": [
+   {
+    "call": 4,
+    "result": "n/a"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "has been cancelled",
+     "status": "observed",
+     "turn": 20,
+     "type": "cancel"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "has been cancelled",
+     "status": "observed",
+     "turn": 20,
+     "type": "cancel"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": []
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/gpt-4.1-2025-04-14/90_0",
+  "set": "published",
+  "sim_id": "55f5ae82-d103-4bcc-bf49-e0c45d224de0",
+  "task_id": "90",
+  "trial": 0
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "c01984ba9743cde5dfd0f047505140ed7bb45246f2f0bf13585ea9e028081aa6",
+  "findings_sha256": "3bdfa0f8e137c1cf8deb8012158026fb383f756555e1fcb4238fc9d307928172",
+  "gate_head": "sha256:f0f88ef423761cb91fe60adc0aa5a56438877381c6f432a22d832d3c697675f8",
+  "gate_receipts": 10,
+  "gold_db_hash": "c01984ba9743cde5dfd0f047505140ed7bb45246f2f0bf13585ea9e028081aa6",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "c01984ba9743cde5dfd0f047505140ed7bb45246f2f0bf13585ea9e028081aa6",
+  "run_id": "published/gpt-4.1-2025-04-14/90_0"
+ }
+}

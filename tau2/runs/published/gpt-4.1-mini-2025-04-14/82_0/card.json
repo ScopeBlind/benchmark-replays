@@ -1,0 +1,149 @@
+{
+ "answer_key": {
+  "gold_db_hash": "7ecde7bd76643d71d05744cf90118df05edb29c94caf725a11da7f38046b854c",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 7,
+    "entity": "orders/#W9571698",
+    "status": "complete",
+    "tool": "return_delivered_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 6,
+    "customer_turn": 18,
+    "proposal_turn": 17,
+    "result": "established"
+   },
+   {
+    "call": 7,
+    "customer_turn": 26,
+    "proposal_turn": 25,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 6,
+    "executed": 989.7,
+    "result": "not stated"
+   },
+   {
+    "call": 7,
+    "executed": 4293.43,
+    "result": "not stated"
+   }
+  ],
+  "e6": [
+   {
+    "call": 6,
+    "result": "match"
+   },
+   {
+    "call": 7,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "refund will be processed",
+     "status": "observed",
+     "turn": 29,
+     "type": "refund"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "refund will be processed",
+     "status": "observed",
+     "turn": 29,
+     "type": "refund"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 1,
+   "turns_with_text_and_call": 1
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 6,
+    "call_id": "call_OUyUy7wVLdWmg2DqBcILW57j",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "call refunds to credit_card_1565124; recorded original method gift_card_7250692; customer gift card: False",
+      "grounded": true,
+      "policy_line": "124",
+      "quote": "must either go to the original payment method, or an existing gift card",
+      "rule": "retail.return.refund-destination",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.return.refund-destination"
+    ],
+    "tool": "return_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.return.refund-destination"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-mini-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/gpt-4.1-mini-2025-04-14/82_0",
+  "set": "published",
+  "sim_id": "19498051-52fe-4a81-a6fd-819ad5c69bf8",
+  "task_id": "82",
+  "trial": 0
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "7ecde7bd76643d71d05744cf90118df05edb29c94caf725a11da7f38046b854c",
+  "findings_sha256": "16507c9545c1378c2db810fddef99d5a076236f94fe5a2733dfaa117916081e0",
+  "gate_head": "sha256:71f2d7cae6f4754c2c3d6a9fa508d5c348a72e16b39db483f08ebb923098fcb0",
+  "gate_receipts": 15,
+  "gold_db_hash": "7ecde7bd76643d71d05744cf90118df05edb29c94caf725a11da7f38046b854c",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "7ecde7bd76643d71d05744cf90118df05edb29c94caf725a11da7f38046b854c",
+  "run_id": "published/gpt-4.1-mini-2025-04-14/82_0"
+ }
+}

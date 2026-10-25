@@ -1,0 +1,14 @@
+{
+ "n": 200,
+ "input_hash_match": 200,
+ "input_size_match": 200,
+ "decision_match": 200,
+ "reason_match": 200,
+ "digest_match": 200,
+ "tool_match": 200,
+ "public_key_match": 200,
+ "kid": {
+  "generated": 200
+ },
+ "mismatches": []
+}

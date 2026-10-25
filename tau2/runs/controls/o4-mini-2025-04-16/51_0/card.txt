@@ -1,0 +1,7 @@
+Run        controls/o4-mini-2025-04-16/51_0 (task 51 trial 0, o4-mini-2025-04-16, sim 4cdae44a)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      5 attempted, 5 authorized, 0 refused
+Write      call 4 return_delivered_order_items orders/#W4689314: observed complete: complete
+Accepted   yes under enforcement (final database equals the answer key)
+Claim      "refund of $2895.55 will be processed": observed
+Evidence   10 gate receipts, 2 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

@@ -1,0 +1,121 @@
+{
+ "answer_key": {
+  "gold_db_hash": "e5c0722a1e6b8a9f8949890e7f6c05892d0a08386a8fc559d73f7b7ee715efcd",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 9,
+    "entity": "orders/#W9348897",
+    "status": "complete",
+    "tool": "cancel_pending_order"
+   }
+  ],
+  "e10": [
+   {
+    "call": 9,
+    "declared": "no longer needed",
+    "phrase": "no longer needed",
+    "result": "established"
+   }
+  ],
+  "e11": [
+   {
+    "said": true,
+    "string": "camera"
+   },
+   {
+    "said": true,
+    "string": "481.50"
+   }
+  ],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 9,
+    "customer_turn": 33,
+    "proposal_turn": 32,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 9,
+    "executed": 1166.98,
+    "result": "match"
+   }
+  ],
+  "e6": [
+   {
+    "call": 9,
+    "result": "n/a"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "has been successfully canceled",
+     "status": "observed",
+     "turn": 36,
+     "type": "cancel"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "has been successfully canceled",
+     "status": "observed",
+     "turn": 36,
+     "type": "cancel"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 3
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": []
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "claude-3-7-sonnet-20250219",
+  "plant": null,
+  "published": null,
+  "run_id": "controls/claude-3-7-sonnet-20250219/38_0",
+  "set": "control",
+  "sim_id": "dcec8d38-3a97-4011-b26c-a121efa3557b",
+  "task_id": "38",
+  "trial": 0
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "e5c0722a1e6b8a9f8949890e7f6c05892d0a08386a8fc559d73f7b7ee715efcd",
+  "findings_sha256": "b025176144c0ad9940a0e0968b1d6e95044216ce0052ade33b49db71a557201d",
+  "gate_head": "sha256:50de67a0c23b89eb07f4ef74f87c4da7df61268055e2461f1688ee4ee07b8773",
+  "gate_receipts": 20,
+  "gold_db_hash": "e5c0722a1e6b8a9f8949890e7f6c05892d0a08386a8fc559d73f7b7ee715efcd",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "e5c0722a1e6b8a9f8949890e7f6c05892d0a08386a8fc559d73f7b7ee715efcd",
+  "run_id": "controls/claude-3-7-sonnet-20250219/38_0"
+ }
+}

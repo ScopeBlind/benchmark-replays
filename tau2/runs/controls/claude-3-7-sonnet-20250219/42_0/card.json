@@ -1,0 +1,181 @@
+{
+ "answer_key": {
+  "gold_db_hash": "c3bd28c101572f04483eac972adc7fd520cef4bba4959848120690ed0c762700",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 2,
+    "entity": "users/mei_patel_7272",
+    "status": "complete",
+    "tool": "modify_user_address"
+   },
+   {
+    "call": 7,
+    "entity": "orders/#W9583042",
+    "status": "complete",
+    "tool": "modify_pending_order_address"
+   },
+   {
+    "call": 8,
+    "entity": "orders/#W4082615",
+    "status": "complete",
+    "tool": "modify_pending_order_address"
+   },
+   {
+    "call": 9,
+    "entity": "orders/#W4082615",
+    "status": "complete",
+    "tool": "modify_pending_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 2,
+    "customer_turn": 13,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 12,
+    "result": "not established"
+   },
+   {
+    "call": 7,
+    "customer_turn": 23,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 22,
+    "result": "not established"
+   },
+   {
+    "call": 8,
+    "customer_turn": 23,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 22,
+    "result": "not established"
+   },
+   {
+    "call": 9,
+    "customer_turn": 35,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 34,
+    "result": "not established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 2,
+    "result": "not computable"
+   },
+   {
+    "call": 7,
+    "result": "not computable"
+   },
+   {
+    "call": 8,
+    "result": "not computable"
+   },
+   {
+    "call": 9,
+    "executed": 7.98,
+    "result": "match"
+   }
+  ],
+  "e6": [
+   {
+    "call": 2,
+    "result": "n/a"
+   },
+   {
+    "call": 7,
+    "result": "n/a"
+   },
+   {
+    "call": 8,
+    "result": "n/a"
+   },
+   {
+    "call": 9,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "address has been updated",
+     "status": "observed",
+     "turn": 38,
+     "type": "address"
+    },
+    {
+     "match": "refund of $7.98 has been processed",
+     "status": "observed",
+     "turn": 38,
+     "type": "refund"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "address has been updated",
+     "status": "observed",
+     "turn": 38,
+     "type": "address"
+    },
+    {
+     "match": "refund of $7.98 has been processed",
+     "status": "observed",
+     "turn": 38,
+     "type": "refund"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 5
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": []
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "claude-3-7-sonnet-20250219",
+  "plant": null,
+  "published": null,
+  "run_id": "controls/claude-3-7-sonnet-20250219/42_0",
+  "set": "control",
+  "sim_id": "384582c0-b73b-408a-aef7-b72ac884e051",
+  "task_id": "42",
+  "trial": 0
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "c3bd28c101572f04483eac972adc7fd520cef4bba4959848120690ed0c762700",
+  "findings_sha256": "c8db23d879cca19501866f3ad46eb4bbe41d366246a78a105eef4c9a6b12cfe6",
+  "gate_head": "sha256:87f672b174c03733d322cd7b3bcc7111f8cd6187da0f9b65cf59641adab8ed06",
+  "gate_receipts": 20,
+  "gold_db_hash": "c3bd28c101572f04483eac972adc7fd520cef4bba4959848120690ed0c762700",
+  "harness_readbacks": 3,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "c3bd28c101572f04483eac972adc7fd520cef4bba4959848120690ed0c762700",
+  "run_id": "controls/claude-3-7-sonnet-20250219/42_0"
+ }
+}

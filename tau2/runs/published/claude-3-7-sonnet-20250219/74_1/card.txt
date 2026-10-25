@@ -1,0 +1,12 @@
+Run        published/claude-3-7-sonnet-20250219/74_1 (task 74 trial 1, claude-3-7-sonnet-20250219, sim 1c3ce8f0)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      11 attempted, 10 authorized, 1 refused
+Refused    call 8 exchange_delivered_order_items: retail.return-exchange.delivered-only
+Write      call 6 cancel_pending_order orders/#W3189752: observed complete: complete
+Write      call 10 modify_pending_order_items orders/#W5166363: observed complete: complete
+Accepted   yes under enforcement (final database equals the answer key)
+Not established  confirmation before call 8: the proposal does not name the call's order or user
+Not established  confirmation before call 10: the proposal does not name the call's order or user
+Claim      "has been successfully canceled": observed
+Claim      "refund of $1,252.16 has been issued": observed
+Evidence   21 gate receipts, 3 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

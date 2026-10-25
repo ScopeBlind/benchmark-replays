@@ -1,0 +1,135 @@
+{
+ "answer_key": {
+  "gold_db_hash": "e60e8a961176447111af9fc08a984b9885443ba174c34b159449a7c44cd233da",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 9,
+    "entity": "orders/#W2466703",
+    "status": "complete",
+    "tool": "modify_pending_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 8,
+    "customer_turn": 27,
+    "proposal_turn": 26,
+    "result": "established"
+   },
+   {
+    "call": 9,
+    "customer_turn": 33,
+    "proposal_turn": 32,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 8,
+    "executed": 6.74,
+    "result": "not stated"
+   },
+   {
+    "call": 9,
+    "executed": 6.74,
+    "result": "not stated"
+   }
+  ],
+  "e6": [
+   {
+    "call": 8,
+    "result": "match"
+   },
+   {
+    "call": 9,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [],
+   "recorded": []
+  },
+  "e8": {
+   "turns_with_several_calls": 1,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 8,
+    "call_id": "call_8GUmqxjzeAaEVWOSGWeaZv7Y",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "latest recorded observation of #W2466703 shows status 'pending', the call needs 'delivered'",
+      "grounded": true,
+      "policy_line": "118, 130",
+      "quote": "An order can only be returned if its status is 'delivered'",
+      "rule": "retail.return-exchange.delivered-only",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.return-exchange.delivered-only"
+    ],
+    "tool": "exchange_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.return-exchange.delivered-only"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-mini-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/gpt-4.1-mini-2025-04-14/85_1",
+  "set": "published",
+  "sim_id": "1f687cc5-e640-4c96-b2a5-beb48b17a30f",
+  "task_id": "85",
+  "trial": 1
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "e60e8a961176447111af9fc08a984b9885443ba174c34b159449a7c44cd233da",
+  "findings_sha256": "e593ab56c71c0a5bdf5e5e664ab5add8c925b30e6a6c5d727cf76cd7176cc29a",
+  "gate_head": "sha256:cda4b0b541efd6b6e72c287537e5bc8101b30f5f9d74983ec68d3f3ab2047d06",
+  "gate_receipts": 19,
+  "gold_db_hash": "e60e8a961176447111af9fc08a984b9885443ba174c34b159449a7c44cd233da",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "e60e8a961176447111af9fc08a984b9885443ba174c34b159449a7c44cd233da",
+  "run_id": "published/gpt-4.1-mini-2025-04-14/85_1"
+ }
+}

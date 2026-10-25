@@ -1,0 +1,662 @@
+{
+ "C0": {
+  "disagreements": [],
+  "mismatch_examples": [],
+  "per_model": {
+   "claude-3-7-sonnet-20250219": {
+    "agree_16oct_regrade": 456,
+    "agree_published_db_match": 456,
+    "calls_with_result_mismatch": 0,
+    "embedded_label_pass": 365,
+    "have_16oct_label": 456,
+    "published_db_match_true": 365,
+    "runs": 456,
+    "runs_with_result_mismatch": 0,
+    "v101_label_pass": 360
+   },
+   "gpt-4.1-2025-04-14": {
+    "agree_16oct_regrade": 456,
+    "agree_published_db_match": 456,
+    "calls_with_result_mismatch": 0,
+    "embedded_label_pass": 354,
+    "have_16oct_label": 456,
+    "published_db_match_true": 354,
+    "runs": 456,
+    "runs_with_result_mismatch": 0,
+    "v101_label_pass": 348
+   },
+   "gpt-4.1-mini-2025-04-14": {
+    "agree_16oct_regrade": 456,
+    "agree_published_db_match": 456,
+    "calls_with_result_mismatch": 0,
+    "embedded_label_pass": 330,
+    "have_16oct_label": 456,
+    "published_db_match_true": 330,
+    "runs": 456,
+    "runs_with_result_mismatch": 0,
+    "v101_label_pass": 321
+   },
+   "o4-mini-2025-04-16": {
+    "agree_16oct_regrade": 456,
+    "agree_published_db_match": 456,
+    "calls_with_result_mismatch": 0,
+    "embedded_label_pass": 338,
+    "have_16oct_label": 456,
+    "published_db_match_true": 338,
+    "runs": 456,
+    "runs_with_result_mismatch": 0,
+    "v101_label_pass": 329
+   }
+  },
+  "result_mismatch_by_tool": {},
+  "tau2_crosscheck": {
+   "embedded_gold_equal": 456,
+   "embedded_gold_n": 456,
+   "errors": 0,
+   "model_clients_loaded": [],
+   "network_attempts": 0,
+   "recorded_hash_equal": 1824,
+   "runs": 1824,
+   "tau2_db_path": "<tau2-bench install at commit 96a3ef92>/data/tau2/domains/retail/db.json",
+   "v101_gold_equal": 114
+  },
+  "tau2_errors": null,
+  "tau2_network_attempts": null,
+  "totals": {
+   "agree_16oct_regrade": 1824,
+   "agree_published_db_match": 1824,
+   "embedded_label_pass": 1387,
+   "have_16oct_label": 1824,
+   "published_db_match_true": 1387,
+   "runs": 1824,
+   "v101_label_pass": 1358
+  }
+ },
+ "C1": {
+  "pass": true,
+  "passed": 52,
+  "plants": 52
+ },
+ "C2": {
+  "control_refused_writes": 0,
+  "controls": 35,
+  "pass": true,
+  "passing_published_runs": 1358,
+  "passing_runs_not_reaching_gold_under_enforcement": 33,
+  "refused_reads_in_passing_runs": 4,
+  "refused_reads_split": {
+   "grounded": 4
+  },
+  "refused_writes_that_ran_in_recording": 36,
+  "refused_writes_tool_also_rejected_in_recording": 134,
+  "split": {
+   "grounded": 170
+  },
+  "strict_refused_writes_in_passing_runs": 170,
+  "strict_runs_with_refused_write": 149,
+  "ungrounded": 0
+ },
+ "C3": {
+  "cli": {
+   "decisions": 284,
+   "evaluate_match": 284,
+   "mismatches": [],
+   "runs": 36,
+   "sign_match": 284
+  },
+  "pass": true,
+  "runs": {
+   "controls": {
+    "calls": 233,
+    "examples": [],
+    "problem_runs": 0,
+    "reexec_own_ok": 233,
+    "reexec_pinned_flips": 0,
+    "runs": 35
+   },
+   "planted": {
+    "calls": 286,
+    "examples": [],
+    "problem_runs": 0,
+    "reexec_own_ok": 286,
+    "reexec_pinned_flips": 4,
+    "runs": 44
+   },
+   "published": {
+    "calls": 13870,
+    "examples": [],
+    "problem_runs": 0,
+    "reexec_own_ok": 13870,
+    "reexec_pinned_flips": 0,
+    "runs": 1824
+   }
+  },
+  "tamper": [
+   {
+    "deleted": {
+     "chain_break": true,
+     "exit": 1,
+     "outcome": "invalid"
+    },
+    "flipped": {
+     "exit": 1,
+     "invalid_signature": true,
+     "outcome": "invalid"
+    },
+    "run": "controls/claude-3-7-sonnet-20250219/14_0",
+    "wrong_key": {
+     "exit": 1,
+     "key_mismatch": true,
+     "outcome": "invalid"
+    }
+   },
+   {
+    "deleted": {
+     "chain_break": true,
+     "exit": 1,
+     "outcome": "invalid"
+    },
+    "flipped": {
+     "exit": 1,
+     "invalid_signature": true,
+     "outcome": "invalid"
+    },
+    "run": "controls/gpt-4.1-2025-04-14/14_0",
+    "wrong_key": {
+     "exit": 1,
+     "key_mismatch": true,
+     "outcome": "invalid"
+    }
+   },
+   {
+    "deleted": {
+     "chain_break": true,
+     "exit": 1,
+     "outcome": "invalid"
+    },
+    "flipped": {
+     "exit": 1,
+     "invalid_signature": true,
+     "outcome": "invalid"
+    },
+    "run": "controls/gpt-4.1-mini-2025-04-14/44_0",
+    "wrong_key": {
+     "exit": 1,
+     "key_mismatch": true,
+     "outcome": "invalid"
+    }
+   },
+   {
+    "deleted": {
+     "chain_break": true,
+     "exit": 1,
+     "outcome": "invalid"
+    },
+    "flipped": {
+     "exit": 1,
+     "invalid_signature": true,
+     "outcome": "invalid"
+    },
+    "run": "controls/o4-mini-2025-04-16/14_0",
+    "wrong_key": {
+     "exit": 1,
+     "key_mismatch": true,
+     "outcome": "invalid"
+    }
+   }
+  ],
+  "verify": {
+   "controls": {
+    "gate_exit0": 35,
+    "harness_exit0": 35,
+    "other": [],
+    "runs": 35
+   },
+   "planted": {
+    "gate_exit0": 44,
+    "harness_exit0": 44,
+    "other": [],
+    "runs": 44
+   },
+   "published": {
+    "claude-3-7-sonnet-20250219/gate": {
+     "chain": "gate",
+     "chainBreaks": 0,
+     "chains": 456,
+     "exit": 0,
+     "failed": 0,
+     "invalid_lines": 0,
+     "model": "claude-3-7-sonnet-20250219",
+     "runs": 456,
+     "total": 7125,
+     "undecidable": 0,
+     "verified": 7125
+    },
+    "claude-3-7-sonnet-20250219/harness": {
+     "chain": "harness",
+     "chainBreaks": 0,
+     "chains": 456,
+     "exit": 0,
+     "failed": 0,
+     "invalid_lines": 0,
+     "model": "claude-3-7-sonnet-20250219",
+     "runs": 456,
+     "total": 1151,
+     "undecidable": 0,
+     "verified": 1151
+    },
+    "gpt-4.1-2025-04-14/gate": {
+     "chain": "gate",
+     "chainBreaks": 0,
+     "chains": 454,
+     "exit": 0,
+     "failed": 0,
+     "invalid_lines": 0,
+     "model": "gpt-4.1-2025-04-14",
+     "runs": 456,
+     "total": 6937,
+     "undecidable": 0,
+     "verified": 6937
+    },
+    "gpt-4.1-2025-04-14/harness": {
+     "chain": "harness",
+     "chainBreaks": 0,
+     "chains": 456,
+     "exit": 0,
+     "failed": 0,
+     "invalid_lines": 0,
+     "model": "gpt-4.1-2025-04-14",
+     "runs": 456,
+     "total": 1118,
+     "undecidable": 0,
+     "verified": 1118
+    },
+    "gpt-4.1-mini-2025-04-14/gate": {
+     "chain": "gate",
+     "chainBreaks": 0,
+     "chains": 456,
+     "exit": 0,
+     "failed": 0,
+     "invalid_lines": 0,
+     "model": "gpt-4.1-mini-2025-04-14",
+     "runs": 456,
+     "total": 7149,
+     "undecidable": 0,
+     "verified": 7149
+    },
+    "gpt-4.1-mini-2025-04-14/harness": {
+     "chain": "harness",
+     "chainBreaks": 0,
+     "chains": 456,
+     "exit": 0,
+     "failed": 0,
+     "invalid_lines": 0,
+     "model": "gpt-4.1-mini-2025-04-14",
+     "runs": 456,
+     "total": 1085,
+     "undecidable": 0,
+     "verified": 1085
+    },
+    "o4-mini-2025-04-16/gate": {
+     "chain": "gate",
+     "chainBreaks": 0,
+     "chains": 456,
+     "exit": 0,
+     "failed": 0,
+     "invalid_lines": 0,
+     "model": "o4-mini-2025-04-16",
+     "runs": 456,
+     "total": 6215,
+     "undecidable": 0,
+     "verified": 6215
+    },
+    "o4-mini-2025-04-16/harness": {
+     "chain": "harness",
+     "chainBreaks": 0,
+     "chains": 456,
+     "exit": 0,
+     "failed": 0,
+     "invalid_lines": 0,
+     "model": "o4-mini-2025-04-16",
+     "runs": 456,
+     "total": 1083,
+     "undecidable": 0,
+     "verified": 1083
+    }
+   },
+   "published_note": "first pass read the verifier output through a pipe, which Node truncates at exit for large outputs; exit codes were 0; counts re-taken with file output"
+  }
+ },
+ "C4": {
+  "claude-3-7-sonnet-20250219": {
+   "claims_by_status": {
+    "fail/executed, not the expected state": 60,
+    "fail/not attempted": 10,
+    "fail/observed": 43,
+    "pass/not attempted": 15,
+    "pass/observed": 412
+   },
+   "claims_success_but_failed_rate": 0.4792,
+   "e10_runs_reason_not_stated": {
+    "fail": 24,
+    "pass": 14
+   },
+   "e4_runs_with_unconfirmed_write": {
+    "fail": 49,
+    "pass": 164
+   },
+   "e5": {
+    "fail/match": 77,
+    "fail/mismatch": 48,
+    "pass/match": 340,
+    "pass/mismatch": 66
+   },
+   "e6": {
+    "fail/match": 106,
+    "fail/mismatch": 5,
+    "pass/match": 316,
+    "pass/mismatch": 6
+   },
+   "e8_runs_text_with_call": {
+    "fail": 96,
+    "pass": 355
+   },
+   "failures_only_answer_key_sees": {
+    "fail": 8
+   },
+   "failures_without_refusal": {
+    "fail": 70
+   },
+   "refusal_order": {
+    "fail/first": 29,
+    "pass/first": 28
+   },
+   "refusals_by_rule": {
+    "fail/write/retail.cancel.pending-only": 1,
+    "fail/write/retail.items.available-same-product": 1,
+    "fail/write/retail.items.different-option": 11,
+    "fail/write/retail.items.once-per-order": 4,
+    "fail/write/retail.modify.pending-only": 3,
+    "fail/write/retail.return-exchange.delivered-only": 7,
+    "fail/write/retail.return.refund-destination": 6,
+    "pass/write/retail.items.different-option": 3,
+    "pass/write/retail.modify.pending-only": 9,
+    "pass/write/retail.payment.gift-card-balance": 1,
+    "pass/write/retail.return-exchange.delivered-only": 9,
+    "pass/write/retail.return.refund-destination": 6
+   },
+   "runs": {
+    "fail": 96,
+    "pass": 360
+   },
+   "runs_with_claim": {
+    "fail": 66,
+    "pass": 264
+   },
+   "runs_with_false_claim": {
+    "fail": 46,
+    "pass": 11
+   },
+   "runs_with_refusal": {
+    "fail": 26,
+    "pass": 28
+   }
+  },
+  "gpt-4.1-2025-04-14": {
+   "claims_by_status": {
+    "fail/errored": 1,
+    "fail/executed, not the expected state": 65,
+    "fail/observed": 24,
+    "pass/not attempted": 15,
+    "pass/observed": 265
+   },
+   "claims_success_but_failed_rate": 0.4722,
+   "e10_runs_reason_not_stated": {
+    "fail": 11,
+    "pass": 13
+   },
+   "e4_runs_with_unconfirmed_write": {
+    "fail": 43,
+    "pass": 118
+   },
+   "e5": {
+    "fail/match": 22,
+    "fail/mismatch": 40,
+    "pass/match": 85,
+    "pass/mismatch": 55
+   },
+   "e6": {
+    "fail/match": 114,
+    "fail/mismatch": 1,
+    "pass/match": 299,
+    "pass/mismatch": 6
+   },
+   "e8_runs_several_calls_in_a_turn": {
+    "fail": 84,
+    "pass": 234
+   },
+   "e8_runs_text_with_call": {
+    "fail": 2,
+    "pass": 7
+   },
+   "failures_only_answer_key_sees": {
+    "fail": 23
+   },
+   "failures_without_refusal": {
+    "fail": 81
+   },
+   "refusal_order": {
+    "fail/first": 35,
+    "pass/first": 36
+   },
+   "refusals_by_rule": {
+    "fail/write/retail.items.available-same-product": 3,
+    "fail/write/retail.items.different-option": 16,
+    "fail/write/retail.items.in-order": 1,
+    "fail/write/retail.items.once-per-order": 1,
+    "fail/write/retail.modify.pending-only": 4,
+    "fail/write/retail.payment.customer-method": 3,
+    "fail/write/retail.payment.gift-card-balance": 1,
+    "fail/write/retail.return-exchange.delivered-only": 8,
+    "fail/write/retail.return.refund-destination": 4,
+    "pass/write/retail.items.available-same-product": 2,
+    "pass/write/retail.items.different-option": 9,
+    "pass/write/retail.items.in-order": 2,
+    "pass/write/retail.items.once-per-order": 2,
+    "pass/write/retail.modify.pending-only": 13,
+    "pass/write/retail.payment.gift-card-balance": 3,
+    "pass/write/retail.return-exchange.delivered-only": 8,
+    "pass/write/retail.return.refund-destination": 3
+   },
+   "runs": {
+    "fail": 108,
+    "pass": 348
+   },
+   "runs_with_claim": {
+    "fail": 68,
+    "pass": 222
+   },
+   "runs_with_false_claim": {
+    "fail": 51,
+    "pass": 14
+   },
+   "runs_with_refusal": {
+    "fail": 27,
+    "pass": 31
+   }
+  },
+  "gpt-4.1-mini-2025-04-14": {
+   "claims_by_status": {
+    "fail/executed, not the expected state": 37,
+    "fail/not attempted": 1,
+    "fail/observed": 22,
+    "pass/not attempted": 2,
+    "pass/observed": 196
+   },
+   "claims_success_but_failed_rate": 0.2519,
+   "e10_runs_reason_not_stated": {
+    "fail": 7,
+    "pass": 6
+   },
+   "e4_runs_with_unconfirmed_write": {
+    "fail": 36,
+    "pass": 104
+   },
+   "e5": {
+    "fail/match": 17,
+    "fail/mismatch": 37,
+    "pass/match": 52,
+    "pass/mismatch": 53
+   },
+   "e6": {
+    "fail/match": 127,
+    "fail/mismatch": 1,
+    "pass/match": 263
+   },
+   "e8_runs_several_calls_in_a_turn": {
+    "fail": 103,
+    "pass": 236
+   },
+   "e8_runs_text_with_call": {
+    "fail": 57,
+    "pass": 111
+   },
+   "failures_only_answer_key_sees": {
+    "fail": 41
+   },
+   "failures_without_refusal": {
+    "fail": 88
+   },
+   "refusal_order": {
+    "fail/first": 53,
+    "pass/first": 84
+   },
+   "refusals_by_rule": {
+    "fail/write/retail.items.available-same-product": 2,
+    "fail/write/retail.items.different-option": 16,
+    "fail/write/retail.items.in-order": 3,
+    "fail/write/retail.modify.pending-only": 6,
+    "fail/write/retail.payment.customer-method": 5,
+    "fail/write/retail.return-exchange.delivered-only": 22,
+    "fail/write/retail.return.refund-destination": 2,
+    "pass/write/retail.items.available-same-product": 2,
+    "pass/write/retail.items.different-option": 10,
+    "pass/write/retail.items.in-order": 6,
+    "pass/write/retail.modify.pending-only": 9,
+    "pass/write/retail.order.status-checked-first": 7,
+    "pass/write/retail.payment.customer-method": 7,
+    "pass/write/retail.payment.gift-card-balance": 1,
+    "pass/write/retail.return-exchange.delivered-only": 30,
+    "pass/write/retail.return.refund-destination": 18
+   },
+   "runs": {
+    "fail": 135,
+    "pass": 321
+   },
+   "runs_with_claim": {
+    "fail": 48,
+    "pass": 167
+   },
+   "runs_with_false_claim": {
+    "fail": 34,
+    "pass": 2
+   },
+   "runs_with_refusal": {
+    "fail": 47,
+    "pass": 69
+   }
+  },
+  "o4-mini-2025-04-16": {
+   "claims_by_status": {
+    "fail/executed, not the expected state": 60,
+    "fail/not attempted": 3,
+    "fail/observed": 28,
+    "pass/observed": 248
+   },
+   "claims_success_but_failed_rate": 0.4094,
+   "e10_runs_reason_not_stated": {
+    "fail": 2,
+    "pass": 7
+   },
+   "e4_runs_with_unconfirmed_write": {
+    "fail": 30,
+    "pass": 71
+   },
+   "e5": {
+    "fail/match": 96,
+    "fail/mismatch": 19,
+    "pass/match": 258,
+    "pass/mismatch": 35
+   },
+   "e6": {
+    "fail/match": 112,
+    "fail/mismatch": 8,
+    "pass/match": 275,
+    "pass/mismatch": 4
+   },
+   "failures_only_answer_key_sees": {
+    "fail": 46
+   },
+   "failures_without_refusal": {
+    "fail": 105
+   },
+   "refusal_order": {
+    "fail/first": 23,
+    "pass/first": 26
+   },
+   "refusals_by_rule": {
+    "fail/read/retail.identity.authenticate-first": 2,
+    "fail/write/retail.items.different-option": 10,
+    "fail/write/retail.items.in-order": 2,
+    "fail/write/retail.modify.pending-only": 3,
+    "fail/write/retail.order.status-checked-first": 1,
+    "fail/write/retail.payment.customer-method": 1,
+    "fail/write/retail.return-exchange.delivered-only": 4,
+    "pass/read/retail.identity.authenticate-first": 4,
+    "pass/write/retail.identity.authenticate-first": 2,
+    "pass/write/retail.items.different-option": 2,
+    "pass/write/retail.modify.pending-only": 4,
+    "pass/write/retail.order.status-checked-first": 2,
+    "pass/write/retail.payment.customer-method": 3,
+    "pass/write/retail.return-exchange.delivered-only": 5,
+    "pass/write/retail.return.refund-destination": 8
+   },
+   "runs": {
+    "fail": 127,
+    "pass": 329
+   },
+   "runs_with_claim": {
+    "fail": 69,
+    "pass": 199
+   },
+   "runs_with_false_claim": {
+    "fail": 52
+   },
+   "runs_with_refusal": {
+    "fail": 22,
+    "pass": 22
+   }
+  }
+ },
+ "C5": {
+  "by_set": {
+   "control": {
+    "compared": 35,
+    "identical": 35
+   },
+   "planted": {
+    "compared": 44,
+    "identical": 44
+   },
+   "published": {
+    "compared": 184,
+    "identical": 184
+   }
+  },
+  "compared": 263,
+  "different": [],
+  "identical": 263,
+  "missing_in_pass2": 0,
+  "pass": true
+ }
+}

@@ -1,0 +1,6 @@
+Run        published/o4-mini-2025-04-16/12_1 (task 12 trial 1, o4-mini-2025-04-16, sim ca2d6d54)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      6 attempted, 5 authorized, 1 refused
+Refused    call 4 return_delivered_order_items: retail.return.refund-destination
+Accepted   yes under enforcement (final database equals the answer key)
+Evidence   11 gate receipts, 1 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

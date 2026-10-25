@@ -1,0 +1,9 @@
+Run        published/gpt-4.1-2025-04-14/74_1 (task 74 trial 1, gpt-4.1-2025-04-14, sim d545630d)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      9 attempted, 9 authorized, 0 refused
+Write      call 7 modify_pending_order_items orders/#W5166363: observed complete: complete
+Write      call 8 cancel_pending_order orders/#W3189752: observed complete: complete
+Accepted   NO under enforcement (final database differs from the answer key)
+           differs at orders/#W5166363 ['payment_history']
+Not established  confirmation before call 7: the proposal does not name the call's order or user
+Evidence   18 gate receipts, 3 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

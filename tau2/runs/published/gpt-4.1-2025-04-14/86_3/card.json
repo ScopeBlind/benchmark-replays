@@ -1,0 +1,205 @@
+{
+ "answer_key": {
+  "gold_db_hash": "4d145d54e2a023348b16a5c6deb1c6f18dca8cb0241e45d10d9287be7c3edfa2",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 7,
+    "entity": "users/yusuf_hernandez_6785",
+    "status": "complete",
+    "tool": "modify_user_address"
+   },
+   {
+    "call": 10,
+    "entity": "users/yusuf_hernandez_6785",
+    "status": "complete",
+    "tool": "modify_user_address"
+   },
+   {
+    "call": 11,
+    "entity": "orders/#W2466703",
+    "status": "complete",
+    "tool": "modify_pending_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 7,
+    "customer_turn": 17,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 16,
+    "result": "not established"
+   },
+   {
+    "call": 9,
+    "customer_turn": 22,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 21,
+    "result": "not established"
+   },
+   {
+    "call": 10,
+    "customer_turn": 22,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 21,
+    "result": "not established"
+   },
+   {
+    "call": 11,
+    "customer_turn": 27,
+    "missing": "no affirmative customer turn after the last proposal",
+    "proposal_turn": 26,
+    "result": "not established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 7,
+    "result": "not computable"
+   },
+   {
+    "call": 9,
+    "executed": 6.74,
+    "result": "match"
+   },
+   {
+    "call": 10,
+    "result": "not computable"
+   },
+   {
+    "call": 11,
+    "executed": 6.74,
+    "result": "not stated"
+   }
+  ],
+  "e6": [
+   {
+    "call": 7,
+    "result": "n/a"
+   },
+   {
+    "call": 9,
+    "result": "match"
+   },
+   {
+    "call": 10,
+    "result": "n/a"
+   },
+   {
+    "call": 11,
+    "result": "not stated"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "order has been updated",
+     "status": "observed",
+     "turn": 30,
+     "type": "item_change"
+    },
+    {
+     "match": "order has been modified",
+     "status": "observed",
+     "turn": 32,
+     "type": "item_change"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "order has been updated",
+     "status": "observed",
+     "turn": 30,
+     "type": "item_change"
+    },
+    {
+     "match": "order has been modified",
+     "status": "observed",
+     "turn": 32,
+     "type": "item_change"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 3,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 9,
+    "call_id": "call_djOk2ynYFRkOXVscGPax7AWA",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "latest recorded observation of #W2466703 shows status 'pending', the call needs 'delivered'",
+      "grounded": true,
+      "policy_line": "118, 130",
+      "quote": "An order can only be returned if its status is 'delivered'",
+      "rule": "retail.return-exchange.delivered-only",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.return-exchange.delivered-only"
+    ],
+    "tool": "exchange_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.return-exchange.delivered-only"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/gpt-4.1-2025-04-14/86_3",
+  "set": "published",
+  "sim_id": "46ee583e-dc18-439e-a443-44564b7366d7",
+  "task_id": "86",
+  "trial": 3
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "4d145d54e2a023348b16a5c6deb1c6f18dca8cb0241e45d10d9287be7c3edfa2",
+  "findings_sha256": "0989e12aba8e20b35934b3fcc0e02ae8452c75f283d91789780957fdb1a2917a",
+  "gate_head": "sha256:c0e647c9a7262dfb8f042b34209c4bdc6ecdebf05567e06b2987e0904a65bc92",
+  "gate_receipts": 23,
+  "gold_db_hash": "4d145d54e2a023348b16a5c6deb1c6f18dca8cb0241e45d10d9287be7c3edfa2",
+  "harness_readbacks": 2,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "4d145d54e2a023348b16a5c6deb1c6f18dca8cb0241e45d10d9287be7c3edfa2",
+  "run_id": "published/gpt-4.1-2025-04-14/86_3"
+ }
+}

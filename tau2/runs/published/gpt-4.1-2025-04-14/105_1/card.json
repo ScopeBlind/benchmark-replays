@@ -1,0 +1,157 @@
+{
+ "answer_key": {
+  "gold_db_hash": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 6,
+    "entity": "orders/#W4316152",
+    "status": "complete",
+    "tool": "exchange_delivered_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": false,
+   "recorded": false
+  },
+  "e3": {
+   "enforced": {
+    "orders/#W4316152": [
+     "exchange_items",
+     "exchange_new_items",
+     "exchange_payment_method_id",
+     "exchange_price_difference",
+     "status"
+    ]
+   },
+   "recorded": {
+    "orders/#W4316152": [
+     "exchange_items",
+     "exchange_new_items",
+     "exchange_payment_method_id",
+     "exchange_price_difference",
+     "status"
+    ]
+   }
+  },
+  "e4": [
+   {
+    "call": 4,
+    "customer_turn": 19,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 18,
+    "result": "not established"
+   },
+   {
+    "call": 6,
+    "customer_turn": 31,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 30,
+    "result": "not established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 4,
+    "executed": 21.1,
+    "result": "not stated"
+   },
+   {
+    "call": 6,
+    "executed": 6.04,
+    "result": "mismatch",
+    "stated": [
+     91.78,
+     94.8
+    ]
+   }
+  ],
+  "e6": [
+   {
+    "call": 4,
+    "result": "match"
+   },
+   {
+    "call": 6,
+    "result": "not stated"
+   }
+  ],
+  "e7": {
+   "enforced": [],
+   "recorded": []
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 4,
+    "call_id": "call_EhNuCe27eyr6JtwhOvpVo84B",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "recorded gift card balance 17.0, amount due 21.1",
+      "grounded": true,
+      "policy_line": "104, 114, 134",
+      "quote": "it must have enough balance to cover",
+      "rule": "retail.payment.gift-card-balance",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.payment.gift-card-balance"
+    ],
+    "tool": "exchange_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.payment.gift-card-balance"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": false,
+   "reward": 0.0
+  },
+  "run_id": "published/gpt-4.1-2025-04-14/105_1",
+  "set": "published",
+  "sim_id": "1d959334-d883-4e46-8ef7-5df539e1b734",
+  "task_id": "105",
+  "trial": 1
+ },
+ "summary": {
+  "accepted_enforced": false,
+  "accepted_recorded": false,
+  "enforced_db_hash": "d1ddc70e04293ebe89e2801484f965648e0155e9eccb4c6065160de059d943f6",
+  "findings_sha256": "abc29c4906552e753c9bc57e30d33ffd85ab61252922d5522b2ae87cefdaa23f",
+  "gate_head": "sha256:9a1670061712e88db09d64077f16f850a207e8deec03391004044cdf838c4f9e",
+  "gate_receipts": 13,
+  "gold_db_hash": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "d1ddc70e04293ebe89e2801484f965648e0155e9eccb4c6065160de059d943f6",
+  "run_id": "published/gpt-4.1-2025-04-14/105_1"
+ }
+}

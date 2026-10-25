@@ -1,0 +1,108 @@
+{
+ "answer_key": {
+  "gold_db_hash": "6d6c5796be53ea085ab9c5897824ec22c9c9de165259fbedc5d7dfe2064be2b9",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 6,
+    "entity": "orders/#W9571698",
+    "status": "complete",
+    "tool": "return_delivered_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 6,
+    "customer_turn": 18,
+    "proposal_turn": 17,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 6,
+    "executed": 989.7,
+    "result": "match"
+   }
+  ],
+  "e6": [
+   {
+    "call": 6,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "refund of $989.70 will be issued",
+     "status": "observed",
+     "turn": 21,
+     "type": "refund"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "refund of $989.70 will be issued",
+     "status": "observed",
+     "turn": 21,
+     "type": "refund"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 1,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": []
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/gpt-4.1-2025-04-14/83_1",
+  "set": "published",
+  "sim_id": "ebb37cf4-33c9-4283-880d-baaee87c593b",
+  "task_id": "83",
+  "trial": 1
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "6d6c5796be53ea085ab9c5897824ec22c9c9de165259fbedc5d7dfe2064be2b9",
+  "findings_sha256": "f370fb0270ac750ae15f2dbf22cd0f63c6cc86dd95fc5083c5dba93ea389fbcc",
+  "gate_head": "sha256:bd7531c6336419f4473dfd56e05bf5878480928eec17dc0079da32f78c3f751a",
+  "gate_receipts": 14,
+  "gold_db_hash": "6d6c5796be53ea085ab9c5897824ec22c9c9de165259fbedc5d7dfe2064be2b9",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "6d6c5796be53ea085ab9c5897824ec22c9c9de165259fbedc5d7dfe2064be2b9",
+  "run_id": "published/gpt-4.1-2025-04-14/83_1"
+ }
+}

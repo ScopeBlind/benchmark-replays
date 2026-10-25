@@ -1,0 +1,250 @@
+{
+ "answer_key": {
+  "gold_db_hash": "8111ebca39106dc47090d13df4491130add9e194d7d71697cf909a9a0be50040",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 9,
+    "entity": "orders/#W1304208",
+    "status": "complete",
+    "tool": "return_delivered_order_items"
+   },
+   {
+    "call": 10,
+    "entity": "orders/#W8353027",
+    "status": "complete",
+    "tool": "exchange_delivered_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": false,
+   "recorded": false
+  },
+  "e3": {
+   "enforced": {
+    "orders/#W1304208": [
+     "exchange_items",
+     "exchange_new_items",
+     "exchange_payment_method_id",
+     "exchange_price_difference",
+     "return_items",
+     "return_payment_method_id",
+     "status"
+    ]
+   },
+   "recorded": {
+    "orders/#W1304208": [
+     "exchange_items",
+     "exchange_new_items",
+     "exchange_payment_method_id",
+     "exchange_price_difference",
+     "return_items",
+     "return_payment_method_id",
+     "status"
+    ]
+   }
+  },
+  "e4": [
+   {
+    "call": 7,
+    "customer_turn": 18,
+    "proposal_turn": 17,
+    "result": "established"
+   },
+   {
+    "call": 8,
+    "customer_turn": 18,
+    "proposal_turn": 17,
+    "result": "established"
+   },
+   {
+    "call": 9,
+    "customer_turn": 23,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 22,
+    "result": "not established"
+   },
+   {
+    "call": 10,
+    "customer_turn": 23,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 22,
+    "result": "not established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 7,
+    "executed": 253.89,
+    "result": "mismatch",
+    "stated": [
+     49.1
+    ]
+   },
+   {
+    "call": 8,
+    "executed": 3.1,
+    "result": "mismatch",
+    "stated": [
+     49.1
+    ]
+   },
+   {
+    "call": 9,
+    "executed": 253.89,
+    "result": "not stated"
+   },
+   {
+    "call": 10,
+    "executed": 3.1,
+    "result": "not stated"
+   }
+  ],
+  "e6": [
+   {
+    "call": 7,
+    "missing": "the method is not in an observed profile",
+    "result": "not checkable"
+   },
+   {
+    "call": 8,
+    "missing": "the method is not in an observed profile",
+    "result": "not checkable"
+   },
+   {
+    "call": 9,
+    "result": "match"
+   },
+   {
+    "call": 10,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "refund will be issued",
+     "status": "observed",
+     "turn": 27,
+     "type": "refund"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "refund will be issued",
+     "status": "observed",
+     "turn": 27,
+     "type": "refund"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 3,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 7,
+    "call_id": "call_qx0zOW3z7Aw3qk7rRQM0SgOz",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "call refunds to gift_card_0000000; recorded original method paypal_1679017; customer gift card: False",
+      "grounded": true,
+      "policy_line": "124",
+      "quote": "must either go to the original payment method, or an existing gift card",
+      "rule": "retail.return.refund-destination",
+      "test": "G2"
+     },
+     {
+      "evidence": "gift_card_0000000 appears in no recorded profile of yara_ito_8499 and is not the order's original method",
+      "grounded": true,
+      "policy_line": "114, 122, 134",
+      "quote": "The user must provide a payment method",
+      "rule": "retail.payment.customer-method",
+      "test": "G1"
+     }
+    ],
+    "rules": [
+     "retail.return.refund-destination",
+     "retail.payment.customer-method"
+    ],
+    "tool": "return_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.return.refund-destination",
+      "retail.payment.customer-method"
+     ]
+    }
+   },
+   {
+    "call": 8,
+    "call_id": "call_ETXefO9BUZhlWjd30hysgsGV",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "gift_card_0000000 appears in no recorded profile of yara_ito_8499 and is not the order's original method",
+      "grounded": true,
+      "policy_line": "114, 122, 134",
+      "quote": "The user must provide a payment method",
+      "rule": "retail.payment.customer-method",
+      "test": "G1"
+     }
+    ],
+    "rules": [
+     "retail.payment.customer-method"
+    ],
+    "tool": "exchange_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.payment.customer-method"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": false,
+   "reward": 0.0
+  },
+  "run_id": "published/gpt-4.1-2025-04-14/107_1",
+  "set": "published",
+  "sim_id": "69279305-faf2-411f-b102-31ddaa763bb2",
+  "task_id": "107",
+  "trial": 1
+ },
+ "summary": {
+  "accepted_enforced": false,
+  "accepted_recorded": false,
+  "enforced_db_hash": "8b7b79fa06b81db978c71935d4b9c9d126e16b83931d59bc77f9637c27f4a356",
+  "findings_sha256": "134c5d3867a9d8364adc69f9176fd26cd833e70acc80b754ec234028afec6458",
+  "gate_head": "sha256:1428338050e53f2eddbe35a6384e88d31e846188c0591894d0a350865edcaa3b",
+  "gate_receipts": 20,
+  "gold_db_hash": "8111ebca39106dc47090d13df4491130add9e194d7d71697cf909a9a0be50040",
+  "harness_readbacks": 2,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "8b7b79fa06b81db978c71935d4b9c9d126e16b83931d59bc77f9637c27f4a356",
+  "run_id": "published/gpt-4.1-2025-04-14/107_1"
+ }
+}

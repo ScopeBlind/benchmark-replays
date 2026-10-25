@@ -1,0 +1,202 @@
+{
+ "answer_key": {
+  "gold_db_hash": "1af6e2cc79b3269e48afc34defd97506284156cbfc07926950dac9200855849c",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 10,
+    "entity": "orders/#W3295833",
+    "status": "complete",
+    "tool": "modify_pending_order_items"
+   },
+   {
+    "call": 12,
+    "entity": "orders/#W8488728",
+    "status": "complete",
+    "tool": "return_delivered_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 10,
+    "customer_turn": 29,
+    "proposal_turn": 28,
+    "result": "established"
+   },
+   {
+    "call": 11,
+    "customer_turn": 33,
+    "missing": "no affirmative customer turn after the last proposal",
+    "proposal_turn": 32,
+    "result": "not established"
+   },
+   {
+    "call": 12,
+    "customer_turn": 33,
+    "missing": "no affirmative customer turn after the last proposal",
+    "proposal_turn": 32,
+    "result": "not established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 10,
+    "executed": 68.92,
+    "result": "match"
+   },
+   {
+    "call": 11,
+    "executed": 245.99,
+    "result": "mismatch",
+    "stated": [
+     68.92
+    ]
+   },
+   {
+    "call": 12,
+    "executed": 245.99,
+    "result": "mismatch",
+    "stated": [
+     68.92
+    ]
+   }
+  ],
+  "e6": [
+   {
+    "call": 10,
+    "result": "not stated"
+   },
+   {
+    "call": 11,
+    "result": "match"
+   },
+   {
+    "call": 12,
+    "result": "match"
+   }
+  ],
+  "e7": {
+   "enforced": [
+    {
+     "match": "return requested",
+     "status": "observed",
+     "turn": 38,
+     "type": "return"
+    },
+    {
+     "match": "refund of $245.99 will be issued",
+     "status": "observed",
+     "turn": 38,
+     "type": "refund"
+    },
+    {
+     "match": "return request has been successfully initiated",
+     "status": "observed",
+     "turn": 40,
+     "type": "return"
+    }
+   ],
+   "recorded": [
+    {
+     "match": "return requested",
+     "status": "observed",
+     "turn": 38,
+     "type": "return"
+    },
+    {
+     "match": "refund of $245.99 will be issued",
+     "status": "observed",
+     "turn": 38,
+     "type": "refund"
+    },
+    {
+     "match": "return request has been successfully initiated",
+     "status": "observed",
+     "turn": 40,
+     "type": "return"
+    }
+   ]
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 11
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 11,
+    "call_id": "toolu_01KbQzhfcBwZaDGayQYHxWi8",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "call refunds to credit_card_3261838; recorded original method paypal_3650980; customer gift card: False",
+      "grounded": true,
+      "policy_line": "124",
+      "quote": "must either go to the original payment method, or an existing gift card",
+      "rule": "retail.return.refund-destination",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.return.refund-destination"
+    ],
+    "tool": "return_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.return.refund-destination"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "claude-3-7-sonnet-20250219",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/claude-3-7-sonnet-20250219/100_2",
+  "set": "published",
+  "sim_id": "f88359af-ec3a-4f68-8415-409959d9f197",
+  "task_id": "100",
+  "trial": 2
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "1af6e2cc79b3269e48afc34defd97506284156cbfc07926950dac9200855849c",
+  "findings_sha256": "198499b3bc53095792cabee28c1059513e1cb2dc51ba8bae65f5a160cbc757c7",
+  "gate_head": "sha256:417fed24bc30cba1651568e26eab32c0e25c3095143d3f6732359d9b3e8c9f4c",
+  "gate_receipts": 25,
+  "gold_db_hash": "1af6e2cc79b3269e48afc34defd97506284156cbfc07926950dac9200855849c",
+  "harness_readbacks": 2,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "1af6e2cc79b3269e48afc34defd97506284156cbfc07926950dac9200855849c",
+  "run_id": "published/claude-3-7-sonnet-20250219/100_2"
+ }
+}

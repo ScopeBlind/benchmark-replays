@@ -1,0 +1,151 @@
+{
+ "answer_key": {
+  "gold_db_hash": "ef45b3de7b49e6bcaadd92c36aca03321e35c7ce99276c09fbf508febe36cd17",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 5,
+    "entity": "orders/#W2890441",
+    "status": "complete",
+    "tool": "return_delivered_order_items"
+   }
+  ],
+  "e10": [],
+  "e11": [
+   {
+    "said": true,
+    "string": "54.04"
+   },
+   {
+    "said": true,
+    "string": "41.64"
+   }
+  ],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 5,
+    "customer_turn": 17,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 16,
+    "result": "not established"
+   },
+   {
+    "call": 6,
+    "customer_turn": 17,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 16,
+    "result": "not established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 5,
+    "executed": 54.04,
+    "result": "match"
+   },
+   {
+    "call": 6,
+    "executed": 41.64,
+    "result": "match"
+   }
+  ],
+  "e6": [
+   {
+    "call": 5,
+    "result": "not stated"
+   },
+   {
+    "call": 6,
+    "result": "not stated"
+   }
+  ],
+  "e7": {
+   "enforced": [],
+   "recorded": []
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 0
+  },
+  "e9": [
+   {
+    "call": 7,
+    "exact_sentence": true
+   }
+  ],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 6,
+    "call_id": "call_DvBuoqOcC9ZKPuoXLYbZ1AsG",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "latest recorded observation of #W2890441 shows status 'return requested', the call needs 'delivered'",
+      "grounded": true,
+      "policy_line": "118, 130",
+      "quote": "An order can only be returned if its status is 'delivered'",
+      "rule": "retail.return-exchange.delivered-only",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.return-exchange.delivered-only"
+    ],
+    "tool": "exchange_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.return-exchange.delivered-only"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "o4-mini-2025-04-16",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/o4-mini-2025-04-16/19_0",
+  "set": "published",
+  "sim_id": "893683e2-4182-4bd7-8d50-90f07b1100f4",
+  "task_id": "19",
+  "trial": 0
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "ef45b3de7b49e6bcaadd92c36aca03321e35c7ce99276c09fbf508febe36cd17",
+  "findings_sha256": "b0a8ef8145d92c78618ae201ec0ee15c7685edfe0c3c495035c224748f67d2bd",
+  "gate_head": "sha256:ad0442ca9d67c90d5c2006e77d2f7f2f6c225d10e9e750a69bdb56bcf1edba77",
+  "gate_receipts": 15,
+  "gold_db_hash": "ef45b3de7b49e6bcaadd92c36aca03321e35c7ce99276c09fbf508febe36cd17",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "ef45b3de7b49e6bcaadd92c36aca03321e35c7ce99276c09fbf508febe36cd17",
+  "run_id": "published/o4-mini-2025-04-16/19_0"
+ }
+}

@@ -1,0 +1,1239 @@
+{
+ "parse": {
+  "ok": true,
+  "checked": true,
+  "parse_ok": true
+ },
+ "policy_digest": "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933",
+ "vectors": 83,
+ "failed": 0,
+ "rows": [
+  {
+   "name": "allowlist allow",
+   "tool": "get_product_details",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "allowlist deny",
+   "tool": "delete_everything",
+   "expect_allow": false,
+   "expect_rules": [
+    "default-deny"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "default-deny"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "default-deny"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "auth deny",
+   "tool": "get_order_details",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.identity.authenticate-first"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.identity.authenticate-first"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.identity.authenticate-first"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "auth allow",
+   "tool": "get_order_details",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "profile other deny",
+   "tool": "get_user_details",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.identity.other-customer-profile"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.identity.other-customer-profile"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.identity.other-customer-profile"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "profile own allow",
+   "tool": "get_user_details",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "order other deny",
+   "tool": "return_delivered_order_items",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.identity.other-customer-order"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.identity.other-customer-order"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.identity.other-customer-order"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "return valid allow",
+   "tool": "return_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "status unobserved deny",
+   "tool": "return_delivered_order_items",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.order.status-checked-first"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.order.status-checked-first"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.order.status-checked-first"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "cancel delivered deny",
+   "tool": "cancel_pending_order",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.cancel.pending-only"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.cancel.pending-only"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.cancel.pending-only"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "cancel pending allow",
+   "tool": "cancel_pending_order",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "cancel reason deny",
+   "tool": "cancel_pending_order",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.cancel.reason"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.cancel.reason"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.cancel.reason"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "cancel reason allow",
+   "tool": "cancel_pending_order",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "modify after item change deny",
+   "tool": "modify_pending_order_address",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.modify.pending-only"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.modify.pending-only"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.modify.pending-only"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "modify pending allow",
+   "tool": "modify_pending_order_address",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "return pending deny",
+   "tool": "return_delivered_order_items",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.return-exchange.delivered-only"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.return-exchange.delivered-only"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.return-exchange.delivered-only"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "exchange once deny",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.items.once-per-order"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.items.once-per-order"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.items.once-per-order"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "exchange valid allow",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "same option deny",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.items.different-option"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.items.different-option"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.items.different-option"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "unavailable deny",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.items.available-same-product"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.items.available-same-product"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.items.available-same-product"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "not in order deny",
+   "tool": "return_delivered_order_items",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.items.in-order"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.items.in-order"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.items.in-order"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "refund to other card deny",
+   "tool": "return_delivered_order_items",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.return.refund-destination"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.return.refund-destination"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.return.refund-destination"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "refund to own gift card allow",
+   "tool": "return_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "unknown method deny",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.payment.customer-method"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.payment.customer-method"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.payment.customer-method"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "other customer's method deny",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.payment.customer-method"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.payment.customer-method"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.payment.customer-method"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "own method allow",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "gift card short deny",
+   "tool": "modify_pending_order_payment",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.payment.gift-card-balance"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.payment.gift-card-balance"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.payment.gift-card-balance"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "gift card covers allow",
+   "tool": "modify_pending_order_payment",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "payment same deny",
+   "tool": "modify_pending_order_payment",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.payment.change-must-differ"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.payment.change-must-differ"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.payment.change-must-differ"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "after transfer deny",
+   "tool": "get_product_details",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.transfer.final"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.transfer.final"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.transfer.final"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "approval mismatch deny",
+   "tool": "return_delivered_order_items",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.approval.exact-call"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.approval.exact-call"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.approval.exact-call"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "approval match allow",
+   "tool": "return_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "approval required deny",
+   "tool": "return_delivered_order_items",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.approval.required"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.approval.required"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.approval.required"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "return without session.identities_located",
+   "tool": "return_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "return without session.auth_user",
+   "tool": "return_delivered_order_items",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.identity.authenticate-first"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.identity.authenticate-first"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.identity.authenticate-first"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "return without session.order",
+   "tool": "return_delivered_order_items",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.order.status-checked-first"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.order.status-checked-first"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.order.status-checked-first"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "return without session.order.user_id",
+   "tool": "return_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "return without session.order.status",
+   "tool": "return_delivered_order_items",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.order.status-checked-first"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.order.status-checked-first"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.order.status-checked-first"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "return without session.order.original_payment_method",
+   "tool": "return_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "return without session.payment_method",
+   "tool": "return_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "return without session.payment_method.owner",
+   "tool": "return_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "return without session.payment_method.source",
+   "tool": "return_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "return without session.prior_item_changes_on_order",
+   "tool": "return_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "return without session.call",
+   "tool": "return_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "return without session.call.digest",
+   "tool": "return_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "return without session.call.missing_item_count",
+   "tool": "return_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "return without session.call.refund_cents",
+   "tool": "return_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "return without session",
+   "tool": "return_delivered_order_items",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.identity.authenticate-first",
+    "retail.order.status-checked-first",
+    "retail.payment.customer-method"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.identity.authenticate-first",
+    "retail.order.status-checked-first",
+    "retail.payment.customer-method"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.identity.authenticate-first",
+    "retail.order.status-checked-first",
+    "retail.payment.customer-method"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "exchange without session.identities_located",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "exchange without session.auth_user",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.identity.authenticate-first"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.identity.authenticate-first"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.identity.authenticate-first"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "exchange without session.order",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.order.status-checked-first"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.order.status-checked-first"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.order.status-checked-first"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "exchange without session.order.user_id",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "exchange without session.order.status",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.order.status-checked-first"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.order.status-checked-first"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.order.status-checked-first"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "exchange without session.order.original_payment_method",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "exchange without session.payment_method",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "exchange without session.payment_method.owner",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "exchange without session.payment_method.source",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "exchange without session.prior_item_changes_on_order",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "exchange without session.call",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "exchange without session.call.digest",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "exchange without session.call.same_item_count",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "exchange without session.call.products_checked",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "exchange without session.call.bad_new_item_count",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "exchange without session.call.missing_item_count",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "exchange without session.call.charge_cents",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "exchange without session.call.refund_cents",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "exchange without session",
+   "tool": "exchange_delivered_order_items",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.identity.authenticate-first",
+    "retail.order.status-checked-first",
+    "retail.payment.customer-method"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.identity.authenticate-first",
+    "retail.order.status-checked-first",
+    "retail.payment.customer-method"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.identity.authenticate-first",
+    "retail.order.status-checked-first",
+    "retail.payment.customer-method"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "payment without session.identities_located",
+   "tool": "modify_pending_order_payment",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "payment without session.auth_user",
+   "tool": "modify_pending_order_payment",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.identity.authenticate-first",
+    "retail.payment.customer-method"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.identity.authenticate-first",
+    "retail.payment.customer-method"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.identity.authenticate-first",
+    "retail.payment.customer-method"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "payment without session.order",
+   "tool": "modify_pending_order_payment",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.order.status-checked-first"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.order.status-checked-first"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.order.status-checked-first"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "payment without session.order.user_id",
+   "tool": "modify_pending_order_payment",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "payment without session.order.status",
+   "tool": "modify_pending_order_payment",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.order.status-checked-first"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.order.status-checked-first"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.order.status-checked-first"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "payment without session.order.original_payment_method",
+   "tool": "modify_pending_order_payment",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "payment without session.payment_method",
+   "tool": "modify_pending_order_payment",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.payment.customer-method"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.payment.customer-method"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.payment.customer-method"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "payment without session.payment_method.owner",
+   "tool": "modify_pending_order_payment",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.payment.customer-method"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.payment.customer-method"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.payment.customer-method"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "payment without session.payment_method.source",
+   "tool": "modify_pending_order_payment",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "payment without session.payment_method.balance_cents",
+   "tool": "modify_pending_order_payment",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "payment without session.prior_item_changes_on_order",
+   "tool": "modify_pending_order_payment",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "payment without session.call",
+   "tool": "modify_pending_order_payment",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "payment without session.call.digest",
+   "tool": "modify_pending_order_payment",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "payment without session.call.charge_cents",
+   "tool": "modify_pending_order_payment",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "payment without session.call.refund_cents",
+   "tool": "modify_pending_order_payment",
+   "expect_allow": true,
+   "expect_rules": [],
+   "cli_exit": 0,
+   "cli_rules": [],
+   "lib_allowed": true,
+   "lib_rules": [],
+   "evaluation_error": false,
+   "ok": true
+  },
+  {
+   "name": "payment without session",
+   "tool": "modify_pending_order_payment",
+   "expect_allow": false,
+   "expect_rules": [
+    "retail.identity.authenticate-first",
+    "retail.order.status-checked-first",
+    "retail.payment.customer-method"
+   ],
+   "cli_exit": 2,
+   "cli_rules": [
+    "retail.identity.authenticate-first",
+    "retail.order.status-checked-first",
+    "retail.payment.customer-method"
+   ],
+   "lib_allowed": false,
+   "lib_rules": [
+    "retail.identity.authenticate-first",
+    "retail.order.status-checked-first",
+    "retail.payment.customer-method"
+   ],
+   "evaluation_error": false,
+   "ok": true
+  }
+ ]
+}

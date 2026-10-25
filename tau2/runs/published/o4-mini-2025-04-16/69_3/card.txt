@@ -1,0 +1,7 @@
+Run        published/o4-mini-2025-04-16/69_3 (task 69 trial 3, o4-mini-2025-04-16, sim 0a462e21)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      6 attempted, 5 authorized, 1 refused
+Refused    call 5 return_delivered_order_items: retail.return-exchange.delivered-only
+Accepted   NO under enforcement (final database differs from the answer key)
+           differs at orders/#W2417020 ['cancel_reason', 'payment_history', 'status']; users/emma_smith_8564 ['payment_methods']
+Evidence   11 gate receipts, 1 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

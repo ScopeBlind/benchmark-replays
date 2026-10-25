@@ -1,0 +1,150 @@
+{
+ "answer_key": {
+  "gold_db_hash": "5fe996d49aefd73c215343df13c30e1d43a1b28fbba0d813e61aa9495f40e7bc",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [
+   {
+    "call": 8,
+    "entity": "users/noah_patel_6952",
+    "status": "complete",
+    "tool": "modify_user_address"
+   }
+  ],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": true,
+   "recorded": true
+  },
+  "e3": {
+   "enforced": {},
+   "recorded": {}
+  },
+  "e4": [
+   {
+    "call": 6,
+    "customer_turn": 21,
+    "missing": "the proposal does not name the call's order or user",
+    "proposal_turn": 20,
+    "result": "not established"
+   },
+   {
+    "call": 7,
+    "customer_turn": 27,
+    "proposal_turn": 26,
+    "result": "established"
+   },
+   {
+    "call": 8,
+    "customer_turn": 31,
+    "missing": "no affirmative customer turn after the last proposal; the proposal does not name the call's order or user",
+    "proposal_turn": 30,
+    "result": "not established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 6,
+    "executed": 1093.34,
+    "result": "match"
+   },
+   {
+    "call": 7,
+    "result": "not computable"
+   },
+   {
+    "call": 8,
+    "result": "not computable"
+   }
+  ],
+  "e6": [
+   {
+    "call": 6,
+    "result": "match"
+   },
+   {
+    "call": 7,
+    "result": "match"
+   },
+   {
+    "call": 8,
+    "result": "n/a"
+   }
+  ],
+  "e7": {
+   "enforced": [],
+   "recorded": []
+  },
+  "e8": {
+   "turns_with_several_calls": 1,
+   "turns_with_text_and_call": 1
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 6,
+    "call_id": "call_G45sxNAemEO2eeY0mUEkRiag",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "latest recorded observation of #W1845024 shows status 'pending', the call needs 'delivered'",
+      "grounded": true,
+      "policy_line": "118, 130",
+      "quote": "An order can only be returned if its status is 'delivered'",
+      "rule": "retail.return-exchange.delivered-only",
+      "test": "G2"
+     }
+    ],
+    "rules": [
+     "retail.return-exchange.delivered-only"
+    ],
+    "tool": "return_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.return-exchange.delivered-only"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-mini-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": true,
+   "reward": 1.0
+  },
+  "run_id": "published/gpt-4.1-mini-2025-04-14/33_1",
+  "set": "published",
+  "sim_id": "6613382e-a107-4b52-a356-0a9927fe3d88",
+  "task_id": "33",
+  "trial": 1
+ },
+ "summary": {
+  "accepted_enforced": true,
+  "accepted_recorded": true,
+  "enforced_db_hash": "5fe996d49aefd73c215343df13c30e1d43a1b28fbba0d813e61aa9495f40e7bc",
+  "findings_sha256": "9d78fbc8d89fa1357e3288541ccf6b58d2c466666a0d206e60d6dede8f24c5d7",
+  "gate_head": "sha256:6af9ebd6d358da963bd352a088ac9cce33d0773ccc7ef5e99b7adf5dbfb99e8a",
+  "gate_receipts": 17,
+  "gold_db_hash": "5fe996d49aefd73c215343df13c30e1d43a1b28fbba0d813e61aa9495f40e7bc",
+  "harness_readbacks": 1,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "5fe996d49aefd73c215343df13c30e1d43a1b28fbba0d813e61aa9495f40e7bc",
+  "run_id": "published/gpt-4.1-mini-2025-04-14/33_1"
+ }
+}

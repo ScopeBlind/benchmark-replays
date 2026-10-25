@@ -1,0 +1,8 @@
+Run        published/o4-mini-2025-04-16/39_1 (task 39 trial 1, o4-mini-2025-04-16, sim bc35823a)
+Policy     sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933
+Calls      4 attempted, 2 authorized, 2 refused
+Refused    call 1 get_order_details: retail.identity.authenticate-first
+Refused    call 2 get_order_details: retail.identity.authenticate-first
+Accepted   NO under enforcement (final database differs from the answer key)
+           differs at users/fatima_taylor_3452 ['address']
+Evidence   6 gate receipts, 1 harness receipts; verify with @veritasacta/verify 0.11.0 --replay-chain and the pinned keys

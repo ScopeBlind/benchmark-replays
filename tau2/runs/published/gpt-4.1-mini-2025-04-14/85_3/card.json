@@ -1,0 +1,140 @@
+{
+ "answer_key": {
+  "gold_db_hash": "e60e8a961176447111af9fc08a984b9885443ba174c34b159449a7c44cd233da",
+  "tasks_blob": "e95a9f898b2d1f6568ea8faec78edc3767ce747d"
+ },
+ "findings": {
+  "divergence_before_first_refusal": [],
+  "e1": [],
+  "e10": [],
+  "e11": [],
+  "e13": [],
+  "e2": {
+   "enforced": false,
+   "recorded": false
+  },
+  "e3": {
+   "enforced": {
+    "orders/#W2466703": [
+     "items",
+     "payment_history",
+     "status"
+    ]
+   },
+   "recorded": {
+    "orders/#W2466703": [
+     "items",
+     "payment_history",
+     "status"
+    ]
+   }
+  },
+  "e4": [
+   {
+    "call": 4,
+    "customer_turn": 21,
+    "proposal_turn": 20,
+    "result": "established"
+   }
+  ],
+  "e5": [
+   {
+    "call": 4,
+    "executed": 6.74,
+    "result": "mismatch",
+    "stated": [
+     153.18,
+     159.92
+    ]
+   }
+  ],
+  "e6": [
+   {
+    "call": 4,
+    "missing": "the method is not in an observed profile",
+    "result": "not checkable"
+   }
+  ],
+  "e7": {
+   "enforced": [],
+   "recorded": []
+  },
+  "e8": {
+   "turns_with_several_calls": 0,
+   "turns_with_text_and_call": 2
+  },
+  "e9": [],
+  "recorded_replay_mismatches": [],
+  "refusals": [
+   {
+    "call": 4,
+    "call_id": "call_Nbd2Kjgw7gBmK6AKyawvddKc",
+    "first_order": true,
+    "grounding": [
+     {
+      "evidence": "latest recorded observation of #W2466703 shows status 'pending', the call needs 'delivered'",
+      "grounded": true,
+      "policy_line": "118, 130",
+      "quote": "An order can only be returned if its status is 'delivered'",
+      "rule": "retail.return-exchange.delivered-only",
+      "test": "G2"
+     },
+     {
+      "evidence": "credit_card_0000000 appears in no recorded profile of yusuf_hernandez_6785 and is not the order's original method",
+      "grounded": true,
+      "policy_line": "114, 122, 134",
+      "quote": "The user must provide a payment method",
+      "rule": "retail.payment.customer-method",
+      "test": "G1"
+     }
+    ],
+    "rules": [
+     "retail.return-exchange.delivered-only",
+     "retail.payment.customer-method"
+    ],
+    "tool": "exchange_delivered_order_items",
+    "under_recorded_facts": {
+     "allowed": false,
+     "rules": [
+      "retail.return-exchange.delivered-only",
+      "retail.payment.customer-method"
+     ]
+    }
+   }
+  ]
+ },
+ "policy": {
+  "digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "policy_text_sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+ },
+ "run": {
+  "model": "gpt-4.1-mini-2025-04-14",
+  "plant": null,
+  "published": {
+   "db_match": false,
+   "reward": 0.0
+  },
+  "run_id": "published/gpt-4.1-mini-2025-04-14/85_3",
+  "set": "published",
+  "sim_id": "ab5f9f11-f220-4b1a-a4bf-ffbc81df1e92",
+  "task_id": "85",
+  "trial": 3
+ },
+ "summary": {
+  "accepted_enforced": false,
+  "accepted_recorded": false,
+  "enforced_db_hash": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+  "findings_sha256": "7baffd4a0c7026deff5a0d1ff61088d74fae4a2f4b51515dcccae1c44870e817",
+  "gate_head": "sha256:1e3dad4beabcc564b5b146b08178a4d7b4e84804fdad2cc7e8adae1424b90263",
+  "gate_receipts": 9,
+  "gold_db_hash": "e60e8a961176447111af9fc08a984b9885443ba174c34b159449a7c44cd233da",
+  "harness_readbacks": 0,
+  "policy_digests": [
+   "sha256:a867d85e364c6f3cb91c604568d0a9832eed25e852a530777ec889f625e32933"
+  ],
+  "recorded_db_hash": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+  "run_id": "published/gpt-4.1-mini-2025-04-14/85_3"
+ }
+}
